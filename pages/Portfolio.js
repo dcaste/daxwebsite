@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from './../components/Image';
+import Image from '../components/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SplitContent from './../components/SplitContent';
-import Title from './../components/Title';
+import SplitContent from '../components/SplitContent';
+import Title from '../components/Title';
 
 // Projects images
-import portfolioImgs from './../data/portfolioImgs';
+import portfolioImgs from '../data/portfolioImgs';
 
 const Portfolio = () => {
 	return (
