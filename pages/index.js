@@ -10,9 +10,9 @@ import BtnGroup from '../components/BtnGroup';
 // Data
 import homeFeatures from '../data/homeFeatures.json';
 
-export default function Home() {
+export default function Index() {
 	return (
-		<div>
+		<main id='mainContent'>
 			<Head>
 				<title>Create Next App</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -72,6 +72,6 @@ export default function Home() {
 
 				{/* <FeatureList data={homeFeatures} /> */}
 			</article>
-		</div>
+		</main>
 	);
 }
