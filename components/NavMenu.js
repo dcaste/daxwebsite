@@ -8,23 +8,31 @@ const NavMenu = (props) => {
 	const content = () => {
 		return (
 			<nav className='NavMenu'>
-				<Link to='/' className='logo'>
-					<span className='TextRed'>Dax</span>Castellón
+				<Link href='/' className='logo'>
+					<a>
+						<span className='TextRed'>Dax</span>Castellón
+					</a>
 				</Link>
 				<ul className='NavLinks'>
 					<li className='NavItem'>
-						<NavLink exact to='/'>
-							Home
-						</NavLink>
+						<Link href='/'>
+							<a>Home</a>
+						</Link>
 					</li>
 					<li className='NavItem'>
-						<NavLink to='/portfolio/'>Portfolio</NavLink>
+						<Link href='/portfolio/'>
+							<a>Portfolio</a>
+						</Link>
 					</li>
 					<li className='NavItem'>
-						<NavLink to='/about/'>About Me</NavLink>
+						<Link href='/about/'>
+							<a>About Me</a>
+						</Link>
 					</li>
 					<li className='NavItem'>
-						<NavLink to='/contact/'>Contact Me</NavLink>
+						<Link href='/contact/'>
+							<a>Contact Me</a>
+						</Link>
 					</li>
 					<li className='NavItem SocialIcon'>
 						<a href='https://www.linkedin.com/in/daxcastellonmeyrat/'>
