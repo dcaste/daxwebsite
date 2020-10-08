@@ -1,65 +1,89 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from '../components/Image';
+import SplitContent from '../components/SplitContent';
+import Title from '../components/Title';
+import FeatureList from '../components/FeatureList';
+import BtnGroup from '../components/BtnGroup';
+
+// Data
+import homeFeatures from '../data/homeFeatures.json';
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<div className={styles.container}>
+			<Head>
+				<title>Create Next App</title>
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+			<article>
+				<SplitContent tag='section' split='50-50' direction='lr'>
+					<Image
+						src_lg='/assets/img/avatar.jpg'
+						alt='Dax Castellón'
+						imgClass='rounded'
+					/>
+					<div className='mobileCentered'>
+						<Title Tag='h1' titleBlack="Hi, I'm" titleRed='Dax' />
+						<p className='lead'>
+							a WordPress Developer living in Switzerland specialized in
+							creating custom themes and plugins with SEO best practices,
+							security standards and optimized for fast loading times.
+						</p>
+						<BtnGroup
+							btnMainCopy='Contact Me'
+							btnMainLink='/contact/'
+							btnSecCopy='About Me'
+							btnSecLink='/about/'
+						/>
+					</div>
+				</SplitContent>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+				<SplitContent tag='section' split='40-60' direction='rl'>
+					<Image
+						src_lg='/assets/img/projects-home.png'
+						src_md='/assets/img/projects-home-480.png'
+						src_sm='/assets/img/projects-home-300.png'
+						align='center'
+						alt='Dax Castellón Work examples.'
+					/>
+					<div>
+						<Title Tag='h2' titleBlack='Work' titleRed='Experience' />
+						<p className='Lead'>
+							I have worked both in Front-end and Back-end, in small and large
+							projects. I have been involved in the conception till the
+							developing and optimization stages of websites.
+						</p>
+						<p>
+							<Link href='/portfolio'>
+								<a>
+									List of selected projects in my Portfolio
+									<FontAwesomeIcon
+										icon={'angle-right'}
+										className='marginLeft'
+									/>
+								</a>
+							</Link>
+						</p>
+					</div>
+				</SplitContent>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+				<FeatureList data={homeFeatures} />
+			</article>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+			<footer className={styles.footer}>
+				<a
+					href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					Powered by{' '}
+					<img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
+				</a>
+			</footer>
+		</div>
+	);
 }

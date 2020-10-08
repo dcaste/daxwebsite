@@ -1,6 +1,4 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import img404 from './../assets/img/404.png';
 
 const Image = ({
 	alt,
@@ -41,7 +39,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-	src_lg: img404,
+	src_lg: '/assets/img/404.png',
 	width: 'auto',
 };
 
