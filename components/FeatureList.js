@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 
 const FeatureList = (props) => {
 	const [config, itemList] = props.data;
@@ -28,8 +29,8 @@ const FeatureList = (props) => {
 			))}
 
 			<p className='featureList__Title'>
-				<Link to={linkURL}>
-					{config.linkCopy}
+				<Link href={linkURL}>
+					<a>{config.linkCopy}</a>
 					<FontAwesomeIcon icon='angle-right' className='marginLeft' />
 				</Link>
 			</p>

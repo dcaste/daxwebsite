@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 const NavMenu = (props) => {
 	const { id, element } = props;

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../components/Image';
@@ -13,7 +12,7 @@ import homeFeatures from '../data/homeFeatures.json';
 
 export default function Home() {
 	return (
-		<div className={styles.container}>
+		<div>
 			<Head>
 				<title>Create Next App</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -42,7 +41,7 @@ export default function Home() {
 					</div>
 				</SplitContent>
 
-				<SplitContent tag='section' split='40-60' direction='rl'>
+				{/* <SplitContent tag='section' split='40-60' direction='rl'>
 					<Image
 						src_lg='/assets/img/projects-home.png'
 						src_md='/assets/img/projects-home-480.png'
@@ -69,21 +68,10 @@ export default function Home() {
 							</Link>
 						</p>
 					</div>
-				</SplitContent>
+				</SplitContent> */}
 
-				<FeatureList data={homeFeatures} />
+				{/* <FeatureList data={homeFeatures} /> */}
 			</article>
-
-			<footer className={styles.footer}>
-				<a
-					href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Powered by{' '}
-					<img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
-				</a>
-			</footer>
 		</div>
 	);
 }

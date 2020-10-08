@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 const BtnGroup = ({ btnMainLink, btnMainCopy, btnSecLink, btnSecCopy }) => {
 	return (
 		<div className='BtnGroup'>
-			<Link to={btnMainLink} className='btn marginRight'>
-				{btnMainCopy}
+			<Link href={btnMainLink} className='btn marginRight'>
+				<a>{btnMainCopy}</a>
 			</Link>
-			<Link to={btnSecLink} className='btn-hollow'>
-				{btnSecCopy}
+			<Link href={btnSecLink} className='btn-hollow'>
+				<a>{btnSecCopy}</a>
 			</Link>
 		</div>
 	);

@@ -1,0 +1,63 @@
+/* barlow-regular - latin */
+@font-face {
+	font-family: 'Barlow';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../public/assets/fonts/barlow-v5-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local('Barlow Regular'), local('Barlow-Regular'),
+		url('../../public/assets/fonts/barlow-v5-latin-regular.eot?#iefix')
+			format('embedded-opentype'),
+		/* IE6-IE8 */ url('../../public/assets/fonts/barlow-v5-latin-regular.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */
+			url('../../public/assets/fonts/barlow-v5-latin-regular.woff')
+			format('woff'),
+		/* Modern Browsers */
+			url('../../public/assets/fonts/barlow-v5-latin-regular.ttf')
+			format('truetype'),
+		/* Safari, Android, iOS */
+			url('../../public/assets/fonts/barlow-v5-latin-regular.svg#Barlow')
+			format('svg'); /* Legacy iOS */
+}
+/* raleway-regular - latin */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../public/assets/fonts/raleway-v17-latin-regular.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		url('../../public/assets/fonts/raleway-v17-latin-regular.eot?#iefix')
+			format('embedded-opentype'),
+		/* IE6-IE8 */
+			url('../../public/assets/fonts/raleway-v17-latin-regular.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */
+			url('../../public/assets/fonts/raleway-v17-latin-regular.woff')
+			format('woff'),
+		/* Modern Browsers */
+			url('../../public/assets/fonts/raleway-v17-latin-regular.ttf')
+			format('truetype'),
+		/* Safari, Android, iOS */
+			url('../../public/assets/fonts/raleway-v17-latin-regular.svg#Raleway')
+			format('svg'); /* Legacy iOS */
+}
+/* raleway-700 - latin */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../../public/assets/fonts/raleway-v17-latin-700.eot'); /* IE9 Compat Modes */
+	src: local(''),
+		url('../../public/assets/fonts/raleway-v17-latin-700.eot?#iefix')
+			format('embedded-opentype'),
+		/* IE6-IE8 */ url('../../public/assets/fonts/raleway-v17-latin-700.woff2')
+			format('woff2'),
+		/* Super Modern Browsers */
+			url('../../public/assets/fonts/raleway-v17-latin-700.woff') format('woff'),
+		/* Modern Browsers */
+			url('../../public/assets/fonts/raleway-v17-latin-700.ttf')
+			format('truetype'),
+		/* Safari, Android, iOS */
+			url('../../public/assets/fonts/raleway-v17-latin-700.svg#Raleway')
+			format('svg'); /* Legacy iOS */
+}

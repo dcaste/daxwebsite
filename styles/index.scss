@@ -6,11 +6,11 @@
 @import './settings/mixins.scss';
 
 // Prioritize First Render styles.
-@import './layout/FirstRender.scss';
+@import './layout/firstRender.scss';
 @import './layout/global.scss';
 
 // Layout.
-@import './layout/Grid.scss';
+@import './layout/grid.scss';
 
 // Components.
 @import './components/FeatureList.scss';
