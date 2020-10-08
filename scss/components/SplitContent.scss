@@ -1,0 +1,77 @@
+/* Split Content Component styles */
+.splitContent {
+	@include contentPadding;
+
+	display: grid;
+	align-items: center;
+	justify-items: center;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 1rem;
+
+		picture {
+			order: 1;
+		}
+		div {
+			order: 2;
+		}
+	}
+
+	@include tablet-v {
+		gap: 3rem;
+	}
+}
+
+.splitContent__50-50 {
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	@include laptop-m {
+		grid-template-rows: 1fr;
+	}
+}
+
+.splitContent__40-60 {
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	@include laptop-m {
+		grid-template-columns: 0.4fr 0.6fr;
+		grid-template-rows: 1fr;
+	}
+}
+
+.splitContent__60-40 {
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+	}
+	@include laptop-m {
+		grid-template-columns: 0.6fr 0.4fr;
+		grid-template-rows: 1fr;
+	}
+}
+
+.splitContent__RightToLeft {
+	@include tablet-h {
+		picture {
+			order: 2;
+		}
+		div {
+			order: 1;
+		}
+	}
+}
+
+.splitContent__list {
+	font-size: 0.95em;
+}
+
+.splitContent__technologies {
+	font-size: 0.9em;
+	font-weight: $bold;
+}

@@ -1,0 +1,18 @@
+// Grid styles.
+.order1 {
+	@include mobile {
+		order: 1;
+	}
+	@include tablet-h {
+		order: inherit;
+	}
+}
+
+.order2 {
+	@include mobile {
+		order: 2;
+	}
+	@include tablet-h {
+		order: inherit;
+	}
+}

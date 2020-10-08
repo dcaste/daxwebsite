@@ -1,0 +1,19 @@
+/* Content Block Component styles */
+
+.orderMobileFirst {
+	@include mobile {
+		order: 1;
+	}
+	@include tablet-h {
+		order: inherit;
+	}
+}
+
+.orderMobileSecond {
+	@include mobile {
+		order: 2;
+	}
+	@include tablet-h {
+		order: inherit;
+	}
+}

@@ -1,0 +1,74 @@
+// Mixins.
+
+/* Media Queries */
+
+// Mobile
+@mixin mobile {
+	@media only screen and (min-width: 320px) {
+		@content;
+	}
+}
+
+// Tablet Vertical
+@mixin tablet-v {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+// Tablet Horizontal
+@mixin tablet-h {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+// Laptop MDPI
+@mixin laptop-m {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+// Laptop HDPI
+@mixin laptop-h {
+	@media only screen and (min-width: 1400px) and (max-width: 1440px) {
+		@content;
+	}
+}
+
+// Large screens
+@mixin large-screens {
+	@media only screen and (min-width: 1441px) {
+		@content;
+	}
+}
+
+@mixin alignwide {
+	margin: auto;
+
+	@include mobile {
+		max-width: 90%;
+	}
+	@include laptop-m() {
+		max-width: 95%;
+	}
+	@include large-screens() {
+		max-width: 1400px;
+	}
+}
+
+@mixin contentPadding {
+	@include mobile {
+		padding: 2rem 0;
+	}
+	@include tablet-v {
+		padding: 3rem 0;
+	}
+	@include laptop-m {
+		padding: 5rem 0;
+	}
+	@include large-screens {
+		padding: 8rem 0;
+	}
+}

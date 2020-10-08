@@ -1,0 +1,11 @@
+[
+	{
+		"split": "50-50",
+		"imageSide": "left",
+		"titleTag": "h1",
+		"titleBlack": "Hi, I'm",
+		"titleRed": "Dax",
+		"contentCopy": "a WordPress Developer living in Switzerland specialized in creating custom themes and plugins with SEO best practices, security standards and optimized for fast loading times.",
+		"contentClasses": "Lead"
+	}
+]
