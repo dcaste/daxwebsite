@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Layout, { siteTitle } from '../components/layout';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../components/Image';
 import SplitContent from '../components/SplitContent';
@@ -10,9 +12,9 @@ import BtnGroup from '../components/BtnGroup';
 // Data
 import homeFeatures from '../data/homeFeatures.json';
 
-export default function Index() {
+export default function Home() {
 	return (
-		<main id='mainContent'>
+		<Layout>
 			<Head>
 				<title>Create Next App</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -72,6 +74,6 @@ export default function Index() {
 
 				{/* <FeatureList data={homeFeatures} /> */}
 			</article>
-		</main>
+		</Layout>
 	);
 }

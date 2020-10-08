@@ -4,24 +4,24 @@ body {
 	height: 100%;
 }
 
-.AlignWide {
+.alignWide {
 	@include alignwide;
 	width: 100%;
 }
 
 // Content
-#MainWrapper {
+#mainWrapper {
 	min-height: 100%;
 	position: relative;
 }
 
-#MainContent {
+#mainContent {
 	@include alignwide;
 	padding-bottom: 150px;
 }
 
 // Nav Menus
-.NavMenu {
+.navMenu {
 	@include alignwide;
 	width: 100%;
 	display: flex;
@@ -29,8 +29,8 @@ body {
 	justify-content: space-between;
 }
 
-#NavHeader,
-#NavFooter {
+#navHeader,
+#navFooter {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -43,18 +43,18 @@ body {
 	}
 }
 
-#NavHeader {
+#navHeader {
 	height: 80px;
 }
 
-#NavFooter {
+#navFooter {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 150px;
 }
 
-.NavLinks {
+.navLinks {
 	display: flex;
 	align-items: center;
 }
