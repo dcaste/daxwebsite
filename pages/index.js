@@ -4,10 +4,10 @@ import Layout, { siteTitle } from '../components/layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../components/Image';
-import SplitContent from '../components/SplitContent';
+import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/Title';
 import FeatureList from '../components/FeatureList';
-import BtnGroup from '../components/Buttons/BtnGroup';
+import BtnGroup from '../components/buttons/BtnGroup';
 
 // Data
 import homeFeatures from '../data/homeFeatures.json';

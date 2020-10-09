@@ -1,4 +1,7 @@
 /* Split Content Component styles */
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
 .splitContent {
 	@include contentPadding;
 
