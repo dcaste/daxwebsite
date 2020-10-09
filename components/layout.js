@@ -23,9 +23,11 @@ export default function Layout({ children, home }) {
 				<meta name='og:title' content={siteTitle} />
 				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
-			<NavMenu element='header' />
-			<main id='mainContent'>{children}</main>
-			<NavMenu element='footer' />
+			<div id='mainWrapper'>
+				<NavMenu element='header' />
+				<main id='mainContent'>{children}</main>
+				<NavMenu element='footer' />
+			</div>
 		</>
 	);
 }

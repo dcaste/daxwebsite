@@ -43,7 +43,7 @@ export default function Home() {
 					</div>
 				</SplitContent>
 
-				{/* <SplitContent tag='section' split='40-60' direction='rl'>
+				<SplitContent tag='section' split='40-60' direction='rl'>
 					<Image
 						src_lg='/assets/img/projects-home.png'
 						src_md='/assets/img/projects-home-480.png'
@@ -70,7 +70,7 @@ export default function Home() {
 							</Link>
 						</p>
 					</div>
-				</SplitContent> */}
+				</SplitContent>
 
 				{/* <FeatureList data={homeFeatures} /> */}
 			</article>
