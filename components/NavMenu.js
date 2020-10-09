@@ -9,8 +9,8 @@ const navMenu = (props) => {
 	const content = () => {
 		return (
 			<nav className='navMenu'>
-				<Link href='/' className='logo'>
-					<a>
+				<Link href='/'>
+					<a className='logo'>
 						<span className='textRed'>Dax</span>Castellón
 					</a>
 				</Link>
@@ -35,12 +35,12 @@ const navMenu = (props) => {
 							<a>Contact Me</a>
 						</Link>
 					</li>
-					<li className='navItem SocialIcon'>
+					<li className='navItem socialIcon'>
 						<a href='https://www.linkedin.com/in/daxcastellonmeyrat/'>
 							<FontAwesomeIcon icon={faLinkedin} />
 						</a>
 					</li>
-					<li className='navItem SocialIcon'>
+					<li className='navItem socialIcon'>
 						<a href='https://github.com/dcaste/'>
 							<FontAwesomeIcon icon={faGithubSquare} />
 						</a>
