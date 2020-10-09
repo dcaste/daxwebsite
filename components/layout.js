@@ -2,8 +2,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import NavMenu from './NavMenu';
 
+// FontAwesome custom Library
+import './../libs/fontawesome';
+
 const name = 'Dax';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Dax Castellón';
 
 export default function Layout({ children, home }) {
 	return (

@@ -1,4 +1,6 @@
+// Custom Font Awesome library
 import { library } from '@fortawesome/fontawesome-svg-core';
+
 import {
 	faAngleRight,
 	faFighterJet,
@@ -9,6 +11,8 @@ import {
 	faExternalLinkAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 library.add(
 	faAngleRight,
 	faFighterJet,
@@ -16,5 +20,7 @@ library.add(
 	faClipboardCheck,
 	faBriefcase,
 	faUsers,
-	faExternalLinkAlt
+	faExternalLinkAlt,
+	faLinkedin,
+	faGithub
 );

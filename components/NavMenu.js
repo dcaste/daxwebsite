@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const navMenu = (props) => {
 	const { element } = props;
@@ -37,12 +36,12 @@ const navMenu = (props) => {
 					</li>
 					<li className='navItem socialIcon'>
 						<a href='https://www.linkedin.com/in/daxcastellonmeyrat/'>
-							<FontAwesomeIcon icon={faLinkedin} />
+							<FontAwesomeIcon icon={['fab', 'linkedin']} />
 						</a>
 					</li>
 					<li className='navItem socialIcon'>
 						<a href='https://github.com/dcaste/'>
-							<FontAwesomeIcon icon={faGithubSquare} />
+							<FontAwesomeIcon icon={['fab', 'github']} />
 						</a>
 					</li>
 				</ul>

@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../components/image/Image';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -16,7 +15,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>Create Next App Home</title>
+				<title>Create Next App Home - {siteTitle}</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
