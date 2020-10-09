@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from '../components/Image';
+import Image from '../components/image/Image';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/Title';
 import FeatureList from '../components/FeatureList';

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styles from './Image.module.scss';
 
 const Image = ({
 	alt,
@@ -11,7 +12,7 @@ const Image = ({
 	width,
 }) => {
 	return (
-		<picture className='image'>
+		<picture className={styles.Image}>
 			<source media='(max-width: 480px)' srcSet={src_sm} />
 			<source media='(max-width: 768px)' srcSet={src_md} />
 			<img
@@ -19,7 +20,7 @@ const Image = ({
 				alt={alt}
 				title={title}
 				style={{ margin: `${margin}` }}
-				className={imgClass}
+				className={styles[imgClass]}
 				width={width}
 				loading='lazy'
 			/>
