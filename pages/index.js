@@ -7,7 +7,7 @@ import Image from '../components/Image';
 import SplitContent from '../components/SplitContent';
 import Title from '../components/Title';
 import FeatureList from '../components/FeatureList';
-import BtnGroup from '../components/BtnGroup';
+import BtnGroup from '../components/Buttons/BtnGroup';
 
 // Data
 import homeFeatures from '../data/homeFeatures.json';

@@ -1,7 +1,7 @@
 /* Buttons *******************************/
-.btn,
-[type='reset'],
-[type='submit'] {
+@import './../../styles/settings/variables.scss';
+
+.btn {
 	padding: 1rem 1.5rem;
 	background: $red;
 	color: $white;
@@ -25,7 +25,7 @@
 	}
 }
 
-.btn-hollow {
+.btnHollow {
 	@extend .btn;
 	color: $red;
 	background: transparent;
@@ -51,9 +51,4 @@
 	border-radius: 50%;
 	margin: 0px;
 	min-width: inherit;
-}
-
-.BtnGroup {
-	clear: both;
-	margin-top: 1.5rem;
 }
