@@ -16,7 +16,6 @@ export default function Home() {
 		<Layout>
 			<Head>
 				<title>{siteTitle} - WordPress Developer</title>
-				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
 			<SplitContent tag='section' split='50-50' direction='lr'>

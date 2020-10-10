@@ -1,15 +1,16 @@
-import React from 'react';
-import Image from '../components/Image';
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import Image from '../components/image/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SplitContent from '../components/SplitContent';
+import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/Title';
-
-// Projects images
-import portfolioImgs from '../data/portfolioImgs';
 
 const Portfolio = () => {
 	return (
-		<article>
+		<Layout>
+			<Head>
+				<title>Portfolio - {siteTitle}</title>
+			</Head>
 			<h1 className='pageTitle'>Portfolio</h1>
 			<h2 className='lead textCentered'>
 				As a member of{' '}
@@ -25,9 +26,9 @@ const Portfolio = () => {
 
 			<SplitContent split='60-40'>
 				<Image
-					src_lg={img_ck_lg}
-					src_md={img_ck_md}
-					src_sm={img_ck_sm}
+					src_lg='/assets/img/project-ck.png'
+					src_md='/assets/img/project-ck-480.png'
+					src_sm='/assets/img/project-ck.png-300'
 					alt="Kampbell's Kitchen Website"
 				/>
 				<div>
@@ -116,9 +117,9 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<Image
-					src_lg={img_swanson_lg}
-					src_md={img_swanson_md}
-					src_sm={img_swanson_sm}
+					src_lg='/assets/img/project-swanson.png'
+					src_md='/assets/img/project-swanson-480.png'
+					src_sm='/assets/img/project-swanson-300.png'
 					alt='Swanson website'
 				/>
 			</SplitContent>
@@ -227,18 +228,18 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<Image
-					src_lg={img_bwl_lg}
-					src_md={img_bwl_md}
-					src_sm={img_bwl_sm}
+					src_lg='/assets/img/project-bwl.png'
+					src_md='/assets/img/project-bwl-480.png'
+					src_sm='/assets/img/project-bwl-300.png'
 					alt='Hotel Best Western Las Mercedes website'
 				/>
 			</SplitContent>
 
 			<SplitContent split='40-60' direction='rl'>
 				<Image
-					src_lg={img_cashpak_lg}
-					src_md={img_cashpak_md}
-					src_sm={img_cashpak_sm}
+					src_lg='/assets/img/project-cashpak.png'
+					src_md='/assets/img/project-cashpak-480.png'
+					src_sm='/assets/img/project-cashpak-300.png'
 					alt='CashPak Nicaragua website'
 				/>
 				<div>
@@ -275,9 +276,9 @@ const Portfolio = () => {
 
 			<SplitContent split='60-40'>
 				<Image
-					src_lg={img_delisoy_lg}
-					src_md={img_delisoy_md}
-					src_sm={img_delisoy_sm}
+					src_lg='/assets/img/project-delisoy.png'
+					src_md='/assets/img/project-delisoy-480.png'
+					src_sm='/assets/img/project-delisoy-300.png'
 					alt='Delisoy website'
 				/>
 				<div>
@@ -366,9 +367,9 @@ const Portfolio = () => {
 
 			<SplitContent split='40-60' direction='rl'>
 				<Image
-					src_lg={img_kh_lg}
-					src_md={img_kh_md}
-					src_sm={img_kh_sm}
+					src_lg='/assets/img/project-kh.png'
+					src_md='/assets/img/project-kh-480.png'
+					src_sm='/assets/img/project-kh-300.png'
 					alt='Kindhumans website'
 				/>
 				<div>
@@ -407,9 +408,9 @@ const Portfolio = () => {
 
 			<SplitContent split='60-40'>
 				<Image
-					src_lg={img_haydee_lg}
-					src_md={img_haydee_md}
-					src_sm={img_haydee_sm}
+					src_lg='/assets/img/project-haydee.png'
+					src_md='/assets/img/project-haydee-480.png'
+					src_sm='/assets/img/project-haydee-300.png'
 					alt='Cocina Dña Haydeé website'
 				/>
 				<div>
@@ -452,9 +453,9 @@ const Portfolio = () => {
 
 			<SplitContent split='40-60' direction='rl'>
 				<Image
-					src_lg={img_candido_lg}
-					src_md={img_candido_md}
-					src_sm={img_candido_sm}
+					src_lg='/assets/img/project-candido.png'
+					src_md='/assets/img/project-candido-480.png'
+					src_sm='/assets/img/project-candido-300.png'
 					alt='Restaurante Don Candido website'
 				/>
 				<div>
@@ -549,7 +550,7 @@ const Portfolio = () => {
 					</p>
 				</div>
 			</SplitContent>
-		</article>
+		</Layout>
 	);
 };
 
