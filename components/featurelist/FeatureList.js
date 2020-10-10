@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
+import styles from './FeatureList.module.scss';
+import classNames from 'classnames';
 
 const FeatureList = (props) => {
 	const [config, itemList] = props.data;
@@ -8,15 +10,15 @@ const FeatureList = (props) => {
 	const linkURL = config.link;
 
 	return (
-		<section className='featureList'>
-			<TitleTag className='featureList__Title'>
+		<section className={styles.featureList}>
+			<TitleTag className={styles.featureList__Title}>
 				{config.title}
 				<span className='textRed'> {config.titleRed}</span>
 			</TitleTag>
 
 			{itemList.items.map((item) => (
-				<div className='featureItem' key={item.id}>
-					<span className='fa-stack fa-2x featureIcon'>
+				<div className={styles.featureItem} key={item.id}>
+					<span className={classNames(styles.featureIcon, 'fa-stack', 'fa-2x')}>
 						<FontAwesomeIcon icon='circle' className='fa-stack-2x' />
 						<FontAwesomeIcon
 							icon={item.icon}
@@ -28,10 +30,12 @@ const FeatureList = (props) => {
 				</div>
 			))}
 
-			<p className='featureList__Title'>
+			<p className={styles.featureList__Title}>
 				<Link href={linkURL}>
-					<a>{config.linkCopy}</a>
-					<FontAwesomeIcon icon='angle-right' className='marginLeft' />
+					<a>
+						{config.linkCopy}
+						<FontAwesomeIcon icon='angle-right' className='marginLeft' />
+					</a>
 				</Link>
 			</p>
 		</section>

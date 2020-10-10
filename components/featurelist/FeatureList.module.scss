@@ -1,4 +1,8 @@
 // Feature List layout.
+
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
 .featureList {
 	@include contentPadding;
 

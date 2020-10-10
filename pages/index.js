@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../components/image/Image';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/Title';
-import FeatureList from '../components/FeatureList';
+import FeatureList from '../components/featurelist/FeatureList';
 import BtnGroup from '../components/buttons/BtnGroup';
 
 // Data
@@ -71,7 +71,7 @@ export default function Home() {
 					</div>
 				</SplitContent>
 
-				{/* <FeatureList data={homeFeatures} /> */}
+				<FeatureList data={homeFeatures} />
 			</article>
 		</Layout>
 	);
