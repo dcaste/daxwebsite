@@ -18,11 +18,13 @@ export default function Layout({ children, home }) {
 					content='Learn how to build a personal website using Next.js'
 				/>
 			</Head>
-			<main id='mainWrapper'>
+			<div id='mainWrapper'>
 				<NavMenu element='header' />
-				<section id='mainContent'>{children}</section>
+				<main id='mainContent' role='main'>
+					<article>{children}</article>
+				</main>
 				<NavMenu element='footer' />
-			</main>
+			</div>
 		</>
 	);
 }
