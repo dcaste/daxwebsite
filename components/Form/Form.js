@@ -11,7 +11,8 @@ const Form = () => {
 				alt='Dax Castellón'
 				imgClass='rounded'
 			/>
-			<p className='textBig'>
+
+			<p className={styles.formSocial}>
 				<a
 					href='https://www.linkedin.com/in/daxcastellonmeyrat/'
 					target='_blank'
@@ -27,40 +28,18 @@ const Form = () => {
 					<FontAwesomeIcon icon={['fab', 'github']} className='marginLeft' />
 				</a>
 			</p>
-			<div>
-				<form>
-					<p>
-						<label>Title</label>
-						<br />
-						<label>
-							<input type='radio' name='title' value='mr' />
-							Mr
-						</label>
-						<label>
-							<input type='radio' name='title' value='mrs' />
-							Mrs
-						</label>
-						<label>
-							<input type='radio' name='title' value='miss' />
-							Miss
-						</label>
-					</p>
-					<p>
-						<label htmlFor=''>Name</label>
-						<input type='text' name='' id='' className={styles.input} />
-					</p>
-					<p>
-						<label htmlFor=''>Message</label>
-						<br />
-						<textarea className={styles.input}></textarea>
-					</p>
-					<p>
-						<button type='submit' className={btnStyles.btn}>
-							Send message
-						</button>
-					</p>
-				</form>
-			</div>
+
+			<form className={styles.formWrapper}>
+				<label htmlFor=''>Name</label>
+				<input type='text' name='' id='' className={styles.input} />
+				<label htmlFor=''>Message</label>
+				<textarea className={styles.input} rows='6'></textarea>
+				<div>
+					<button type='submit' className={btnStyles.btn}>
+						Send message
+					</button>
+				</div>
+			</form>
 		</div>
 	);
 };

@@ -3,21 +3,35 @@
 @import './../../styles/settings/mixins.scss';
 
 .formComponent {
-	display: grid;
-	justify-content: center;
-	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 500px;
 
 	@include mobile {
-		max-width: 100%;
+		margin: 2rem auto;
+	}
+	@include tablet-h {
 		margin: 2rem auto;
 	}
 	@include laptop-m {
-		max-width: 70%;
 		margin: 3rem auto;
 	}
-	@include laptop-h {
-		max-width: 50%;
-		margin: 5rem auto;
+}
+
+.formSocial {
+	font-size: 2em;
+}
+
+.formWrapper {
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+
+	label {
+		margin-bottom: 0.5em;
+		display: block;
 	}
 }
 
@@ -25,13 +39,15 @@
 	background-color: $grey_lighter;
 	border: 1px solid $grey_light;
 	cursor: text;
-	padding: 1rem;
+	padding: 1rem 1.5rem;
+	margin: auto;
 	line-height: 1em;
 	border-radius: $global-radius;
-	width: 100%;
 	height: auto;
 	box-sizing: border-box;
 	font-family: $fonts;
+	font-size: 0.9em;
+	display: inline-block;
 
 	&:focus {
 		outline: 0px;
