@@ -10,6 +10,7 @@ import {
 	faUsers,
 	faExternalLinkAlt,
 	faCheck,
+	faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -24,5 +25,6 @@ library.add(
 	faExternalLinkAlt,
 	faLinkedin,
 	faGithub,
-	faCheck
+	faCheck,
+	faInfoCircle
 );

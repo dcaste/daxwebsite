@@ -3,6 +3,7 @@
 @import './../../styles/settings/mixins.scss';
 
 .layoutGrid {
+	@include contentPadding;
 	display: grid;
 	grid-template-rows: auto;
 	grid-template-columns: 1fr;

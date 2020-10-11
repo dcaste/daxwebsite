@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import Image from '../components/image/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
+import Grid from '../components/grid/Grid';
 import Title from '../components/Title';
 
 const Portfolio = () => {
@@ -12,17 +13,6 @@ const Portfolio = () => {
 				<title>Portfolio - {siteTitle}</title>
 			</Head>
 			<h1 className='pageTitle'>Portfolio</h1>
-			<h2 className='lead textCentered'>
-				As a member of{' '}
-				<a
-					href='https://rain.agency/'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Rain Agency
-				</a>{' '}
-				WordPress Team.
-			</h2>
 
 			<SplitContent split='60-40'>
 				<Image
@@ -36,8 +26,7 @@ const Portfolio = () => {
 					<p>
 						<strong>
 							Campbell's Kitchen is the biggest Campbell's website containing
-							thousands of detailed recipes whith directions on where to buy
-							their products near your location.
+							thousands of detailed recipes.
 						</strong>
 					</p>
 					<p>
@@ -47,18 +36,27 @@ const Portfolio = () => {
 							href='https://www.campbells.com/kitchen/'
 						>
 							https://www.campbells.com/kitchen/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
 						</a>
 					</p>
 					<ul className='splitContent__list'>
 						<li>
+							As a member of{' '}
+							<a
+								href='https://rain.agency/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Rain Agency
+							</a>{' '}
+							WordPress Team.
+						</li>
+						<li>
 							WordPress back-end development of plugins and parent theme to be
 							used in other Campbell’s minisites.
 						</li>
-						<li>Integration of the API Recipe Reviews in the theme.</li>
+						<li>
+							Integration of the API Recipe Reviews in the theme with AJAX.
+						</li>
 						<li>
 							Integration of{' '}
 							<a
@@ -99,13 +97,20 @@ const Portfolio = () => {
 							rel='noopener noreferrer'
 						>
 							https://www.campbells.com/swanson/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
 						</a>
 					</p>
 					<ul className='splitContent__list'>
+						<li>
+							As a member of{' '}
+							<a
+								href='https://rain.agency/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Rain Agency
+							</a>{' '}
+							WordPress Team.
+						</li>
 						<li>
 							Frontend and Backend development of plugins used as blocks of
 							content and adjustments to the child custom theme based on the
@@ -124,221 +129,7 @@ const Portfolio = () => {
 				/>
 			</SplitContent>
 
-			<div className='textCentered splitContent__list'>
-				<p>
-					Other Campbell’s minisites in which I have contributed with similar
-					tasks:
-					<br />
-					<a
-						href='https://www.campbells.com/v8/ '
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://www.campbells.com/v8/
-						<FontAwesomeIcon
-							icon={'external-link-alt'}
-							className='marginLeft'
-						/>
-					</a>
-					<br />
-					<a
-						href='https://www.campbells.com/well-yes/ '
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://www.campbells.com/well-yes/
-						<FontAwesomeIcon
-							icon={'external-link-alt'}
-							className='marginLeft'
-						/>
-					</a>
-				</p>
-			</div>
-
-			<hr />
-
-			<h2 className='lead textCentered'>
-				As Web Developer Team Leader in{' '}
-				<a
-					href='https://tactic-center.com/'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Tactic Center
-				</a>
-			</h2>
-
-			<SplitContent split='60-40'>
-				<div>
-					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
-					<p>
-						<strong>
-							Las Mercedes is part of the Best Western hotel chain and one of
-							the main hotels in Nicaragua.
-						</strong>
-					</p>
-					<p>
-						<a
-							href='https://lasmercedes.com.ni/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://lasmercedes.com.ni/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
-					<ul className='splitContent__list'>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
-							Technologies: HTML5, SASS, CSS3, jQuery, PHP
-						</li>
-					</ul>
-				</div>
-				<Image
-					src_lg='/assets/img/project-bwl.png'
-					src_md='/assets/img/project-bwl-480.png'
-					src_sm='/assets/img/project-bwl-300.png'
-					alt='Hotel Best Western Las Mercedes website'
-				/>
-			</SplitContent>
-
-			<SplitContent split='40-60' direction='rl'>
-				<Image
-					src_lg='/assets/img/project-cashpak.png'
-					src_md='/assets/img/project-cashpak-480.png'
-					src_sm='/assets/img/project-cashpak-300.png'
-					alt='CashPak Nicaragua website'
-				/>
-				<div>
-					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
-					<p>
-						<strong>
-							CashPak is a Nicaraguan nationwide WesternUnion subsidiary.
-						</strong>
-					</p>
-					<ul className='splitContent__list'>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
-							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
-						</li>
-					</ul>
-					<p>
-						<a
-							href='https://cashpak.com.ni/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://cashpak.com.ni/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
-				</div>
-			</SplitContent>
-
-			<SplitContent split='60-40'>
-				<Image
-					src_lg='/assets/img/project-delisoy.png'
-					src_md='/assets/img/project-delisoy-480.png'
-					src_sm='/assets/img/project-delisoy-300.png'
-					alt='Delisoy website'
-				/>
-				<div>
-					<Title Tag='h3' titleBlack='Delisoy' />
-					<p>
-						<strong>
-							CashPak is a Nicaraguan WesternUnion subsidiary with large
-							national reach.
-						</strong>
-					</p>
-					<ul className='splitContent__list'>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>WooCommerce integration as a catalog of products</li>
-						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
-							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
-						</li>
-					</ul>
-					<p>
-						<a
-							href='https://soydelisoy.com/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://soydelisoy.com/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
-				</div>
-			</SplitContent>
-
-			<div className='textCentered splitContent__list'>
-				<p>
-					Other Tactic Center sites in which I have contributed with similar
-					tasks:
-					<br />
-					<a
-						href='https://cruzlorena.com.ni/
-						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://cruzlorena.com.ni/
-						<FontAwesomeIcon
-							icon={'external-link-alt'}
-							className='marginLeft'
-						/>
-					</a>
-					<br />
-					<a
-						href='https://sinsa.com.ni/
-						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://sinsa.com.ni/
-						<FontAwesomeIcon
-							icon={'external-link-alt'}
-							className='marginLeft'
-						/>
-					</a>
-					<br />
-					<a
-						href='https://medco.com.ni/
-						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://medco.com.ni/
-						<FontAwesomeIcon
-							icon={'external-link-alt'}
-							className='marginLeft'
-						/>
-					</a>
-				</p>
-			</div>
-
-			<hr />
-
-			<h2 className='lead textCentered'>Selected projects as freelancer</h2>
-
-			<SplitContent split='40-60' direction='rl'>
+			<SplitContent split='60-40' direction='lr'>
 				<Image
 					src_lg='/assets/img/project-kh.png'
 					src_md='/assets/img/project-kh-480.png'
@@ -360,13 +151,10 @@ const Portfolio = () => {
 							href='https://kindhumans.com/'
 						>
 							https://kindhumans.com/{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
 						</a>
 					</p>
 					<ul className='splitContent__list'>
+						<li>As freelance developer</li>
 						<li>Developed the Blogs section with AJAX filter</li>
 						<li>
 							Developed the basic theme for the WooCommerce products and cart
@@ -376,6 +164,140 @@ const Portfolio = () => {
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
+				</div>
+			</SplitContent>
+
+			<SplitContent split='40-60' direction='rl'>
+				<div>
+					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
+					<p>
+						<strong>
+							Las Mercedes is part of the Best Western hotel chain and one of
+							the main hotels in Nicaragua.
+						</strong>
+					</p>
+					<p>
+						<a
+							href='https://lasmercedes.com.ni/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							https://lasmercedes.com.ni/
+						</a>
+					</p>
+					<ul className='splitContent__list'>
+						<li>
+							As Web Developer Team Leader in{' '}
+							<a
+								href='https://tactic-center.com/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Tactic Center
+							</a>
+						</li>
+						<li>
+							Front-end and Back-end development of custom theme and plugins
+						</li>
+						<li>UI design and photo retouching</li>
+						<li className='splitContent__technologies'>
+							Technologies: HTML5, SASS, CSS3, jQuery, PHP
+						</li>
+					</ul>
+				</div>
+				<Image
+					src_lg='/assets/img/project-bwl.png'
+					src_md='/assets/img/project-bwl-480.png'
+					src_sm='/assets/img/project-bwl-300.png'
+					alt='Hotel Best Western Las Mercedes website'
+				/>
+			</SplitContent>
+			<SplitContent split='60-40'>
+				<Image
+					src_lg='/assets/img/project-delisoy.png'
+					src_md='/assets/img/project-delisoy-480.png'
+					src_sm='/assets/img/project-delisoy-300.png'
+					alt='Delisoy website'
+				/>
+				<div>
+					<Title Tag='h3' titleBlack='Delisoy' />
+					<p>
+						<strong>Delisoy is the lead brand of soy milk in Nicaragua.</strong>
+					</p>
+					<ul className='splitContent__list'>
+						<li>
+							As Web Developer Team Leader in{' '}
+							<a
+								href='https://tactic-center.com/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Tactic Center
+							</a>
+						</li>
+						<li>
+							Front-end and Back-end development of custom theme and plugins
+						</li>
+						<li>WooCommerce integration as a catalog of products</li>
+						<li>UI design and photo retouching</li>
+						<li className='splitContent__technologies'>
+							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
+						</li>
+					</ul>
+					<p>
+						<a
+							href='https://soydelisoy.com/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							https://soydelisoy.com/
+						</a>
+					</p>
+				</div>
+			</SplitContent>
+
+			<SplitContent split='40-60' direction='rl'>
+				<Image
+					src_lg='/assets/img/project-cashpak.png'
+					src_md='/assets/img/project-cashpak-480.png'
+					src_sm='/assets/img/project-cashpak-300.png'
+					alt='CashPak Nicaragua website'
+				/>
+				<div>
+					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
+					<p>
+						<strong>
+							CashPak is a Nicaraguan nationwide WesternUnion subsidiary.
+						</strong>
+					</p>
+					<ul className='splitContent__list'>
+						<li>
+							As Web Developer Team Leader in{' '}
+							<a
+								href='https://tactic-center.com/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Tactic Center
+							</a>
+						</li>
+						<li>
+							Front-end and Back-end development of custom theme and plugins
+						</li>
+						<li>UI design and photo retouching</li>
+						<li className='splitContent__technologies'>
+							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
+						</li>
+					</ul>
+					<p>
+						<a
+							href='https://cashpak.com.ni/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							https://cashpak.com.ni/
+						</a>
+					</p>
 				</div>
 			</SplitContent>
 
@@ -392,7 +314,7 @@ const Portfolio = () => {
 						<strong>
 							Cocina Dña Haydeé is the most recognized restaurant of local
 							cuisine in Nicaragua and appears in the first search results
-							positions for Nicaraguan cuisine.
+							positions for Nicaraguan cuisine restaurants.
 						</strong>
 					</p>
 					<p>
@@ -401,11 +323,7 @@ const Portfolio = () => {
 							rel='noopener noreferrer'
 							href='http://lacocina.com.ni/'
 						>
-							http://lacocina.com.ni/{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
+							http://lacocina.com.ni/
 						</a>
 					</p>
 					<ul className='splitContent__list'>
@@ -446,11 +364,7 @@ const Portfolio = () => {
 							rel='noopener noreferrer'
 							href='http://restaurantedoncandido.com/'
 						>
-							http://restaurantedoncandido.com/{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
+							http://restaurantedoncandido.com/
 						</a>
 					</p>
 					<ul className='splitContent__list'>
@@ -464,65 +378,89 @@ const Portfolio = () => {
 				</div>
 			</SplitContent>
 
-			<SplitContent>
-				<div className='textCentered splitContent__list'>
-					<p>
-						Other freelance projects:
-						<br />
-						<a
-							href='http://caminoreal.com.ni/
-						'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							http://caminoreal.com.ni/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-						<br />
-						<a
-							href='https://tallerbonilla.com/
-						'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://tallerbonilla.com/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-						<br />
-						<a
-							href='https://nicabus.com.ni/
-						'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://nicabus.com.ni/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-						<br />
-						<a
-							href='http://hotelvalerieni.com/
-						'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							http://hotelvalerieni.com/
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
+			<Grid columns={3}>
+				<h4 className='entireColumn textCentered'>
+					Other websites in which I have contributed with similar tasks:
+				</h4>
+				<div>
+					<p>As a member of Rain Agency WordPress team</p>
+					<a
+						href='https://www.campbells.com/v8/ '
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://www.campbells.com/v8/
+					</a>
+					<a
+						href='https://www.campbells.com/well-yes/ '
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://www.campbells.com/well-yes/
+					</a>
 				</div>
-			</SplitContent>
+				<div>
+					<p>As WordPress team leader in Tactic Center</p>
+					<a
+						href='https://cruzlorena.com.ni/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://cruzlorena.com.ni/
+					</a>
+					<a
+						href='https://sinsa.com.ni/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://sinsa.com.ni/
+					</a>
+					<a
+						href='https://medco.com.ni/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://medco.com.ni/
+					</a>
+				</div>
+				<div>
+					<p>As freelancer</p>
+					<a
+						href='http://caminoreal.com.ni/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						http://caminoreal.com.ni/
+					</a>
+					<a
+						href='https://tallerbonilla.com/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://tallerbonilla.com/
+					</a>
+					<a
+						href='https://nicabus.com.ni/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						https://nicabus.com.ni/
+					</a>
+					<a
+						href='http://hotelvalerieni.com/
+						'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						http://hotelvalerieni.com/
+					</a>
+				</div>
+			</Grid>
 		</Layout>
 	);
 };
