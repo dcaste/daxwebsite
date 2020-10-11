@@ -157,43 +157,16 @@ const Portfolio = () => {
 
 			<hr />
 
-			<div className='width70'>
-				<h2 className='lead textCentered'>
-					As a member of{' '}
-					<a
-						href='https://tactic-center.com/'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						Tactic Center
-					</a>
-				</h2>
-				<ul className='splitContent__list'>
-					<li>
-						Development of custom Wordpress themes and plugins using SEO best
-						practices, PHPCS security standards and optimized under GTMetrix and
-						Google PageSpeed performance requirements.
-					</li>
-					<li>
-						Supervising and assisting two junior developers as Web Development
-						Team Leader.
-					</li>
-					<li>
-						Planning the development processes of the company's main websites.
-					</li>
-					<li>
-						Established the company development security standards, Git workflow
-						and assisted in moving existing websites to a new hosting provider.
-					</li>
-					<li>
-						WooCommerce integration for E-commerce websites and Active Campaign
-						as CRM.
-					</li>
-					<li>
-						UI design and photo retouching in all projects I was assigned to.
-					</li>
-				</ul>
-			</div>
+			<h2 className='lead textCentered'>
+				As Web Developer Team Leader in{' '}
+				<a
+					href='https://tactic-center.com/'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					Tactic Center
+				</a>
+			</h2>
 
 			<SplitContent split='60-40'>
 				<div>

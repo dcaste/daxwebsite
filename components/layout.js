@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import NavMenu from './NavMenu';
 
 // FontAwesome custom Library
-import './../libs/fontawesome';
+import '../data/fontawesome';
 
 const name = 'Dax';
 export const siteTitle = 'Dax Castellón';

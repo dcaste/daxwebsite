@@ -1,0 +1,26 @@
+// Cards layout
+
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.card {
+	background-color: $white;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.08);
+	border-radius: 0.5rem;
+
+	@include mobile {
+		padding: 1rem;
+	}
+	@include tablet-v {
+		padding: 2rem;
+	}
+	@include laptop-m {
+		padding: 3rem;
+	}
+}
+
+.cardTitle {
+	margin: 0 auto 3rem auto;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid $grey_light;
+}

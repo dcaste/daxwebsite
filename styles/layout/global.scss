@@ -58,20 +58,26 @@ h6 {
 	font-size: 1.2rem;
 }
 
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+	margin-top: 1.5rem;
+}
+
 .pageTitle {
 	margin: auto;
 	text-align: center;
-	border-bottom: 1px solid $grey_light;
 
 	@include mobile {
 		max-width: 100%;
 		padding: 1rem 0;
-		margin-bottom: 2rem;
 	}
 	@include tablet-h {
 		max-width: 75%;
 		padding: 1.5rem 0;
-		margin-bottom: 3rem;
 	}
 	@include laptop-m {
 		max-width: 50%;
@@ -169,6 +175,7 @@ hr {
 	}
 }
 
+// Grid / Layout
 .widthHalf {
 	@include mobile {
 		max-width: 100%;
@@ -187,6 +194,24 @@ hr {
 	@include tablet-h {
 		max-width: 70%;
 	}
+}
+
+.entireColumn {
+	grid-column: 1/-1;
+}
+
+.contentPadding {
+	@include contentPadding;
+}
+
+.boxFullWidth {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	background-color: $grey_light;
 }
 
 // Typography
@@ -213,6 +238,10 @@ hr {
 	}
 }
 
+.textBig {
+	font-size: 1.8em;
+}
+
 .marginLeft {
 	margin-left: 0.5rem;
 }
@@ -222,10 +251,6 @@ hr {
 
 .textCentered {
 	text-align: center;
-}
-
-.contentPadding {
-	@include contentPadding;
 }
 
 // Lists.

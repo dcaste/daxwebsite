@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './splitContent.module.scss';
 
 const SplitContent = (props) => {
-	const { Tag, split, direction } = props;
+	const { Tag, split, direction, className } = props;
 	const splitClass = split !== undefined && `splitContent__${split}`;
 	const splitDirection = direction === 'rl' && 'splitContent__RightToLeft';
 
@@ -12,7 +12,8 @@ const SplitContent = (props) => {
 			className={classNames(
 				styles.splitContent,
 				styles[splitClass],
-				styles[splitDirection]
+				styles[splitDirection],
+				className
 			)}
 		>
 			{props.children}

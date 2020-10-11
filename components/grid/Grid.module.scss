@@ -1,0 +1,65 @@
+/* Grid Content Component styles */
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.layoutGrid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+
+	@include mobile {
+		gap: 2rem;
+	}
+	@include tablet-h {
+		gap: 3rem;
+	}
+	@include laptop-m {
+		gap: 4rem;
+	}
+}
+
+.layoutGrid__1 {
+	@extend .layoutGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+	@include tablet-h {
+		grid-template-columns: 1fr;
+	}
+}
+
+.layoutGrid__2 {
+	@extend .layoutGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+	@include tablet-h {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.layoutGrid__3 {
+	@extend .layoutGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+	@include tablet-h {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include laptop-m {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.layoutGrid__4 {
+	@extend .layoutGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+	@include tablet-h {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include laptop-m {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
