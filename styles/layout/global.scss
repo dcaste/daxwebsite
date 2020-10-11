@@ -84,48 +84,6 @@ p + h6 {
 	}
 }
 
-// Forms.
-[type='text'],
-[type='password'],
-[type='date'],
-[type='datetime'],
-[type='datetime-local'],
-[type='month'],
-[type='week'],
-[type='email'],
-[type='number'],
-[type='search'],
-[type='tel'],
-[type='time'],
-[type='url'],
-[type='color'],
-select,
-textarea {
-	background-color: $grey_lighter;
-	border: 1px solid $grey_light;
-	cursor: text;
-	padding: 1rem;
-	line-height: 1em;
-	border-radius: $global-radius;
-	width: 100%;
-	height: auto;
-	box-sizing: border-box;
-	font-family: $fonts;
-
-	&:focus {
-		outline: 0px;
-	}
-
-	&::placeholder {
-		color: $black;
-		font-size: 0.9em;
-	}
-}
-
-select {
-	cursor: pointer;
-}
-
 // Miscellaneous.
 strong {
 	font-weight: $bold;
