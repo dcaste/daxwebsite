@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './Grid.module.scss';
 
-const Grid = ({ element, columns, children }) => {
+const Grid = ({ element, columns, children, className }) => {
 	let layoutGrid;
 	switch (columns) {
 		case 1:
@@ -24,7 +24,7 @@ const Grid = ({ element, columns, children }) => {
 			break;
 	}
 
-	return <div className={styles[layoutGrid]}>{children}</div>;
+	return <div className={(styles[layoutGrid], className)}>{children}</div>;
 };
 
 Grid.propTypes = {
