@@ -4,7 +4,7 @@
 @import './../../styles/settings/mixins.scss';
 
 .featureList {
-	@include contentPadding;
+	@include contentSpacing;
 
 	display: grid;
 	align-items: flex-start;

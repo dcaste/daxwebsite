@@ -200,8 +200,8 @@ hr {
 	grid-column: 1/-1;
 }
 
-.contentPadding {
-	@include contentPadding;
+.contentSpacing {
+	@include contentSpacing;
 }
 
 // Typography

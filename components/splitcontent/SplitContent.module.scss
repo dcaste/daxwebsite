@@ -3,7 +3,7 @@
 @import './../../styles/settings/mixins.scss';
 
 .splitContent {
-	@include contentPadding;
+	@include contentSpacing;
 
 	display: grid;
 	align-items: center;
