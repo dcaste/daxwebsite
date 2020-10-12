@@ -4,7 +4,6 @@
 
 .splitContent {
 	@include contentSpacing;
-
 	display: grid;
 	align-items: center;
 	justify-items: center;
@@ -13,17 +12,22 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		gap: 1rem;
-
-		picture {
-			order: 1;
-		}
-		div {
-			order: 2;
-		}
 	}
 
 	@include tablet-v {
 		gap: 3rem;
+	}
+}
+
+.splitContent__img {
+	@include mobile {
+		order: 1;
+	}
+}
+
+.splitContent__copy {
+	@include mobile {
+		order: 2;
 	}
 }
 

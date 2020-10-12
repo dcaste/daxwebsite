@@ -20,7 +20,7 @@ export default function Layout({ children, home }) {
 			<div id='mainWrapper'>
 				<NavMenu element='header' />
 				<main id='mainContent' role='main'>
-					<article>{children}</article>
+					<article id='mainArticle'>{children}</article>
 				</main>
 				<NavMenu element='footer' />
 			</div>

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import styles from './Image.module.scss';
+import classNames from 'classnames';
 
 const Image = ({
 	alt,
@@ -7,10 +8,13 @@ const Image = ({
 	src_lg,
 	src_md,
 	src_sm,
-	margin,
-	imgClass,
+	className,
+	isRounded,
 	width,
 }) => {
+	const imgClasses = className;
+	const rounded = isRounded === true ? 'rounded' : null;
+
 	return (
 		<picture className={styles.Image}>
 			<source media='(max-width: 480px)' srcSet={src_sm} />
@@ -19,8 +23,7 @@ const Image = ({
 				src={src_lg}
 				alt={alt}
 				title={title}
-				style={{ margin: `${margin}` }}
-				className={styles[imgClass]}
+				className={styles[rounded]}
 				width={width}
 				loading='lazy'
 			/>
@@ -34,8 +37,6 @@ Image.propTypes = {
 	src_lg: PropTypes.string.isRequired,
 	src_md: PropTypes.string,
 	src_sm: PropTypes.string,
-	imgClass: PropTypes.string,
-	margin: PropTypes.string,
 	width: PropTypes.string,
 };
 

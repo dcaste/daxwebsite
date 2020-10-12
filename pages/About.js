@@ -54,130 +54,132 @@ const About = () => {
 				</div>
 			</SplitContent>
 
-			<Card>
-				<h2 className='textCentered'>
-					<span className='textRed marginRight'>
-						<FontAwesomeIcon icon='briefcase' />
-					</span>{' '}
-					Work Experience
-				</h2>
-				<Grid columns={2}>
-					<div>
-						<h3>
-							As a member of{' '}
-							<a
-								href='https://rain.agency/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Rain Agency
-							</a>{' '}
-							WordPress Team
-						</h3>
-						<ul>
-							<li>
-								Developing of custom plugins and the main theme backend for{' '}
+			<SplitContent>
+				<Card>
+					<h2 className='textCentered'>
+						<span className='textRed marginRight'>
+							<FontAwesomeIcon icon='briefcase' />
+						</span>{' '}
+						Work Experience
+					</h2>
+					<Grid columns={2}>
+						<div>
+							<h3>
+								As a member of{' '}
 								<a
-									href='https://www.campbells.com/kitchen/'
+									href='https://rain.agency/'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
-									Campbell's Kitchen
-								</a>
-								, the biggest Campbell's website. Those plugins and main theme
-								were later implemented in other Campbell's ministes such as{' '}
-								<a
-									href='https://www.campbells.com/swanson/'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Swanson
-								</a>
-								,{' '}
-								<a
-									href='https://www.campbells.com/v8/'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									V8
+									Rain Agency
 								</a>{' '}
-								and{' '}
+								WordPress Team
+							</h3>
+							<ul>
+								<li>
+									Developing of custom plugins and the main theme backend for{' '}
+									<a
+										href='https://www.campbells.com/kitchen/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Campbell's Kitchen
+									</a>
+									, the biggest Campbell's website. Those plugins and main theme
+									were later implemented in other Campbell's ministes such as{' '}
+									<a
+										href='https://www.campbells.com/swanson/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Swanson
+									</a>
+									,{' '}
+									<a
+										href='https://www.campbells.com/v8/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										V8
+									</a>{' '}
+									and{' '}
+									<a
+										href='https://www.campbells.com/well-yes/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Well Zes!
+									</a>
+								</li>
+								<li>
+									Integration of the external API Recipe Reviews in the theme
+									with AJAX and PHP.
+								</li>
+								<li>
+									Integration of{' '}
+									<a
+										href='https://schema.org/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										Schema.org
+									</a>{' '}
+									structured data in the main theme, especially in recipes.
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h3>
+								As Web Developer Team Leader in{' '}
 								<a
-									href='https://www.campbells.com/well-yes/'
+									href='https://tactic-center.com/'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
-									Well Zes!
+									Tactic Center
 								</a>
-							</li>
-							<li>
-								Integration of the external API Recipe Reviews in the theme with
-								AJAX and PHP.
-							</li>
-							<li>
-								Integration of{' '}
-								<a
-									href='https://schema.org/'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									Schema.org
-								</a>{' '}
-								structured data in the main theme, especially in recipes.
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h3>
-							As Web Developer Team Leader in{' '}
-							<a
-								href='https://tactic-center.com/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Tactic Center
-							</a>
-						</h3>
-						<ul className='splitContent__list'>
-							<li>
-								Supervising and assisting two junior developers as Web
-								Development Team Leader.
-							</li>
-							<li>
-								Development of custom Wordpress themes and plugins using SEO
-								best practices, PHPCS security standards and optimized under
-								GTMetrix and Google PageSpeed performance requirements.
-							</li>
-							<li>
-								Planning the development processes of the company's main
-								websites.
-							</li>
-							<li>
-								Established the company development security standards, Git
-								workflow and assisted in moving existing websites to a new
-								hosting provider.
-							</li>
-							<li>
-								WooCommerce integration for E-commerce websites and Active
-								Campaign software as CRM.
-							</li>
-						</ul>
-					</div>
-					<div className='entireColumn width70'>
-						<h3>As Freelance WordPress Developer</h3>
-						<p>
-							As freelance developer I have worked in small teams and by myself
-							in a variety of projects, both in frontend and backend.
-						</p>
-						<p>
-							With my own clients I have been in charge of the whole process of
-							conceptualization, designing the UI, coding and deployment of
-							websites. In some cases I still provide services of Webmastering
-							and Hosting.
-						</p>
-					</div>
-				</Grid>
-			</Card>
+							</h3>
+							<ul className='splitContent__list'>
+								<li>
+									Supervising and assisting two junior developers as Web
+									Development Team Leader.
+								</li>
+								<li>
+									Development of custom Wordpress themes and plugins using SEO
+									best practices, PHPCS security standards and optimized under
+									GTMetrix and Google PageSpeed performance requirements.
+								</li>
+								<li>
+									Planning the development processes of the company's main
+									websites.
+								</li>
+								<li>
+									Established the company development security standards, Git
+									workflow and assisted in moving existing websites to a new
+									hosting provider.
+								</li>
+								<li>
+									WooCommerce integration for E-commerce websites and Active
+									Campaign software as CRM.
+								</li>
+							</ul>
+						</div>
+						<div className='entireColumn width70'>
+							<h3>As Freelance WordPress Developer</h3>
+							<p>
+								As freelance developer I have worked in small teams and by
+								myself in a variety of projects, both in frontend and backend.
+							</p>
+							<p>
+								With my own clients I have been in charge of the whole process
+								of conceptualization, designing the UI, coding and deployment of
+								websites. In some cases I still provide services of Webmastering
+								and Hosting.
+							</p>
+						</div>
+					</Grid>
+				</Card>
+			</SplitContent>
 
 			<SplitContent>
 				<h2>

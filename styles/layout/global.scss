@@ -73,14 +73,11 @@ p + h6 {
 
 	@include mobile {
 		max-width: 100%;
-		padding: 1rem 0;
+		margin-bottom: 3rem;
 	}
 	@include tablet-h {
 		max-width: 75%;
-		padding: 1.5rem 0;
-	}
-	@include laptop-m {
-		max-width: 50%;
+		margin-bottom: 5rem;
 	}
 }
 

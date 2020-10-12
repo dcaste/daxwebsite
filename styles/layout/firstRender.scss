@@ -20,6 +20,15 @@ body {
 	padding-bottom: 150px;
 }
 
+#mainArticle {
+	@include mobile {
+		padding: 3rem 0;
+	}
+	@include laptop-m {
+		padding: 5rem 0;
+	}
+}
+
 // Nav Menus
 .navMenu {
 	@include alignwide;

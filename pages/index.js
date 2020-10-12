@@ -22,7 +22,8 @@ export default function Home() {
 				<Image
 					src_lg='/assets/img/avatar.jpg'
 					alt='Dax Castellón'
-					imgClass='rounded'
+					className='splitContent__img'
+					isRounded={true}
 				/>
 				<div className='mobileCentered'>
 					<Title Tag='h1' titleBlack="Hi, I'm" titleRed='Dax' />

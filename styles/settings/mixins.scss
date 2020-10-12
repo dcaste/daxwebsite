@@ -59,16 +59,18 @@
 }
 
 @mixin contentSpacing {
-	@include mobile {
-		margin: 2rem 0;
+	$this: &;
+
+	* + & {
+		@include mobile {
+			margin-top: 7rem;
+		}
+		@include laptop-m {
+			margin-top: 15rem;
+		}
 	}
-	@include tablet-v {
-		margin: 3rem 0;
-	}
-	@include laptop-m {
-		margin: 5rem 0;
-	}
-	@include large-screens {
-		margin: 8rem 0;
+
+	h1 + & {
+		margin-top: 0;
 	}
 }
