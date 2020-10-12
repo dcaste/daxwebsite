@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from './Grid.module.scss';
+import classNames from 'classnames';
 
-const Grid = ({ element, columns, children, className }) => {
-	let layoutGrid;
+const Grid = ({ Tag, columns, children, className }) => {
+	let layoutGrid = '';
+
 	switch (columns) {
 		case 1:
 			layoutGrid = 'layoutGrid__1';
@@ -11,31 +13,30 @@ const Grid = ({ element, columns, children, className }) => {
 		case 2:
 			layoutGrid = 'layoutGrid__2';
 			break;
-
 		case 3:
 			layoutGrid = 'layoutGrid__3';
 			break;
-
 		case 4:
 			layoutGrid = 'layoutGrid__4';
 			break;
-
 		default:
+			layoutGrid = 'layoutGrid__1';
 			break;
 	}
 
-	return <div className={(styles[layoutGrid], className)}>{children}</div>;
+	return (
+		<Tag className={classNames(styles[layoutGrid], className)}>{children}</Tag>
+	);
 };
 
 Grid.propTypes = {
-	element: PropTypes.string,
+	Tag: PropTypes.string,
 	columns: PropTypes.number,
-	rows: PropTypes.number,
 	gap: PropTypes.number,
 };
 
 Grid.defaultProps = {
-	element: 'div',
+	Tag: 'div',
 	columns: 1,
 	gap: 1,
 };
