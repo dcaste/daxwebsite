@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import Image from '../components/image/Image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
 import Title from '../components/Title';
