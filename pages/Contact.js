@@ -1,10 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import Grid from '../components/grid/Grid';
-import Image from '../components/image/Image';
 import Form from '../components/form/Form';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import btnStyles from './../components/buttons/Btn.module.scss';
 
 const Contact = () => {
 	return (

@@ -22,35 +22,33 @@
 .formSocial {
 	font-size: 2em;
 }
-
 .formWrapper {
 	width: 100%;
-	display: grid;
-	gap: 1rem;
-	margin-top: 1rem;
-
-	label {
-		margin-bottom: 0.5em;
-		display: block;
-	}
+	margin-top: 2rem;
 }
-
+.label {
+	margin-bottom: 0.5rem;
+	display: inline-block;
+}
 .input {
-	background-color: $grey_lighter;
+	width: 100% !important;
+	background-color: $white;
 	border: 1px solid $grey_light;
 	cursor: text;
 	padding: 1rem 1.5rem;
 	margin: auto;
 	line-height: 1em;
 	border-radius: $global-radius;
-	height: auto;
 	box-sizing: border-box;
 	font-family: $fonts;
 	font-size: 0.9em;
 	display: inline-block;
+	resize: none;
 
 	&:focus {
 		outline: 0px;
+		border: 1px solid $red;
+		background-color: $white;
 	}
 
 	&::placeholder {
@@ -58,3 +56,29 @@
 		font-size: 0.9em;
 	}
 }
+
+.error {
+	display: inline-block;
+	position: relative;
+	padding: 0.5em 1rem;
+	margin: 0.5rem 0 0 0;
+	font-weight: $bold;
+	font-size: 0.9em;
+	color: $red;
+	background-color: lighten($red, 40);
+	border-radius: 5px;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 100%;
+		left: 2rem;
+		margin-left: -10px;
+		border-width: 7px;
+		border-style: solid;
+		border-color: transparent transparent lighten($red, 40) transparent;
+	}
+}
+
+// .errorText{
+
+// }
