@@ -1,7 +1,7 @@
 import styles from './Form.module.scss';
 import btnStyles from './../buttons/Btn.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from '../../components/image/Image';
+import Image from '../image/Image';
 import { useFormik } from 'formik';
 
 const validate = (values) => {
