@@ -47,7 +47,7 @@
 
 	&:focus {
 		outline: 0px;
-		border: 1px solid $red;
+		border: 1px solid $black;
 		background-color: $white;
 	}
 
@@ -62,8 +62,8 @@
 	position: relative;
 	padding: 0.5em 1rem;
 	margin: 0.5rem 0 0 0;
+	font-size: 0.85em;
 	font-weight: $bold;
-	font-size: 0.9em;
 	color: $red;
 	background-color: lighten($red, 40);
 	border-radius: 5px;
@@ -78,7 +78,3 @@
 		border-color: transparent transparent lighten($red, 40) transparent;
 	}
 }
-
-// .errorText{
-
-// }

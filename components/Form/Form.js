@@ -33,9 +33,7 @@ const Form = () => {
 			yourMessage: '',
 		},
 		validate,
-		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
-		},
+		onSubmit: (values) => {},
 	});
 
 	return (
@@ -62,7 +60,14 @@ const Form = () => {
 				</a>
 			</p>
 
-			<form onSubmit={formik.handleSubmit} className={styles.formWrapper}>
+			<form
+				method='POST'
+				onSubmit={formik.handleSubmit}
+				className={styles.formWrapper}
+				data-netlify='true'
+				name='contactMe'
+				action='/thank-you'
+			>
 				<p>
 					<label htmlFor='yourName' className={styles.label}>
 						Name
@@ -91,9 +96,7 @@ const Form = () => {
 					/>
 				</p>
 				{formik.touched.yourEmail && formik.errors.yourEmail ? (
-					<p className={styles.error}>
-						<span className={styles.errorText}>{formik.errors.yourEmail}</span>
-					</p>
+					<p className={styles.error}>{formik.errors.yourEmail}</p>
 				) : null}
 				<p>
 					<label htmlFor='yourMessage' className={styles.label}>
@@ -104,6 +107,7 @@ const Form = () => {
 						id='yourMessage'
 						name='yourMessage'
 						type='yourMessage'
+						rows='8'
 						{...formik.getFieldProps('yourMessage')}
 					/>
 				</p>
