@@ -1,5 +1,5 @@
 import styles from './ContactForm.module.scss';
-import btnStyles from './../buttons/Btn.module.scss';
+import btnStyles from '../buttonsComponents/Btn.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../image/Image';
 import { useFormik } from 'formik';
