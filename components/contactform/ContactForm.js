@@ -1,4 +1,4 @@
-import styles from './Form.module.scss';
+import styles from './ContactForm.module.scss';
 import btnStyles from './../buttons/Btn.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '../image/Image';

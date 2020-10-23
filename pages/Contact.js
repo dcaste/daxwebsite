@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import Form from '../components/form/Form';
+import ContactForm from '../components/contactform/ContactForm';
 
 const Contact = () => {
 	return (
@@ -11,7 +11,7 @@ const Contact = () => {
 
 			<h1 className='pageTitle'>Contact Me</h1>
 
-			<Form />
+			<ContactForm />
 		</Layout>
 	);
 };
