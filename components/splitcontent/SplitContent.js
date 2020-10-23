@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './splitContent.module.scss';
+import styles from './SplitContent.module.scss';
 
 const SplitContent = (props) => {
 	const { Tag, split, direction, className } = props;
