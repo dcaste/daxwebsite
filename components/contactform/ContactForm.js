@@ -1,86 +1,92 @@
 import styles from './ContactForm.module.scss';
 import btnStyles from '../buttonsComponents/Btn.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from '../image/Image';
-import { useFormik } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-const Form = () => {
-	const formik = useFormik({
-		initialValues: {
-			yourName: '',
-			yourEmail: '',
-			yourMessage: '',
-		},
-		onSubmit: (values) => {
-			formik.resetForm;
-			formik.setSubmitting(false);
-			alert(JSON.stringify(values, null, 2));
-		},
-	});
-
+const ContactForm = () => {
 	return (
-		<form
-			method='POST'
-			onSubmit={formik.handleSubmit}
-			className={styles.formWrapper}
-			data-netlify='true'
-			name='contactMe'
-			action='/thank-you'
+		<Formik
+			initialValues={{ yourName: '', yourEmail: '', yourMessage: '' }}
+			validationSchema={Yup.object({
+				yourName: Yup.string().required('This field is required'),
+				yourMessage: Yup.string().required('This field is required'),
+				yourEmail: Yup.string()
+					.email('Invalid email address')
+					.required('This field is required'),
+			})}
+			onSubmit={(values, { setSubmitting }) => {
+				setTimeout(() => {
+					alert(JSON.stringify(values, null, 2));
+					setSubmitting(false);
+				}, 400);
+			}}
 		>
-			<p>
-				<label htmlFor='yourName' className={styles.label}>
-					Name
-				</label>
-				<input
-					className={styles.input}
-					id='yourName'
-					name='yourName'
-					type='text'
-					{...formik.getFieldProps('yourName')}
-				/>
-			</p>
-			{formik.touched.yourName && formik.errors.yourName ? (
-				<p className={styles.error}>{formik.errors.yourName}</p>
-			) : null}
-			<p>
-				<label htmlFor='yourEmail' className={styles.label}>
-					Email
-				</label>
-				<input
-					className={styles.input}
-					id='yourEmail'
-					name='yourEmail'
-					type='yourEmail'
-					{...formik.getFieldProps('yourEmail')}
-				/>
-			</p>
-			{formik.touched.yourEmail && formik.errors.yourEmail ? (
-				<p className={styles.error}>{formik.errors.yourEmail}</p>
-			) : null}
-			<p>
-				<label htmlFor='yourMessage' className={styles.label}>
-					Message
-				</label>
-				<textarea
-					className={styles.input}
-					id='yourMessage'
-					name='yourMessage'
-					type='yourMessage'
-					rows='8'
-					{...formik.getFieldProps('yourMessage')}
-				/>
-			</p>
-			{formik.touched.yourMessage && formik.errors.yourMessage ? (
-				<p className={styles.error}>{formik.errors.yourMessage}</p>
-			) : null}
-			<p>
-				<button type='submit' className={btnStyles.btn}>
-					Send Message
-				</button>
-			</p>
-		</form>
+			{(formik) => (
+				<form
+					method='POST'
+					onSubmit={formik.handleSubmit}
+					className={styles.formWrapper}
+					data-netlify='true'
+					name='contactMe'
+				>
+					<p>
+						<label htmlFor='yourName' className={styles.label}>
+							Name
+						</label>
+						<Field
+							className={styles.input}
+							id='yourName'
+							name='yourName'
+							type='text'
+						/>
+						<ErrorMessage
+							name='yourName'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						<label htmlFor='yourEmail' className={styles.label}>
+							Email
+						</label>
+						<Field
+							className={styles.input}
+							id='yourEmail'
+							name='yourEmail'
+							type='email'
+						/>
+						<ErrorMessage
+							name='yourEmail'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						<label htmlFor='yourMessage' className={styles.label}>
+							Message
+						</label>
+						<Field
+							className={styles.input}
+							id='yourMessage'
+							name='yourMessage'
+							as='textarea'
+							rows='8'
+						/>
+						<ErrorMessage
+							name='yourMessage'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						<button type='submit' className={btnStyles.btn}>
+							Send Message
+						</button>
+					</p>
+				</form>
+			)}
+		</Formik>
 	);
 };
 
-export default Form;
+export default ContactForm;
