@@ -22,11 +22,12 @@ const Contact = () => {
 						isRounded={true}
 					/>
 					<p className='textCentered'>
-						<span className='lead'>Dax Castellón Meyrat</span>
+						<strong className='lead'>Dax Castellón Meyrat</strong>
 						<br />
 						Web Developer
 						<br />
 					</p>
+					<p className='textCentered'>dax@daxcastellon.dev</p>
 					<p className='textCentered textBig'>
 						<a
 							href='https://www.linkedin.com/in/daxcastellonmeyrat/'
