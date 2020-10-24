@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import Link from 'next/link';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
 import Card from '../components/card/Card';
