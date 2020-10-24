@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import ContactForm from '../components/contactform/ContactForm';
+import SplitContent from '../components/splitcontent/SplitContent';
+import Image from '../components/image/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = () => {
 	return (
@@ -11,7 +14,42 @@ const Contact = () => {
 
 			<h1 className='pageTitle'>Contact Me</h1>
 
-			<ContactForm />
+			<SplitContent split='50-50' direction='lr'>
+				<div>
+					<Image
+						src_lg='/assets/img/avatar.jpg'
+						alt='Dax Castellón'
+						isRounded={true}
+					/>
+					<p className='textCentered'>
+						<span className='lead'>Dax Castellón Meyrat</span>
+						<br />
+						Web Developer
+						<br />
+					</p>
+					<p className='textCentered textBig'>
+						<a
+							href='https://www.linkedin.com/in/daxcastellonmeyrat/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<FontAwesomeIcon icon={['fab', 'linkedin']} />
+						</a>
+						<a
+							href='https://github.com/dcaste/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<FontAwesomeIcon
+								icon={['fab', 'github']}
+								className='marginLeft'
+							/>
+						</a>
+					</p>
+				</div>
+
+				<ContactForm />
+			</SplitContent>
 		</Layout>
 	);
 };
