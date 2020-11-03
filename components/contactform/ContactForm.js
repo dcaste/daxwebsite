@@ -21,17 +21,17 @@ const ContactForm = () => {
 				setTimeout(() => {
 					alert(JSON.stringify(values, null, 2));
 					setSubmitting(false);
+					emailjs
+						.sendForm('service_ae6ncmb', 'template_vk9xbjj', '#contactForm')
+						.then(
+							function (response) {
+								console.log('SUCCESS!', response.status, response.text);
+							},
+							function (error) {
+								console.log('FAILED...', error);
+							}
+						);
 				}, 400);
-				emailjs
-					.sendForm('service_ae6ncmb', 'template_vk9xbjj', '#contactForm')
-					.then(
-						function (response) {
-							console.log('SUCCESS!', response.status, response.text);
-						},
-						function (error) {
-							console.log('FAILED...', error);
-						}
-					);
 			}}
 		>
 			{(formik) => (
