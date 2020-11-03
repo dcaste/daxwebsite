@@ -2,6 +2,9 @@ import styles from './ContactForm.module.scss';
 import btnStyles from '../buttonsComponents/Btn.module.scss';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { init } from 'emailjs-com';
+
+init('user_OJTvyK60CS34CyVDlIKv5');
 
 const ContactForm = () => {
 	return (
@@ -19,15 +22,25 @@ const ContactForm = () => {
 					alert(JSON.stringify(values, null, 2));
 					setSubmitting(false);
 				}, 400);
+				emailjs
+					.sendForm('service_ae6ncmb', 'template_vk9xbjj', '#contactForm')
+					.then(
+						function (response) {
+							console.log('SUCCESS!', response.status, response.text);
+						},
+						function (error) {
+							console.log('FAILED...', error);
+						}
+					);
 			}}
 		>
 			{(formik) => (
-				<form
+				<Form
 					method='POST'
 					onSubmit={formik.handleSubmit}
 					className={styles.formWrapper}
-					data-netlify='true'
 					name='contactMe'
+					id='contactForm'
 				>
 					<p>
 						<label htmlFor='yourName' className={styles.label}>
@@ -83,7 +96,7 @@ const ContactForm = () => {
 							Send Message
 						</button>
 					</p>
-				</form>
+				</Form>
 			)}
 		</Formik>
 	);
