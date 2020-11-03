@@ -20,7 +20,6 @@ const ContactForm = () => {
 			onSubmit={(values, { setSubmitting }) => {
 				setTimeout(() => {
 					alert(JSON.stringify(values, null, 2));
-					setSubmitting(false);
 					emailjs
 						.sendForm('service_ae6ncmb', 'template_vk9xbjj', '#contactForm')
 						.then(
@@ -31,6 +30,7 @@ const ContactForm = () => {
 								console.log('FAILED...', error);
 							}
 						);
+					setSubmitting(false);
 				}, 400);
 			}}
 		>
