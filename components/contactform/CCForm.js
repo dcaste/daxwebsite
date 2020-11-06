@@ -6,7 +6,7 @@ import { emailjs, init } from 'emailjs-com';
 
 //init('user_OJTvyK60CS34CyVDlIKv5');
 
-const ContactForm = () => {
+const CCForm = () => {
 	return (
 		<Formik
 			initialValues={{ yourName: '', yourEmail: '', yourMessage: '' }}
@@ -105,4 +105,4 @@ const ContactForm = () => {
 	);
 };
 
-export default ContactForm;
+export default CCForm;

@@ -49,7 +49,7 @@ const Contact = () => {
 					</p>
 				</div>
 
-				<ContactForm />
+				<CCForm />
 			</SplitContent>
 		</Layout>
 	);
