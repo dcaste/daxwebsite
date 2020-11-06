@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import ContactForm from '../components/contactform/ContactForm';
+import CCForm from '../components/contactform/CCForm';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Image from '../components/image/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
