@@ -20,8 +20,9 @@
 		"@fortawesome/react-fontawesome": "^0.1.11",
 		"classnames": "^2.2.6",
 		"emailjs-com": "^2.6.3",
-		"formik": "^2.2.0",
+		"formik": "^2.2.2",
 		"prop-types": "^15.7.2",
+		"react-formal": "^2.1.2",
 		"sass": "^1.27.0",
 		"yup": "^0.29.3"
 	}

@@ -1,64 +1,119 @@
 import styles from './ContactForm.module.scss';
 import btnStyles from '../buttonsComponents/Btn.module.scss';
-import { useFormik } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
+import { useState } from 'react';
 
 const ContactForm = () => {
-	const formik = useFormik({
-		initialValues: {
-			email: '',
-		},
-		onSubmit: (e) => {
-			// alert(JSON.stringify(values, null, 2));
-			emailjs
-				.sendForm(
-					'service_ae6ncmb',
-					'template_vk9xbjj',
-					e.target,
-					'user_OJTvyK60CS34CyVDlIKv5'
-				)
-				.then(
-					(result) => {
-						console.log(result.text);
-					},
-					(error) => {
-						console.log(error.text);
-					}
-				);
-		},
-	});
-	const sendEmail = (e) => {
-		e.preventDefault();
+	const [btnSubmitValue, setBtnSubmitValue] = useState('Send message');
+	const [btnSubmitError, setBtnSubmitError] = useState(false);
 
+	const sendEmail = () => {
+		setBtnSubmitValue('Sending...');
 		emailjs
 			.sendForm(
 				'service_ae6ncmb',
 				'template_vk9xbjj',
-				e.target,
-				'user_OJTvyK60CS34CyVDlIKv5'
+				'contactMe',
+				'user_OJTvyK60CS34CyVDlIKv5X'
 			)
 			.then(
-				(result) => {
-					console.log(result.text);
+				function (response) {
+					console.log('SUCCESS!', response.status, response.text);
 				},
-				(error) => {
-					console.log(error.text);
+				function (error) {
+					console.log('FAILED...', error);
+					setBtnSubmitError(true);
 				}
 			);
 	};
 	return (
-		<form onSubmit={sendEmail} id='ContactForm'>
-			<label htmlFor='email'>Email Address</label>
-			<input
-				id='email'
-				name='email'
-				type='email'
-				onChange={formik.handleChange}
-				value={formik.values.email}
-			/>
-			<button type='submit'>Submit</button>
-		</form>
+		<Formik
+			initialValues={{ yourName: '', yourEmail: '', yourMessage: '' }}
+			validationSchema={Yup.object({
+				yourName: Yup.string().required('This field is required'),
+				yourMessage: Yup.string().required('This field is required'),
+				yourEmail: Yup.string()
+					.email('Invalid email address')
+					.required('This field is required'),
+			})}
+			onSubmit={(setSubmitting) => {
+				sendEmail();
+				setSubmitting(false);
+			}}
+		>
+			{(formik) => (
+				<Form
+					onSubmit={formik.handleSubmit}
+					className={styles.formWrapper}
+					name='contactMe'
+					id='contactMe'
+				>
+					<p>
+						<label htmlFor='yourName' className={styles.label}>
+							Name
+						</label>
+						<Field
+							className={styles.input}
+							id='yourName'
+							name='yourName'
+							type='text'
+						/>
+						<ErrorMessage
+							name='yourName'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						<label htmlFor='yourEmail' className={styles.label}>
+							Email
+						</label>
+						<Field
+							className={styles.input}
+							id='yourEmail'
+							name='yourEmail'
+							type='email'
+						/>
+						<ErrorMessage
+							name='yourEmail'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						<label htmlFor='yourMessage' className={styles.label}>
+							Message
+						</label>
+						<Field
+							className={styles.input}
+							id='yourMessage'
+							name='yourMessage'
+							as='textarea'
+							rows='8'
+						/>
+						<ErrorMessage
+							name='yourMessage'
+							component='span'
+							className={styles.error}
+						/>
+					</p>
+					<p>
+						{btnSubmitError ? (
+							<span className={styles.error}>
+								There was a problem sending this message. Please send me a
+								direct Email message or try again in a couple of minutes.
+							</span>
+						) : (
+							<button type='submit' className={btnStyles.btn}>
+								{btnSubmitValue}
+							</button>
+						)}
+					</p>
+				</Form>
+			)}
+		</Formik>
 	);
 };
 
