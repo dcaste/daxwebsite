@@ -6,17 +6,24 @@ import emailjs from 'emailjs-com';
 import { useState } from 'react';
 
 const ContactForm = () => {
-	const [btnSubmitValue, setBtnSubmitValue] = useState('Send message');
-	const [btnSubmitError, setBtnSubmitError] = useState(false);
+	const [btnSubmitValue, setBtnSubmitValue] = useState('Send message'); // Submit Button Value
+	const [btnSubmitError, showSubmitErrMsg] = useState(false); // Error Submit Message
+
+	const clearFormHandler = () => {
+		setBtnSubmitValue('Send message');
+		showSubmitErrMsg(false);
+	};
 
 	const sendEmail = () => {
 		setBtnSubmitValue('Sending...');
+
+		// Config your variables in next.config.js
 		emailjs
 			.sendForm(
-				'service_ae6ncmb',
-				'template_vk9xbjj',
+				process.env.emailjsService,
+				process.env.emailjsTemplate,
 				'contactMe',
-				'user_OJTvyK60CS34CyVDlIKv5X'
+				process.env.emailjsUser
 			)
 			.then(
 				function (response) {
@@ -24,7 +31,7 @@ const ContactForm = () => {
 				},
 				function (error) {
 					console.log('FAILED...', error);
-					setBtnSubmitError(true);
+					showSubmitErrMsg(true);
 				}
 			);
 	};
@@ -101,10 +108,21 @@ const ContactForm = () => {
 					</p>
 					<p>
 						{btnSubmitError ? (
-							<span className={styles.error}>
-								There was a problem sending this message. Please send me a
-								direct Email message or try again in a couple of minutes.
-							</span>
+							<div className={styles.sendingError}>
+								<p>
+									There was a problem sending this message. Please send me a
+									direct Email message or try again in a couple of minutes.
+								</p>
+								<p>
+									<button
+										type='reset'
+										className={btnStyles.btn}
+										onClick={clearFormHandler}
+									>
+										OK
+									</button>
+								</p>
+							</div>
 						) : (
 							<button type='submit' className={btnStyles.btn}>
 								{btnSubmitValue}

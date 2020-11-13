@@ -78,3 +78,15 @@
 		border-color: transparent transparent lighten($red, 40) transparent;
 	}
 }
+
+.sendingError {
+	display: inline-block;
+	position: relative;
+	padding: 0.5em 1rem;
+	margin: 0.5rem 0 0 0;
+	font-size: 0.85em;
+	font-weight: $bold;
+	color: $red;
+	background-color: lighten($red, 40);
+	border-radius: 5px;
+}
