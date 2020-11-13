@@ -17,7 +17,6 @@ const ContactForm = () => {
 	const sendEmail = () => {
 		setBtnSubmitValue('Sending...');
 
-		// Config your variables in next.config.js
 		emailjs
 			.sendForm(
 				process.env.emailjsService,
