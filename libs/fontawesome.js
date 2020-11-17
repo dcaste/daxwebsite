@@ -10,7 +10,10 @@ import {
 	faUsers,
 	faExternalLinkAlt,
 	faCheck,
+	faCheckCircle,
 	faInfoCircle,
+	faTimes,
+	faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -26,5 +29,8 @@ library.add(
 	faLinkedin,
 	faGithub,
 	faCheck,
-	faInfoCircle
+	faCheckCircle,
+	faInfoCircle,
+	faTimes,
+	faExclamationTriangle
 );

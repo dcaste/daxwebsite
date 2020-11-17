@@ -1,0 +1,36 @@
+/* Alert messages */
+@import './../../styles/settings/variables.scss';
+
+.alert {
+	padding: 0.5rem 1rem;
+	font-size: 0.85em;
+	border-radius: 4px;
+}
+.alertError {
+	@extend .alert;
+	background-color: $red_light;
+	strong {
+		color: $red;
+	}
+}
+.alertWarning {
+	@extend .alert;
+	background-color: $yellow_light;
+	strong {
+		color: $yellow;
+	}
+}
+.alertSuccess {
+	@extend .alert;
+	background-color: $green_light;
+	strong {
+		color: $green;
+	}
+}
+.alertInfo {
+	@extend .alert;
+	background-color: $blue_light;
+	strong {
+		color: $blue;
+	}
+}

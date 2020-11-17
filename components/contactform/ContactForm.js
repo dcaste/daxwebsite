@@ -4,15 +4,14 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
+import Alert from './../alert/Alert';
 
 const ContactForm = () => {
-	const [btnSubmitValue, setBtnSubmitValue] = useState('Send message'); // Submit Button Value
-	const [btnSubmitError, showSubmitErrMsg] = useState(false); // Error Submit Message
+	// Submit Button Value
+	const [btnSubmitValue, setBtnSubmitValue] = useState('Send message');
 
-	const clearFormHandler = () => {
-		setBtnSubmitValue('Send message');
-		showSubmitErrMsg(false);
-	};
+	// Form Response (success or error)
+	const [formResponse, setFormResponse] = useState('neutral');
 
 	const sendEmail = () => {
 		setBtnSubmitValue('Sending...');
@@ -27,13 +26,22 @@ const ContactForm = () => {
 			.then(
 				function (response) {
 					console.log('SUCCESS!', response.status, response.text);
+					setFormResponse('success');
+					setBtnSubmitValue('Send message');
 				},
 				function (error) {
 					console.log('FAILED...', error);
-					showSubmitErrMsg(true);
+					setFormResponse('error');
+					setBtnSubmitValue('Send message');
 				}
 			);
 	};
+
+	const handleReset = () => {
+		setFormResponse('neutral');
+		setBtnSubmitValue('Send message');
+	};
+
 	return (
 		<Formik
 			initialValues={{ yourName: '', yourEmail: '', yourMessage: '' }}
@@ -105,29 +113,27 @@ const ContactForm = () => {
 							className={styles.error}
 						/>
 					</p>
-					<p>
-						{btnSubmitError ? (
-							<div className={styles.sendingError}>
-								<p>
-									There was a problem sending this message. Please send me a
-									direct Email message or try again in a couple of minutes.
-								</p>
-								<p>
-									<button
-										type='reset'
-										className={btnStyles.btn}
-										onClick={clearFormHandler}
-									>
-										OK
-									</button>
-								</p>
-							</div>
-						) : (
+					{formResponse === 'neutral' && (
+						<p>
 							<button type='submit' className={btnStyles.btn}>
 								{btnSubmitValue}
 							</button>
-						)}
-					</p>
+						</p>
+					)}
+					{formResponse === 'success' && (
+						<Alert
+							severity='success'
+							msg='Thank you for contacting me, your message has been succesfully
+								delivered!'
+						/>
+					)}
+					{formResponse === 'error' && (
+						<Alert
+							severity='error'
+							msg='There was a problem sending this message. Please send me a
+								direct Email message or try again in a couple of minutes.'
+						/>
+					)}
 				</Form>
 			)}
 		</Formik>
