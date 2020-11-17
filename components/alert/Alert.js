@@ -2,7 +2,7 @@ import styles from './Alert.module.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Alert = ({ severity, msg }) => {
+const Alert = ({ severity, children }) => {
 	let alertSeverity = '';
 	let alertTitle = '';
 	let icon = '';
@@ -41,14 +41,13 @@ const Alert = ({ severity, msg }) => {
 					{alertTitle}
 				</strong>
 			</p>
-			<p>{msg}</p>
+			{children}
 		</div>
 	);
 };
 
 Alert.propTypes = {
-	msg: PropTypes.string.isRequired,
-	severity: PropTypes.string.isRequired,
+	severity: PropTypes.string,
 };
 
 Alert.defaultProps = {

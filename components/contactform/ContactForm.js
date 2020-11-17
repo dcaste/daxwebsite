@@ -121,18 +121,29 @@ const ContactForm = () => {
 						</p>
 					)}
 					{formResponse === 'success' && (
-						<Alert
-							severity='success'
-							msg='Thank you for contacting me, your message has been succesfully
-								delivered!'
-						/>
+						<Alert severity='success'>
+							<p>
+								Thank you for contacting me, your message has been succesfully
+								delivered!
+							</p>
+						</Alert>
 					)}
 					{formResponse === 'error' && (
-						<Alert
-							severity='error'
-							msg='There was a problem sending this message. Please send me a
-								direct Email message or try again in a couple of minutes.'
-						/>
+						<Alert severity='error'>
+							<p>
+								There was a problem sending this message. Please send me a
+								direct Email message or try again in a couple of minutes.
+							</p>
+							<p>
+								<button
+									type='reset'
+									className={btnStyles.btn}
+									onClick={handleReset}
+								>
+									OK
+								</button>
+							</p>
+						</Alert>
 					)}
 				</Form>
 			)}
