@@ -1,8 +1,8 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import ContactForm from '../components/contactform/ContactForm';
 import SplitContent from '../components/splitcontent/SplitContent';
-import Image from '../components/image/Image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contact = () => {
@@ -17,9 +17,11 @@ const Contact = () => {
 			<SplitContent split='50-50' direction='lr'>
 				<div>
 					<Image
-						src_lg='/assets/img/avatar.jpg'
+						src='/assets/img/avatar.jpg'
 						alt='Dax Castellón'
-						isRounded={true}
+						className='rounded'
+						width={300}
+						height={300}
 					/>
 					<p className='textCentered'>
 						<strong className='lead'>Dax Castellón Meyrat</strong>

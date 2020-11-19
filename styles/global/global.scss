@@ -97,12 +97,6 @@ a {
 	}
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-	display: inline-block;
-}
-
 p {
 	margin: 0px;
 	line-height: 1.5em;
@@ -127,6 +121,10 @@ hr {
 	@include laptop-m {
 		margin: 5rem auto;
 	}
+}
+
+.rounded {
+	border-radius: 50%;
 }
 
 // Grid / Layout

@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from '../components/image/Image';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/Title';
 import FeatureList from '../components/featurelist/FeatureList';
@@ -20,10 +20,11 @@ export default function Home() {
 
 			<SplitContent tag='section' split='50-50' direction='lr'>
 				<Image
-					src_lg='/assets/img/avatar.jpg'
+					src='/assets/img/avatar.jpg'
 					alt='Dax Castellón'
-					className='splitContent__img'
-					isRounded={true}
+					width={300}
+					height={299}
+					className='rounded'
 				/>
 				<div className='mobileCentered'>
 					<Title Tag='h1' titleBlack="Hi, I'm" titleRed='Dax' />
@@ -43,11 +44,10 @@ export default function Home() {
 
 			<SplitContent tag='section' split='40-60' direction='rl'>
 				<Image
-					src_lg='/assets/img/projects-home.png'
-					src_md='/assets/img/projects-home-480.png'
-					src_sm='/assets/img/projects-home-300.png'
-					align='center'
+					src='/assets/img/projects-home.png'
 					alt='Dax Castellón Work examples.'
+					width={640}
+					height={320}
 				/>
 				<div>
 					<Title Tag='h2' titleBlack='Work' titleRed='Experience' />

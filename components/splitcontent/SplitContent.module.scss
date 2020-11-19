@@ -65,10 +65,10 @@
 
 .splitContent__RightToLeft {
 	@include tablet-h {
-		picture {
+		.splitContent__picture {
 			order: 2;
 		}
-		div {
+		.splitContent__content {
 			order: 1;
 		}
 	}
