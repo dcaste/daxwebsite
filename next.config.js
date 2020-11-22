@@ -4,4 +4,5 @@ module.exports = {
 		emailjsTemplate: 'template_vk9xbjj',
 		emailjsUser: 'user_OJTvyK60CS34CyVDlIKv5',
 	},
+	trailingSlash: true,
 };
