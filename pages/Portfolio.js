@@ -4,6 +4,7 @@ import Layout, { siteTitle } from '../components/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
 import Title from '../components/Title';
+import styles from '../components/splitcontent/SplitContent.module.scss';
 
 const Portfolio = () => {
 	return (
@@ -14,13 +15,7 @@ const Portfolio = () => {
 			<h1 className='pageTitle'>Portfolio</h1>
 
 			<SplitContent split='60-40'>
-				<Image
-					src='/assets/img/project-ck.png'
-					alt="Kampbell's Kitchen Website"
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Campbell’s Kitchen' />
 					<p>
 						<strong>
@@ -37,7 +32,7 @@ const Portfolio = () => {
 							https://www.campbells.com/kitchen/
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>
 							As a member of{' '}
 							<a
@@ -72,15 +67,23 @@ const Portfolio = () => {
 							and the plugins gave blocks of content to the administrators by
 							using custom fields.
 						</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies: HTML5, LESS, CSS3, jQuery, PHP, AJAX.
 						</li>
 					</ul>
 				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-ck.png'
+						alt="Kampbell's Kitchen Website"
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
 
 			<SplitContent split='40-60' direction='rl'>
-				<div className='splitContent__content'>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Swanson' />
 					<p>
 						<strong>
@@ -98,7 +101,7 @@ const Portfolio = () => {
 							https://www.campbells.com/swanson/
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>
 							As a member of{' '}
 							<a
@@ -115,12 +118,12 @@ const Portfolio = () => {
 							content and adjustments to the child custom theme based on the
 							main Campbell’s Kitchen theme.
 						</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies:HTML5, LESS, CSS3, jQuery, PHP, AJAX.
 						</li>
 					</ul>
 				</div>
-				<div className='splitContent__picture'>
+				<div className={styles.picture}>
 					<Image
 						src='/assets/img/project-swanson.png'
 						alt='Swanson website'
@@ -131,13 +134,7 @@ const Portfolio = () => {
 			</SplitContent>
 
 			<SplitContent split='60-40'>
-				<Image
-					src='/assets/img/project-kh.png'
-					alt='Kindhumans website'
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Kindhumans' />
 					<p>
 						<strong>
@@ -154,22 +151,30 @@ const Portfolio = () => {
 							https://kindhumans.com/{' '}
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>As freelance developer</li>
 						<li>Developed the Blogs section with AJAX filter</li>
 						<li>
 							Developed the basic theme for the WooCommerce products and cart
 							sections
 						</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
 				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-kh.png'
+						alt='Kindhumans website'
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
 
 			<SplitContent split='40-60' direction='rl'>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
 					<p>
 						<strong>
@@ -186,7 +191,7 @@ const Portfolio = () => {
 							https://lasmercedes.com.ni/
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>
 							As Web Developer Team Leader in{' '}
 							<a
@@ -201,31 +206,28 @@ const Portfolio = () => {
 							Front-end and Back-end development of custom theme and plugins
 						</li>
 						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
 				</div>
-				<Image
-					src='/assets/img/project-bwl.png'
-					alt='Hotel Best Western Las Mercedes website'
-					width={640}
-					height={320}
-				/>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-bwl.png'
+						alt='Hotel Best Western Las Mercedes website'
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
+
 			<SplitContent split='60-40'>
-				<Image
-					src='/assets/img/project-delisoy.png'
-					alt='Delisoy website'
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Delisoy' />
 					<p>
 						<strong>Delisoy is the lead brand of soy milk in Nicaragua.</strong>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>
 							As Web Developer Team Leader in{' '}
 							<a
@@ -241,8 +243,8 @@ const Portfolio = () => {
 						</li>
 						<li>WooCommerce integration as a catalog of products</li>
 						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
-							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
+						<li className={styles.technologies}>
+							Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
 					<p>
@@ -255,23 +257,25 @@ const Portfolio = () => {
 						</a>
 					</p>
 				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-delisoy.png'
+						alt='Delisoy website'
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
 
 			<SplitContent split='40-60' direction='rl'>
-				<Image
-					src='/assets/img/project-cashpak.png'
-					alt='CashPak Nicaragua website'
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
 					<p>
 						<strong>
 							CashPak is a Nicaraguan nationwide WesternUnion subsidiary.
 						</strong>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>
 							As Web Developer Team Leader in{' '}
 							<a
@@ -286,8 +290,8 @@ const Portfolio = () => {
 							Front-end and Back-end development of custom theme and plugins
 						</li>
 						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
-							Technologies: Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
+						<li className={styles.technologies}>
+							Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
 					<p>
@@ -300,16 +304,18 @@ const Portfolio = () => {
 						</a>
 					</p>
 				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-cashpak.png'
+						alt='CashPak Nicaragua website'
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
 
 			<SplitContent split='60-40'>
-				<Image
-					src='/assets/img/project-haydee.png'
-					alt='Cocina Dña Haydeé website'
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Cocina Dña Haydeé' />
 					<p>
 						<strong>
@@ -327,7 +333,7 @@ const Portfolio = () => {
 							http://lacocina.com.ni/
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>Front-end and Back-end custom WordPress theme and plugins</li>
 						<li>
 							The WP theme allows the managers to change prices and dishes. The
@@ -336,21 +342,23 @@ const Portfolio = () => {
 						</li>
 						<li>In site SEO</li>
 						<li>UI design and photo retouching</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
 				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-haydee.png'
+						alt='Cocina Dña Haydeé website'
+						width={640}
+						height={320}
+					/>
+				</div>
 			</SplitContent>
 
 			<SplitContent split='40-60' direction='rl'>
-				<Image
-					src='/assets/img/project-candido.png'
-					alt='Restaurante Don Candido website'
-					width={640}
-					height={320}
-				/>
-				<div>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Restaurante Don Candido' />
 					<p>
 						<strong>
@@ -368,14 +376,22 @@ const Portfolio = () => {
 							http://restaurantedoncandido.com/
 						</a>
 					</p>
-					<ul className='splitContent__list'>
+					<ul className={styles.list}>
 						<li>Custom WordPress theme, plugins and hosting services</li>
 						<li>UI design and photo retouching</li>
 						<li>In site SEO</li>
-						<li className='splitContent__technologies'>
+						<li className={styles.technologies}>
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
+				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/project-candido.png'
+						alt='Restaurante Don Candido website'
+						width={640}
+						height={320}
+					/>
 				</div>
 			</SplitContent>
 
@@ -384,82 +400,106 @@ const Portfolio = () => {
 					Other websites in which I have contributed with similar tasks:
 				</h4>
 				<div>
-					<p>As a member of Rain Agency WordPress team</p>
-					<a
-						href='https://www.campbells.com/v8/ '
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://www.campbells.com/v8/
-					</a>
-					<a
-						href='https://www.campbells.com/well-yes/ '
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://www.campbells.com/well-yes/
-					</a>
+					<h5>As a member of Rain Agency WordPress team</h5>
+					<ul className={styles.list}>
+						<li>
+							<a
+								href='https://www.campbells.com/v8/ '
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://www.campbells.com/v8/
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://www.campbells.com/well-yes/ '
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://www.campbells.com/well-yes/
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div>
-					<p>As WordPress team leader in Tactic Center</p>
-					<a
-						href='https://cruzlorena.com.ni/
+					<h5>As WordPress team leader in Tactic Center</h5>
+					<ul className={styles.list}>
+						<li>
+							<a
+								href='https://cruzlorena.com.ni/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://cruzlorena.com.ni/
-					</a>
-					<a
-						href='https://sinsa.com.ni/
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://cruzlorena.com.ni/
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://sinsa.com.ni/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://sinsa.com.ni/
-					</a>
-					<a
-						href='https://medco.com.ni/
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://sinsa.com.ni/
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://medco.com.ni/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://medco.com.ni/
-					</a>
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://medco.com.ni/
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div>
-					<p>As freelancer</p>
-					<a
-						href='http://caminoreal.com.ni/'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						http://caminoreal.com.ni/
-					</a>
-					<a
-						href='https://tallerbonilla.com/
+					<h5>As freelancer</h5>
+					<ul className={styles.list}>
+						<li>
+							<a
+								href='http://caminoreal.com.ni/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								http://caminoreal.com.ni/
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://tallerbonilla.com/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://tallerbonilla.com/
-					</a>
-					<a
-						href='https://nicabus.com.ni/
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://tallerbonilla.com/
+							</a>
+						</li>
+						<li>
+							<a
+								href='https://nicabus.com.ni/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						https://nicabus.com.ni/
-					</a>
-					<a
-						href='http://hotelvalerieni.com/
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								https://nicabus.com.ni/
+							</a>
+						</li>
+						<li>
+							<a
+								href='http://hotelvalerieni.com/
 						'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						http://hotelvalerieni.com/
-					</a>
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								http://hotelvalerieni.com/
+							</a>
+						</li>
+					</ul>
 				</div>
 			</Grid>
 		</Layout>

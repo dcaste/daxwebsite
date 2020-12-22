@@ -10,7 +10,6 @@ const SplitContent = (props) => {
 	return (
 		<Tag
 			className={classNames(
-				styles.splitContent,
 				styles[splitClass],
 				styles[splitDirection],
 				className
