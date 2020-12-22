@@ -7,9 +7,9 @@
 	@include contentSpacing;
 	display: grid;
 	align-items: flex-start;
-	gap: 3rem;
 
 	@include mobile {
+		gap: 3rem;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 	}
@@ -18,8 +18,8 @@
 		grid-template-columns: 1fr 1fr;
 	}
 
-	@include large-screens {
-		grid-template-columns: 1fr 1fr 1fr;
+	@include laptop-h {
+		gap: 6rem;
 	}
 }
 
