@@ -1,0 +1,9 @@
+[
+  {
+    "id":"1",
+    "name":"Campbell’s Kitchen",
+    "description":"Campbell's Kitchen is the biggest Campbell's website containing thousands of detailed recipes.",
+    "link":"https://www.campbells.com/kitchen/",
+    "details":"<ul class=\"SplitContent_list__3JJQO\"><li>As a member of<!-- --> <a href=\"https:\/\/rain.agency\/\" target=\"_blank\" rel=\"noopener noreferrer\">Rain Agency<\/a> <!-- -->WordPress Team.<\/li><li>WordPress back-end development of plugins and parent theme to be used in other Campbell\u2019s minisites.<\/li><li>Integration of the API Recipe Reviews in the theme with AJAX.<\/li><li>Integration of<!-- --> <a href=\"https:\/\/schema.org\/\" target=\"_blank\" rel=\"noopener noreferrer\">https:\/\/schema.org\/<\/a> <!-- -->structured data in the theme, especially in recipes.<\/li><li>This website was built before the Gutenberg editor was introduced and the plugins gave blocks of content to the administrators by using custom fields.<\/li><li class=\"SplitContent_technologies__3IQBT\">Technologies: HTML5, LESS, CSS3, jQuery, PHP, AJAX.<\/li><\/ul>"
+  }
+]
