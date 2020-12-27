@@ -38,17 +38,21 @@
 	}
 }
 
-#go-to-top {
-	display: none;
+.goToTop {
+	display: block;
 	position: fixed;
 	bottom: 2rem;
 	right: 2rem;
 	z-index: 999999;
-	border: 2px solid $white;
 	outline: none;
-	padding: 1rem 0.8rem;
+	padding: 0.8rem 1.1rem;
 	font-size: 0.8rem;
 	border-radius: 50%;
 	margin: 0px;
 	min-width: inherit;
+	background-color: $red;
+	color: $white;
+	&:hover {
+		color: $white;
+	}
 }

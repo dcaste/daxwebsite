@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/misc/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
-import Title from '../components/Title';
+import Title from '../components/misc/Title';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 
 const Portfolio = () => {

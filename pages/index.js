@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/misc/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
-import Title from '../components/Title';
+import Title from '../components/misc/Title';
 import FeatureList from '../components/featurelist/FeatureList';
 import BtnGroup from '../components/buttonsComponents/BtnGroup';
 

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/misc/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
 import Card from '../components/card/Card';

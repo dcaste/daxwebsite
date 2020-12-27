@@ -1,0 +1,18 @@
+/* Copy Right styles */
+@import './../../styles/settings/variables.scss';
+
+.copyRight {
+	background-color: $black;
+	color: $grey_light;
+	text-align: center;
+	font-size: 15px;
+	padding: 0 0 40px 0;
+	display: block;
+
+	a {
+		color: $grey_light;
+		&:hover {
+			color: $red;
+		}
+	}
+}

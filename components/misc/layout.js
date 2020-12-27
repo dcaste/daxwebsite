@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import NavMenu from './NavMenu';
+import GoToTop from '../buttonsComponents/GoToTop';
+import CopyRight from '../copyright/CopyRight';
 
 // FontAwesome custom Library
-import '../libs/fontawesome';
+import '../../libs/fontawesome';
 
 const name = 'Dax';
 export const siteTitle = 'Dax Castellón';
@@ -23,6 +25,8 @@ export default function Layout({ children, home }) {
 					<article id='mainArticle'>{children}</article>
 				</main>
 				<NavMenu element='footer' />
+				<CopyRight />
+				<GoToTop />
 			</div>
 		</>
 	);

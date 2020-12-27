@@ -4,6 +4,7 @@ config.autoAddCss = false;
 
 import {
 	faAngleRight,
+	faAngleUp,
 	faFighterJet,
 	faCircle,
 	faClipboardCheck,
@@ -21,6 +22,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
 	faAngleRight,
+	faAngleUp,
 	faFighterJet,
 	faCircle,
 	faClipboardCheck,
