@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
@@ -16,9 +16,11 @@ const About = () => {
 			<h1 className='pageTitle'>About Me</h1>
 
 			<SplitContent split='50-50' direction='lr'>
-				<Image
+				<DaxImage
+					src_lg='/assets/img/avatar.jpg'
 					src='/assets/img/avatar.jpg'
 					alt='Dax Castellón'
+					isRounded={true}
 					className='rounded'
 					width={300}
 					height={300}
