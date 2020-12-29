@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/misc/layout';
+import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Title from '../components/misc/Title';
@@ -15,11 +15,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle} - WordPress Developer</title>
-				<meta
-					name='description'
-					content='WordPress Developer living in Switzerland specialized in creating custom themes and plugins with SEO best practices, security standards and optimized for fast loading times'
-				/>
+				<title>{siteTitle} - Web Developer</title>
 			</Head>
 
 			<SplitContent tag='section' split='50-50' direction='lr'>
@@ -36,9 +32,9 @@ export default function Home() {
 				<div className='mobileCentered'>
 					<Title Tag='h1' titleBlack="Hi, I'm" titleRed='Dax' />
 					<p className='lead'>
-						a WordPress Developer living in Switzerland specialized in creating
-						custom themes and plugins with SEO best practices, security
-						standards and optimized for fast loading times.
+						a Web Developer living in Switzerland specialized in creating custom
+						websites with SEO best practices, security standards and optimized
+						for fast loading times.
 					</p>
 					<BtnGroup
 						btnMainCopy='Contact Me'

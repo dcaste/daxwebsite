@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/misc/layout';
+import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
 import Card from '../components/card/Card';
@@ -11,6 +11,10 @@ const About = () => {
 		<Layout>
 			<Head>
 				<title>About Me - {siteTitle}</title>
+				<meta
+					name='description'
+					content='Work experience as a member of Web Developer teams and as freelancer'
+				/>
 			</Head>
 
 			<h1 className='pageTitle'>About Me</h1>

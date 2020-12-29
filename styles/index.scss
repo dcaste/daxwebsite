@@ -1,16 +1,8 @@
 // CSS Reset
 @import './settings/reset.scss';
 
-// Basic Config.
-@import './settings/variables.scss';
-@import './settings/mixins.scss';
-
 // Prioritize First Render styles.
-@import './layout/firstRender.scss';
 @import './global/global.scss';
-
-// Components.
-@import './components/NavMenu.scss';
 
 // Fonts
 @import './settings/fonts.scss';

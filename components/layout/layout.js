@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import NavMenu from './NavMenu';
+import NavMenu from '../navmenu/NavMenu';
 import { useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import GoToTop from '../buttonsComponents/GoToTop';
 import CopyRight from '../copyright/CopyRight';
+import styles from './layout.module.scss';
 
 // FontAwesome custom Library
 import '../../libs/fontawesome';
@@ -29,16 +30,20 @@ export default function Layout({ children, home }) {
 				<link rel='icon' href='/favicon.ico' />
 				<meta
 					name='description'
-					content='WordPress Developer living in Switzerland specialized in creating custom themes and plugins with SEO best practices, security standards and optimized for fast loading times'
+					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
 				/>
 			</Head>
-			<div id='mainWrapper'>
-				<NavMenu element='header' />
-				<main id='mainContent' role='main'>
-					<article id='mainArticle'>{children}</article>
+			<div id='mainWrapper' className={styles.mainWrapper}>
+				<header className={styles.navHeader}>
+					<NavMenu />
+				</header>
+				<main role='main' className={styles.mainContent}>
+					<article className={styles.mainArticle}>{children}</article>
 				</main>
-				<NavMenu element='footer' />
-				<CopyRight />
+				<footer className={styles.navFooter}>
+					<NavMenu />
+					<CopyRight />
+				</footer>
 				{showButton && <GoToTop />}
 			</div>
 		</>

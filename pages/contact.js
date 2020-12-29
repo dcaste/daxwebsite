@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/misc/layout';
+import Layout, { siteTitle } from '../components/layout/layout';
 import ContactForm from '../components/contactform/ContactForm';
 import SplitContent from '../components/splitcontent/SplitContent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +10,10 @@ const Contact = () => {
 		<Layout>
 			<Head>
 				<title>Contact Me - {siteTitle}</title>
+				<meta
+					name='description'
+					content='Contact information to reach Web developer, Dax Castellón'
+				/>
 			</Head>
 
 			<h1 className='pageTitle'>Contact Me</h1>

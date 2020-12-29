@@ -1,6 +1,6 @@
-import Layout from '../components/misc/layout';
+import Layout from '../components/layout/layout';
 import Head from 'next/head';
-import { siteTitle } from '../components/misc/layout';
+import { siteTitle } from '../components/layout/layout';
 
 export default function Custom404() {
 	return (

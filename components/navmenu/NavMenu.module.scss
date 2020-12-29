@@ -1,0 +1,50 @@
+// Nav Menus
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.navMenu {
+	@include alignwide;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+
+	a {
+		text-decoration: none;
+	}
+
+	@include mobile {
+		display: none;
+	}
+	@include tablet-h {
+		display: flex;
+	}
+}
+
+.navLinks {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	list-style: none;
+	margin: 0;
+}
+
+.logo {
+	font-weight: $bold;
+	color: $grey;
+	font-size: 1.2em;
+}
+
+.navItem + .navItem {
+	margin-left: 2rem;
+}
+
+.socialIcon {
+	font-size: 1.3em;
+	margin-left: 2rem;
+}
+
+.socialIcon + .socialIcon {
+	margin-left: 1rem;
+}
