@@ -11,6 +11,10 @@ const About = () => {
 		<Layout>
 			<Head>
 				<title>About Me - {siteTitle}</title>
+				<meta
+					name='description'
+					content='Work experience as a member of Web Developer teams and as freelancer'
+				/>
 			</Head>
 
 			<h1 className='pageTitle'>About Me</h1>

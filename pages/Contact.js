@@ -10,6 +10,10 @@ const Contact = () => {
 		<Layout>
 			<Head>
 				<title>Contact Me - {siteTitle}</title>
+				<meta
+					name='description'
+					content='Contact information to reach Web developer, Dax Castellón'
+				/>
 			</Head>
 
 			<h1 className='pageTitle'>Contact Me</h1>

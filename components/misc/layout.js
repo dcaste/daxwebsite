@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
 				<link rel='icon' href='/favicon.ico' />
 				<meta
 					name='description'
-					content='WordPress Developer living in Switzerland specialized in creating custom themes and plugins with SEO best practices, security standards and optimized for fast loading times'
+					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
 				/>
 			</Head>
 			<div id='mainWrapper'>

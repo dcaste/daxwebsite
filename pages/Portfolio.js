@@ -11,6 +11,10 @@ const Portfolio = () => {
 		<Layout>
 			<Head>
 				<title>Portfolio - {siteTitle}</title>
+				<meta
+					name='description'
+					content='Web portfolio with selected projects, mostly build with WordPress CMS'
+				/>
 			</Head>
 			<h1 className='pageTitle'>Portfolio</h1>
 
