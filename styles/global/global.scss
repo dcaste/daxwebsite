@@ -1,4 +1,7 @@
 // Basic styles.
+@import '../settings/variables.scss';
+@import '../settings/mixins.scss';
+
 body {
 	font-family: $fonts;
 	font-size: 20px;

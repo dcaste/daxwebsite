@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import DaxImage from '../components/daximage/DaxImage';
-import Layout, { siteTitle } from '../components/misc/layout';
+import Layout, { siteTitle } from '../components/layout/layout';
 import ContactForm from '../components/contactform/ContactForm';
 import SplitContent from '../components/splitcontent/SplitContent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

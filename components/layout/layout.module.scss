@@ -1,0 +1,64 @@
+// Layout styles
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+// Content
+.mainWrapper {
+	min-height: 100vh;
+	position: relative;
+}
+
+.mainContent {
+	@include alignwide;
+	padding-bottom: 150px;
+}
+
+.mainArticle {
+	@include mobile {
+		padding: 3rem 0;
+	}
+	@include laptop-m {
+		padding: 5rem 0;
+	}
+}
+
+// Nav Menus
+.navHeader,
+.navFooter {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include mobile {
+		display: none;
+	}
+	@include laptop-m {
+		display: flex;
+	}
+
+	a {
+		padding: 2px;
+		text-decoration: none;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.navHeader {
+	a {
+		color: $grey;
+	}
+}
+.navFooter {
+	display: block;
+	position: absolute;
+	height: 150px;
+	bottom: 0;
+	width: 100%;
+	background-color: $black;
+
+	a {
+		color: $grey_light;
+	}
+}
