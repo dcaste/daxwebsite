@@ -29,16 +29,8 @@
 	align-items: center;
 	justify-content: space-between;
 
-	@include mobile {
-		display: none;
-	}
-	@include laptop-m {
-		display: flex;
-	}
-
 	a {
 		padding: 2px;
-		text-decoration: none;
 		&:hover {
 			color: $red;
 		}
@@ -51,12 +43,18 @@
 	}
 }
 .navFooter {
-	display: block;
 	position: absolute;
 	height: 150px;
 	bottom: 0;
 	width: 100%;
 	background-color: $black;
+
+	@include mobile {
+		display: flex;
+	}
+	@include tablet-h {
+		display: block;
+	}
 
 	a {
 		color: $grey_light;
