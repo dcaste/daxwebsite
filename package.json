@@ -23,5 +23,8 @@
 		"react-formal": "^2.1.2",
 		"sass": "^1.29.0",
 		"yup": "^0.29.3"
+	},
+	"devDependencies": {
+		"@n8tb1t/use-scroll-position": "^2.0.3"
 	}
 }

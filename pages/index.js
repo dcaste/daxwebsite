@@ -16,6 +16,10 @@ export default function Home() {
 		<Layout>
 			<Head>
 				<title>{siteTitle} - WordPress Developer</title>
+				<meta
+					name='description'
+					content='WordPress Developer living in Switzerland specialized in creating custom themes and plugins with SEO best practices, security standards and optimized for fast loading times'
+				/>
 			</Head>
 
 			<SplitContent tag='section' split='50-50' direction='lr'>
