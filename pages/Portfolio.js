@@ -132,6 +132,8 @@ const Portfolio = () => {
 						src_md='/assets/img/project-swanson-480.png'
 						src_sm='/assets/img/project-swanson-300.png'
 						alt='Swanson website'
+						width={640}
+						height={320}
 					/>
 				</div>
 			</SplitContent>
