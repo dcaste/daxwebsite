@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './daxImage.module.scss';
+import styles from './DaxImage.module.scss';
 import classNames from 'classnames';
 
 const DaxImage = ({
