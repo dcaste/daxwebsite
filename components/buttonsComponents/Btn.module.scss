@@ -12,6 +12,7 @@
 	box-sizing: border-box;
 	border: 2px solid $red;
 	border-radius: $global-radius;
+	transition: $transition;
 	text-decoration: none;
 
 	&:focus {
@@ -34,6 +35,6 @@
 	&:hover {
 		color: $black;
 		border: 2px solid $black;
-		background-color: transparent;
+		background-color: $grey_lighter;
 	}
 }
