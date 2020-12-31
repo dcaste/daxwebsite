@@ -10,16 +10,7 @@
 
 .mainContent {
 	@include alignwide;
-	padding-bottom: 150px;
-}
-
-.mainArticle {
-	@include mobile {
-		padding: 3rem 0;
-	}
-	@include laptop-m {
-		padding: 5rem 0;
-	}
+	padding-bottom: 150px; // Spacing for ABsolute positioned footer.
 }
 
 // Nav Menus
@@ -58,5 +49,8 @@
 
 	a {
 		color: $grey_light;
+		&:hover {
+			color: $red_light;
+		}
 	}
 }

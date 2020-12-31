@@ -3,6 +3,7 @@ import NavMenu from '../navmenu/NavMenu';
 import { useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import GoToTop from '../buttonsComponents/GoToTop';
+import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
 import styles from './layout.module.scss';
 
@@ -38,7 +39,11 @@ export default function Layout({ children, home }) {
 					<NavMenu />
 				</header>
 				<main role='main' className={styles.mainContent}>
-					<article className={styles.mainArticle}>{children}</article>
+					<article className={styles.mainArticle}>
+						<Spacer />
+						{children}
+						<Spacer />
+					</article>
 				</main>
 				<footer className={styles.navFooter}>
 					<NavMenu />

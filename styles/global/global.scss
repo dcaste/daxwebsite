@@ -159,10 +159,6 @@ hr {
 	grid-column: 1/-1;
 }
 
-.contentSpacing {
-	@include contentSpacing;
-}
-
 // Typography
 label {
 	font-weight: $bold;
