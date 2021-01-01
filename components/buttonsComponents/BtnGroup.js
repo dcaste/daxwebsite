@@ -2,10 +2,17 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styles from './BtnGroup.module.scss';
 import stylesBtn from './Btn.module.scss';
+import classNames from 'classnames';
 
-const BtnGroup = ({ btnMainLink, btnMainCopy, btnSecLink, btnSecCopy }) => {
+const BtnGroup = ({
+	btnMainLink,
+	btnMainCopy,
+	btnSecLink,
+	btnSecCopy,
+	className,
+}) => {
 	return (
-		<div className={styles.BtnGroup}>
+		<div className={classNames(className, styles.BtnGroup)}>
 			<Link href={btnMainLink}>
 				<a className={stylesBtn.btn}>{btnMainCopy}</a>
 			</Link>

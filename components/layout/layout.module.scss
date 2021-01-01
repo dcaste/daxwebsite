@@ -10,7 +10,14 @@
 
 .mainContent {
 	@include alignwide;
-	padding-bottom: 150px; // Spacing for ABsolute positioned footer.
+
+	// Spacing for ABsolute positioned footer.
+	@include mobile {
+		padding-bottom: 100px;
+	}
+	@include tablet-h {
+		padding-bottom: 150px;
+	}
 }
 
 // Nav Menus
@@ -33,17 +40,19 @@
 		color: $grey;
 	}
 }
+
 .navFooter {
 	position: absolute;
-	height: 150px;
 	bottom: 0;
 	width: 100%;
 	background-color: $black;
 
 	@include mobile {
+		height: 100px;
 		display: flex;
 	}
 	@include tablet-h {
+		height: 150px;
 		display: block;
 	}
 

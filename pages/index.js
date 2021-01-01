@@ -33,8 +33,13 @@ export default function Home() {
 					/>
 				</div>
 				<div className={styles.content}>
-					<Title Tag='h1' titleBlack="Hi, I'm" titleRed='Dax' />
-					<p className='lead'>
+					<Title
+						Tag='h1'
+						titleBlack="Hi, I'm"
+						titleRed='Dax'
+						className='mobileCentered'
+					/>
+					<p className='lead mobileCentered'>
 						a Web Developer living in Switzerland specialized in creating custom
 						websites with SEO best practices, security standards and optimized
 						for fast loading times.
@@ -44,6 +49,7 @@ export default function Home() {
 						btnMainLink='/contact/'
 						btnSecCopy='About Me'
 						btnSecLink='/about/'
+						className='mobileCentered'
 					/>
 				</div>
 			</SplitContent>
