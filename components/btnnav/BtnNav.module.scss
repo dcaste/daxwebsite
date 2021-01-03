@@ -1,0 +1,14 @@
+/* Go to Top Button */
+@import './../../styles/settings/mixins.scss';
+@import '../buttonsComponents/Btn.module.scss';
+
+.btnNav {
+	@extend .btn;
+	@include shadow2dp;
+	padding: 0.5rem 0.7rem;
+	border-radius: 4px;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	font-size: 0.8em;
+}

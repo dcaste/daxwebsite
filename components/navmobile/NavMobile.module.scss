@@ -1,0 +1,65 @@
+// Mobile Navigation styles
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+@import '../buttonsComponents/Btn.module.scss';
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.7);
+	z-index: 999;
+}
+
+.close {
+	@extend .btn;
+	border-radius: 4px;
+	padding: 0.5rem 0.7rem;
+	position: absolute;
+	right: 1rem;
+	font-size: 0.8em;
+}
+
+.container {
+	@include alignwide;
+	padding: 1rem;
+	width: 100%;
+	left: 5%;
+	top: 1rem;
+	bottom: 1rem;
+	position: fixed;
+	background-color: white;
+	z-index: 9999;
+}
+
+.nav {
+	display: flex;
+	flex-flow: column;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	justify-content: space-evenly;
+	height: 100%;
+	text-align: center;
+	a {
+		text-decoration: none;
+	}
+}
+
+.item {
+	display: block;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+.social {
+	display: inline-block;
+	padding: 10px;
+	font-size: 2em;
+}
+
+.social + .social {
+	margin-left: 1rem;
+}
