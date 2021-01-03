@@ -25,11 +25,10 @@ export default function Home() {
 						src_lg='/assets/img/avatar.jpg'
 						src='/assets/img/avatar.jpg'
 						alt='Dax Castellón'
-						className='splitContent__img'
 						isRounded={true}
-						width={300}
-						height={299}
 						className='rounded'
+						width={300}
+						height={300}
 					/>
 				</div>
 				<div className={styles.content}>
