@@ -8,6 +8,7 @@ body {
 	color: $black;
 	background-repeat: repeat-y;
 	background-color: $white;
+	background-attachment: fixed;
 	@include mobile {
 		background-image: url('../../public/assets/img/bkg-mobile.jpg');
 		background-position: 0 -30px;
@@ -39,14 +40,19 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 1rem 0;
+	margin: 0;
 	font-weight: $bold;
 	color: $black;
 	font-family: $fonts_headers;
 }
 
 h1 {
-	font-size: 3rem;
+	@include mobile {
+		font-size: 2rem;
+	}
+	@include tablet-v {
+		font-size: 2.5rem;
+	}
 }
 h2 {
 	font-size: 2rem;
@@ -159,10 +165,6 @@ hr {
 	grid-column: 1/-1;
 }
 
-.contentSpacing {
-	@include contentSpacing;
-}
-
 // Typography
 label {
 	font-weight: $bold;
@@ -184,6 +186,9 @@ label {
 	line-height: 1.3em;
 	@include mobile {
 		font-size: 1.1em;
+	}
+	@include tablet-v {
+		font-size: 1.3em;
 	}
 	@include tablet-v {
 		font-size: 1.2em;

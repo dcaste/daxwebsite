@@ -18,17 +18,19 @@ const Contact = () => {
 
 			<h1 className='pageTitle'>Contact Me</h1>
 
-			<SplitContent split='50-50' direction='lr'>
+			<SplitContent split='50-50'>
 				<div>
-					<DaxImage
-						src_lg='/assets/img/avatar.jpg'
-						src='/assets/img/avatar.jpg'
-						alt='Dax Castellón'
-						isRounded={true}
-						className='rounded'
-						width={300}
-						height={300}
-					/>
+					<p>
+						<DaxImage
+							src_lg='/assets/img/avatar.jpg'
+							src='/assets/img/avatar.jpg'
+							alt='Dax Castellón'
+							isRounded={true}
+							className='rounded'
+							width={300}
+							height={300}
+						/>
+					</p>
 					<p className='textCentered'>
 						<strong className='lead'>Dax Castellón Meyrat</strong>
 						<br />

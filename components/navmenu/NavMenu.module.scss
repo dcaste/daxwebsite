@@ -6,19 +6,13 @@
 	@include alignwide;
 	width: 100%;
 	display: flex;
+	flex-flow: row;
 	align-items: center;
 	justify-content: space-between;
 	height: 80px;
 
 	a {
 		text-decoration: none;
-	}
-
-	@include mobile {
-		display: none;
-	}
-	@include tablet-h {
-		display: flex;
 	}
 }
 

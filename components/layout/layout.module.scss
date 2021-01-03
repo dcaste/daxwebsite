@@ -10,30 +10,28 @@
 
 .mainContent {
 	@include alignwide;
-	padding-bottom: 150px;
-}
 
-.mainArticle {
+	// Spacing for ABsolute positioned footer.
 	@include mobile {
-		padding: 3rem 0;
+		padding-bottom: 100px;
 	}
-	@include laptop-m {
-		padding: 5rem 0;
+	@include tablet-v {
+		padding-bottom: 150px;
 	}
 }
 
 // Nav Menus
 .navHeader,
 .navFooter {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
 	a {
 		padding: 2px;
 		&:hover {
 			color: $red;
 		}
+	}
+
+	> div {
+		width: 100%;
 	}
 }
 
@@ -42,21 +40,28 @@
 		color: $grey;
 	}
 }
+
 .navFooter {
 	position: absolute;
-	height: 150px;
 	bottom: 0;
 	width: 100%;
 	background-color: $black;
 
 	@include mobile {
-		display: flex;
+		height: 100px;
 	}
-	@include tablet-h {
-		display: block;
+	@include tablet-v {
+		height: 150px;
 	}
 
 	a {
 		color: $grey_light;
+		&:hover {
+			color: $red_light;
+		}
 	}
+}
+
+.navMobile {
+	z-index: 999;
 }

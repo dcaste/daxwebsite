@@ -3,6 +3,7 @@ import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
+import Spacer from '../components/spacer/Spacer';
 import Card from '../components/card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -60,7 +61,7 @@ const About = () => {
 					</p>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<Card className='contentSpacing'>
 				<Grid columns={2}>
 					<h2 className=' entireColumn textCentered'>
@@ -114,7 +115,7 @@ const About = () => {
 									target='_blank'
 									rel='noopener noreferrer'
 								>
-									Well Zes!
+									Well Yes!
 								</a>
 							</li>
 							<li>
@@ -185,8 +186,8 @@ const About = () => {
 					</div>
 				</Grid>
 			</Card>
-
-			<SplitContent>
+			<Spacer />
+			<SplitContent className='width70'>
 				<h2>
 					<span className='textRed marginRight'>
 						<FontAwesomeIcon icon='check' />

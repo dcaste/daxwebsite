@@ -16,6 +16,7 @@ import {
 	faInfoCircle,
 	faTimes,
 	faExclamationTriangle,
+	faBars,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -35,5 +36,6 @@ library.add(
 	faCheckCircle,
 	faInfoCircle,
 	faTimes,
-	faExclamationTriangle
+	faExclamationTriangle,
+	faBars
 );

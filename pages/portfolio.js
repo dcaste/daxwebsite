@@ -3,6 +3,7 @@ import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
+import Spacer from '../components/spacer/Spacer';
 import Title from '../components/misc/Title';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 
@@ -88,7 +89,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Swanson' />
@@ -141,7 +142,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Kindhumans' />
@@ -184,7 +185,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
@@ -235,7 +236,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Delisoy' />
@@ -284,7 +285,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
@@ -334,7 +335,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Cocina Dña Haydeé' />
@@ -380,7 +381,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Restaurante Don Candido' />
@@ -421,7 +422,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-
+			<Spacer height='double' />
 			<Grid columns={3}>
 				<h4 className='entireColumn textCentered'>
 					Other websites in which I have contributed with similar tasks:

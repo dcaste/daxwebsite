@@ -1,0 +1,20 @@
+// Spacer component styles.
+@import './../../styles/settings/mixins.scss';
+
+.spacer-simple {
+	@include mobile {
+		height: 3rem;
+	}
+	@include laptop-m {
+		height: 5rem;
+	}
+}
+
+.spacer-double {
+	@include mobile {
+		height: 6rem;
+	}
+	@include laptop-m {
+		height: 10rem;
+	}
+}
