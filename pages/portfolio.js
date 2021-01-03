@@ -81,7 +81,7 @@ const Portfolio = () => {
 					<DaxImage
 						src_lg='/assets/img/project-ck.png'
 						src_md='/assets/img/project-ck-480.png'
-						src_sm='/assets/img/project-ck.png-300'
+						src_sm='/assets/img/project-ck-300.png'
 						src='/assets/img/project-ck.png'
 						alt="Kampbell's Kitchen Website"
 						width={640}
