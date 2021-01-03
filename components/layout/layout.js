@@ -7,7 +7,7 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 // Components
 import NavMenu from '../navmenu/NavMenu';
 import NavMobile from '../navmobile/NavMobile';
-import BtnNav from '../btnnav/BtnNav';
+import BtnNav from '../buttonsComponents/BtnNav';
 import GoToTop from '../buttonsComponents/GoToTop';
 import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
