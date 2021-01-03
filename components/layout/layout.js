@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import NavMenu from '../navmenu/NavMenu';
 import { useState } from 'react';
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import GoToTop from '../buttonsComponents/GoToTop';
 import Spacer from '../spacer/Spacer';
@@ -27,30 +28,43 @@ export default function Layout({ children, home }) {
 	);
 	return (
 		<>
-			<Head>
-				<link rel='icon' href='/favicon.ico' />
-				<meta
-					name='description'
-					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
-				/>
-			</Head>
-			<div id='mainWrapper' className={styles.mainWrapper}>
-				<header className={styles.navHeader}>
-					<NavMenu />
-				</header>
-				<main role='main' className={styles.mainContent}>
-					<article className={styles.mainArticle}>
-						<Spacer />
-						{children}
-						<Spacer />
-					</article>
-				</main>
-				<footer className={styles.navFooter}>
-					<NavMenu />
-					<CopyRight />
-				</footer>
-				{showButton && <GoToTop />}
-			</div>
+			<BreakpointProvider>
+				<Head>
+					<link rel='icon' href='/favicon.ico' />
+					<meta
+						name='description'
+						content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
+					/>
+				</Head>
+
+				<div id='mainWrapper' className={styles.mainWrapper}>
+					<header className={styles.navHeader}>
+						<Breakpoint medium up>
+							<NavMenu />
+						</Breakpoint>
+						<Breakpoint medium down>
+							<button>Menu</button>
+						</Breakpoint>
+					</header>
+
+					<main role='main' className={styles.mainContent}>
+						<article className={styles.mainArticle}>
+							<Spacer />
+							{children}
+							<Spacer />
+						</article>
+					</main>
+
+					<footer className={styles.navFooter}>
+						<Breakpoint medium up>
+							<NavMenu />
+						</Breakpoint>
+						<CopyRight />
+					</footer>
+
+					{showButton && <GoToTop />}
+				</div>
+			</BreakpointProvider>
 		</>
 	);
 }

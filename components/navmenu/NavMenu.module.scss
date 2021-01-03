@@ -13,13 +13,6 @@
 	a {
 		text-decoration: none;
 	}
-
-	@include mobile {
-		display: none;
-	}
-	@include tablet-h {
-		display: flex;
-	}
 }
 
 .navLinks {

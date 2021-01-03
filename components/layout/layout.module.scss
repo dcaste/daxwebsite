@@ -15,7 +15,7 @@
 	@include mobile {
 		padding-bottom: 100px;
 	}
-	@include tablet-h {
+	@include tablet-v {
 		padding-bottom: 150px;
 	}
 }
@@ -23,15 +23,15 @@
 // Nav Menus
 .navHeader,
 .navFooter {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
 	a {
 		padding: 2px;
 		&:hover {
 			color: $red;
 		}
+	}
+
+	> div {
+		width: 100%;
 	}
 }
 
@@ -49,11 +49,9 @@
 
 	@include mobile {
 		height: 100px;
-		display: flex;
 	}
-	@include tablet-h {
+	@include tablet-v {
 		height: 150px;
-		display: block;
 	}
 
 	a {

@@ -186,7 +186,7 @@ const About = () => {
 					</div>
 				</Grid>
 			</Card>
-			<Spacer height='double' />
+			<Spacer />
 			<SplitContent className='width70'>
 				<h2>
 					<span className='textRed marginRight'>
