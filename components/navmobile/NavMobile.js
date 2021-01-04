@@ -1,15 +1,23 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './NavMobile.module.scss';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NavMobile = ({ show, hide }) => {
 	if (!show) return null;
 
 	return (
-		<>
-			<div className={styles.overlay} />
+		<AnimatePresence>
+			<div className={styles.overlay} key='overlay' />
 
-			<nav className={styles.container}>
+			<motion.nav
+				className={styles.container}
+				initial={{ opacity: 0, scale: 0 }}
+				animate={{ opacity: 1, scale: 1 }}
+				exit={{ opacity: 0, scale: 0 }}
+				transition={{ duration: 0.25 }}
+				key='nav'
+			>
 				<button onClick={hide} className={styles.close}>
 					<FontAwesomeIcon icon={['fas', 'times']} />
 				</button>
@@ -47,8 +55,8 @@ const NavMobile = ({ show, hide }) => {
 						</a>
 					</li>
 				</ul>
-			</nav>
-		</>
+			</motion.nav>
+		</AnimatePresence>
 	);
 };
 

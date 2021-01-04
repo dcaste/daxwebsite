@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { motion } from 'framer-motion';
 
 // Components
 import NavMenu from '../navmenu/NavMenu';
@@ -62,23 +63,26 @@ export default function Layout({ children, home }) {
 							<NavMenu />
 						</Breakpoint>
 					</div>
-
 					<main role='main' className={styles.mainContent}>
-						<article className={styles.mainArticle}>
+						<motion.article
+							className={styles.mainArticle}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 0.25 }}
+							exit={{ opacity: 0 }}
+						>
 							<Spacer />
 							{children}
 							<Spacer />
-						</article>
+						</motion.article>
 					</main>
-
 					<footer className={styles.navFooter}>
 						<Breakpoint medium up>
 							<NavMenu />
 						</Breakpoint>
 						<CopyRight />
 					</footer>
-
-					{showButton && <GoToTop />}
+					<GoToTop show={showButton} />
 				</div>
 			</BreakpointProvider>
 		</>
