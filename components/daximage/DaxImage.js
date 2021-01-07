@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import styles from './DaxImage.module.scss';
-import classNames from 'classnames';
 
 const DaxImage = ({
 	alt,
@@ -13,11 +12,10 @@ const DaxImage = ({
 	width,
 	height,
 }) => {
-	const imgClasses = className;
 	const rounded = isRounded === true ? 'rounded' : null;
 
 	return (
-		<picture className={styles.Image}>
+		<picture>
 			<source media='(max-width: 480px)' srcSet={src_sm} />
 			<source media='(max-width: 768px)' srcSet={src_md} />
 			<img
@@ -26,7 +24,7 @@ const DaxImage = ({
 				title={title}
 				className={styles[rounded]}
 				width={width}
-				height={height}
+				height='auto'
 				loading='lazy'
 			/>
 		</picture>
