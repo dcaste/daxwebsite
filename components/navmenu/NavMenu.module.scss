@@ -14,13 +14,6 @@
 	a {
 		text-decoration: none;
 	}
-
-	@include mobile {
-		display: none;
-	}
-	@include tablet-v {
-		display: flex;
-	}
 }
 
 .navLinks {

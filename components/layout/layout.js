@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { motion } from 'framer-motion';
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 
 // Components
 import NavMenu from '../navmenu/NavMenu';
@@ -48,40 +49,49 @@ export default function Layout({ children, home }) {
 				/>
 			</Head>
 
-			<div id='mainWrapper' className={styles.mainWrapper}>
-				<div className={styles.navHeader}>
-					<BtnNav
-						open={openNavMobile}
-						toggle={() => {
-							setOpenNavMobile(!openNavMobile);
-						}}
-					/>
-					<NavMobile open={openNavMobile} />
+			<BreakpointProvider>
+				<div id='mainWrapper' className={styles.mainWrapper}>
+					<div className={styles.navHeader}>
+						<Breakpoint small down>
+							<BtnNav
+								open={openNavMobile}
+								toggle={() => {
+									setOpenNavMobile(!openNavMobile);
+								}}
+							/>
+						</Breakpoint>
 
-					<NavMenu />
+						<NavMobile open={openNavMobile} />
+
+						<Breakpoint medium up>
+							<NavMenu />
+						</Breakpoint>
+					</div>
+
+					<main role='main' className={styles.mainContent}>
+						<motion.article
+							className={styles.mainArticle}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 0.25 }}
+							exit={{ opacity: 0 }}
+						>
+							<Spacer />
+							{children}
+							<Spacer />
+						</motion.article>
+					</main>
+
+					<footer className={styles.navFooter}>
+						<Breakpoint medium up>
+							<NavMenu />
+						</Breakpoint>
+						<CopyRight />
+					</footer>
+
+					<GoToTop show={showButton} />
 				</div>
-
-				<main role='main' className={styles.mainContent}>
-					<motion.article
-						className={styles.mainArticle}
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						transition={{ duration: 0.25 }}
-						exit={{ opacity: 0 }}
-					>
-						<Spacer />
-						{children}
-						<Spacer />
-					</motion.article>
-				</main>
-
-				<footer className={styles.navFooter}>
-					<NavMenu />
-					<CopyRight />
-				</footer>
-
-				<GoToTop show={showButton} />
-			</div>
+			</BreakpointProvider>
 		</>
 	);
 }
