@@ -1,11 +1,24 @@
 import styles from './GoToTop.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const GoToTop = () => {
+const GoToTop = ({ show }) => {
 	return (
-		<a href='#mainWrapper' id='goToTop' className={styles.goToTop}>
-			<FontAwesomeIcon icon={'angle-up'} />
-		</a>
+		<AnimatePresence>
+			{show && (
+				<motion.a
+					href='#mainWrapper'
+					id='goToTop'
+					className={styles.goToTop}
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					exit={{ opacity: 0, scale: 0 }}
+					transition={{ duration: 0.2 }}
+				>
+					<FontAwesomeIcon icon={'angle-up'} />
+				</motion.a>
+			)}
+		</AnimatePresence>
 	);
 };
 

@@ -11,6 +11,7 @@ const DaxImage = ({
 	className,
 	isRounded,
 	width,
+	height,
 }) => {
 	const imgClasses = className;
 	const rounded = isRounded === true ? 'rounded' : null;
@@ -25,6 +26,7 @@ const DaxImage = ({
 				title={title}
 				className={styles[rounded]}
 				width={width}
+				height={height}
 				loading='lazy'
 			/>
 		</picture>
