@@ -1,6 +1,6 @@
-import styles from './Alert.module.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './Alert.module.scss';
 
 const Alert = ({ severity, children }) => {
 	let alertSeverity = '';

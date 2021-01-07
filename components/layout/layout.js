@@ -1,7 +1,6 @@
 // Next and NPM Modules
 import Head from 'next/head';
 import { useState } from 'react';
-import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { motion } from 'framer-motion';
 
@@ -28,7 +27,7 @@ export default function Layout({ children, home }) {
 	const [showButton, setShowButton] = useState(false);
 
 	// State to show or hide the Mobile Navigation Menu
-	const [showNavMobile, setShowNavMobile] = useState(false);
+	const [openNavMobile, setOpenNavMobile] = useState(false);
 
 	// Shows Go to Top button if current Y position is greater than 0
 	useScrollPosition(
@@ -49,42 +48,40 @@ export default function Layout({ children, home }) {
 				/>
 			</Head>
 
-			<BreakpointProvider>
-				<div id='mainWrapper' className={styles.mainWrapper}>
-					<div className={styles.navHeader}>
-						<Breakpoint small down>
-							<BtnNav show={() => setShowNavMobile(true)} />
-							<NavMobile
-								show={showNavMobile}
-								hide={() => setShowNavMobile(false)}
-							/>
-						</Breakpoint>
-						<Breakpoint medium up>
-							<NavMenu />
-						</Breakpoint>
-					</div>
-					<main role='main' className={styles.mainContent}>
-						<motion.article
-							className={styles.mainArticle}
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ duration: 0.25 }}
-							exit={{ opacity: 0 }}
-						>
-							<Spacer />
-							{children}
-							<Spacer />
-						</motion.article>
-					</main>
-					<footer className={styles.navFooter}>
-						<Breakpoint medium up>
-							<NavMenu />
-						</Breakpoint>
-						<CopyRight />
-					</footer>
-					<GoToTop show={showButton} />
+			<div id='mainWrapper' className={styles.mainWrapper}>
+				<div className={styles.navHeader}>
+					<BtnNav
+						open={openNavMobile}
+						toggle={() => {
+							setOpenNavMobile(!openNavMobile);
+						}}
+					/>
+					<NavMobile open={openNavMobile} />
+
+					<NavMenu />
 				</div>
-			</BreakpointProvider>
+
+				<main role='main' className={styles.mainContent}>
+					<motion.article
+						className={styles.mainArticle}
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ duration: 0.25 }}
+						exit={{ opacity: 0 }}
+					>
+						<Spacer />
+						{children}
+						<Spacer />
+					</motion.article>
+				</main>
+
+				<footer className={styles.navFooter}>
+					<NavMenu />
+					<CopyRight />
+				</footer>
+
+				<GoToTop show={showButton} />
+			</div>
 		</>
 	);
 }
