@@ -1,10 +1,14 @@
 import styles from './BtnNav.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const BtnNav = ({ show }) => {
+const BtnNav = ({ open, toggle }) => {
 	return (
-		<button className={styles.btnNav} onClick={show}>
-			<FontAwesomeIcon icon={'bars'} />
+		<button className={styles.btnNav} onClick={toggle}>
+			{open ? (
+				<FontAwesomeIcon icon={'times'} />
+			) : (
+				<FontAwesomeIcon icon={'bars'} />
+			)}
 		</button>
 	);
 };
