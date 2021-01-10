@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import DaxImage from '../components/daximage/DaxImage';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout/layout';
 import ContactForm from '../components/contactform/ContactForm';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -21,11 +21,9 @@ const Contact = () => {
 			<SplitContent split='50-50'>
 				<div>
 					<p>
-						<DaxImage
-							src_lg='/assets/img/avatar.jpg'
+						<Image
 							src='/assets/img/avatar.jpg'
 							alt='Dax Castellón'
-							isRounded={true}
 							className='rounded'
 							width={300}
 							height={300}

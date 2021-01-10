@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import DaxImage from '../components/daximage/DaxImage';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
@@ -78,10 +78,7 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-ck.png'
-						src_md='/assets/img/project-ck-480.png'
-						src_sm='/assets/img/project-ck-300.png'
+					<Image
 						src='/assets/img/project-ck.png'
 						alt="Kampbell's Kitchen Website"
 						width={640}
@@ -132,10 +129,8 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-swanson.png'
-						src_md='/assets/img/project-swanson-480.png'
-						src_sm='/assets/img/project-swanson-300.png'
+					<Image
+						src='/assets/img/project-swanson.png'
 						alt='Swanson website'
 						width={640}
 						height={320}
@@ -174,10 +169,7 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-kh.png'
-						src_md='/assets/img/project-kh-480.png'
-						src_sm='/assets/img/project-kh-300.png'
+					<Image
 						src='/assets/img/project-kh.png'
 						alt='Kindhumans website'
 						width={640}
@@ -225,10 +217,7 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-bwl.png'
-						src_md='/assets/img/project-bwl-480.png'
-						src_sm='/assets/img/project-bwl-300.png'
+					<Image
 						src='/assets/img/project-bwl.png'
 						alt='Hotel Best Western Las Mercedes website'
 						width={640}
@@ -274,10 +263,7 @@ const Portfolio = () => {
 					</p>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-delisoy.png'
-						src_md='/assets/img/project-delisoy-480.png'
-						src_sm='/assets/img/project-delisoy-300.png'
+					<Image
 						src='/assets/img/project-delisoy.png'
 						alt='Delisoy website'
 						width={640}
@@ -324,10 +310,7 @@ const Portfolio = () => {
 					</p>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-cashpak.png'
-						src_md='/assets/img/project-cashpak-480.png'
-						src_sm='/assets/img/project-cashpak-300.png'
+					<Image
 						src='/assets/img/project-cashpak.png'
 						alt='CashPak Nicaragua website'
 						width={640}
@@ -370,10 +353,7 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-haydee.png'
-						src_md='/assets/img/project-haydee-480.png'
-						src_sm='/assets/img/project-haydee-300.png'
+					<Image
 						src='/assets/img/project-haydee.png'
 						alt='Restaurante Cocina Doña Haydeé website'
 						width={640}
@@ -411,10 +391,7 @@ const Portfolio = () => {
 					</ul>
 				</div>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/project-candido.png'
-						src_md='/assets/img/project-candido-480.png'
-						src_sm='/assets/img/project-candido-300.png'
+					<Image
 						src='/assets/img/project-candido.png'
 						alt='Restaurante Don Candido website'
 						width={640}
