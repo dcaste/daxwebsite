@@ -20,15 +20,13 @@ export default function Home() {
 				<title>{siteTitle} - Web Developer</title>
 			</Head>
 			<SplitContent tag='section' split='50-50'>
-				<div className={styles.picture}>
-					<Image
-						src='/assets/img/avatar.jpg'
-						alt='Dax Castellón'
-						className='rounded'
-						width={300}
-						height={300}
-					/>
-				</div>
+				<Image
+					src='/assets/img/avatar.jpg'
+					alt='Dax Castellón'
+					className='rounded'
+					width={300}
+					height={300}
+				/>
 				<div className={styles.content}>
 					<Title
 						Tag='h1'
