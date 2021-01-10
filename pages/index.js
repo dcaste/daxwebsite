@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import DaxImage from '../components/daximage/DaxImage';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -21,11 +21,9 @@ export default function Home() {
 			</Head>
 			<SplitContent tag='section' split='50-50'>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/avatar.jpg'
+					<Image
 						src='/assets/img/avatar.jpg'
 						alt='Dax Castellón'
-						isRounded={true}
 						className='rounded'
 						width={300}
 						height={300}
@@ -55,11 +53,7 @@ export default function Home() {
 			<Spacer height='double' />
 			<SplitContent tag='section' split='40-60' direction='rl'>
 				<div className={styles.picture}>
-					<DaxImage
-						src_lg='/assets/img/projects-home.png'
-						src_md='/assets/img/projects-home-480.png'
-						src_sm='/assets/img/projects-home-300.png'
-						align='center'
+					<Image
 						src='/assets/img/projects-home.png'
 						alt='Dax Castellón Work examples.'
 						width={640}
