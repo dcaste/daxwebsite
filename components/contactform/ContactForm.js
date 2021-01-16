@@ -15,7 +15,6 @@ const ContactForm = () => {
 
 	const sendEmail = () => {
 		setBtnSubmitValue('Sending...');
-		console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE);
 
 		emailjs
 			.sendForm(
