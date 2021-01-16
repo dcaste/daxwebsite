@@ -8,7 +8,7 @@
 }
 .alertError {
 	@extend .alert;
-	background-color: $red_light;
+	background-color: $red_lighter;
 	strong {
 		color: $red;
 	}
