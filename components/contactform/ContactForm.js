@@ -15,13 +15,14 @@ const ContactForm = () => {
 
 	const sendEmail = () => {
 		setBtnSubmitValue('Sending...');
+		console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE);
 
 		emailjs
 			.sendForm(
-				process.env.emailjsService,
-				process.env.emailjsTemplate,
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
 				'contactMe',
-				process.env.emailjsUser
+				process.env.NEXT_PUBLIC_EMAILJS_USER
 			)
 			.then(
 				function (response) {
