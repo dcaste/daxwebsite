@@ -20,7 +20,7 @@ const Contact = () => {
 
 			<SplitContent split='50-50'>
 				<div>
-					<p>
+					<div>
 						<Image
 							src='/assets/img/avatar.jpg'
 							alt='Dax Castellón'
@@ -28,7 +28,7 @@ const Contact = () => {
 							width={300}
 							height={300}
 						/>
-					</p>
+					</div>
 					<p className='textCentered'>
 						<strong className='lead'>Dax Castellón Meyrat</strong>
 						<br />
