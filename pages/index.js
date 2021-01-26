@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,14 +13,35 @@ import BtnGroup from '../components/buttonsComponents/BtnGroup';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 
 // Data
-import homeFeatures from '../data/homeFeatures.json';
+const CONTENT = gql`
+	{
+		page(id: "cG9zdDo1") {
+			id
+			content(format: RENDERED)
+		}
+	}
+`;
 
 export default function Home() {
+	const { loading, error, data } = useQuery(CONTENT);
+
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error :(</p>;
+
 	return (
 		<Layout>
 			<Head>
 				<title>{siteTitle} - Web Developer</title>
 			</Head>
+			{data.page.homeContent.homeContent.map((item) => (
+				<div>
+					<p>{item.__typename}</p>
+
+					{item.__typename === 'Page_Homecontent_HomeContent_Bloque' && (
+						<h2>{item.contenido}</h2>
+					)}
+				</div>
+			))}
 			<SplitContent tag='section' split='50-50'>
 				<div className={styles.picture}>
 					<DaxImage
