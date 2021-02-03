@@ -14,7 +14,7 @@ import styles from '../components/splitcontent/SplitContent.module.scss';
 // Data
 const CONTENT = gql`
 	{
-		post(id: "cG9zdDox") {
+		page(id: "cG9zdDoy") {
 			content(format: RENDERED)
 		}
 	}
@@ -25,12 +25,16 @@ export default function Home() {
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error :( </p>;
+	if (data) {
+		console.log(data);
+	}
 
 	return (
 		<Layout>
 			<Head>
 				<title>{siteTitle} - Web Developer</title>
 			</Head>
+			{data.page.content}
 			{/* {data.page.homeContent.homeContent.map((item) => (
 				<div>
 					<p>{item.__typename}</p>
