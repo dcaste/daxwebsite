@@ -1,14 +1,9 @@
 import { AnimatePresence } from 'framer-motion';
 import '../styles/index.scss';
-import {
-	ApolloClient,
-	InMemoryCache,
-	gql,
-	ApolloProvider,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
-	uri: 'http://localhost/daxwp/graphql',
+	uri: 'http://daxwebsite.local/graphql',
 	cache: new InMemoryCache(),
 });
 

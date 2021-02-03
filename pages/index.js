@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import { useQuery, gql } from '@apollo/client';
 import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +14,7 @@ import styles from '../components/splitcontent/SplitContent.module.scss';
 // Data
 const CONTENT = gql`
 	{
-		page(id: "cG9zdDo1") {
-			id
+		post(id: "cG9zdDox") {
 			content(format: RENDERED)
 		}
 	}
@@ -26,14 +24,14 @@ export default function Home() {
 	const { loading, error, data } = useQuery(CONTENT);
 
 	if (loading) return <p>Loading...</p>;
-	if (error) return <p>Error :(</p>;
+	if (error) return <p>Error :( </p>;
 
 	return (
 		<Layout>
 			<Head>
 				<title>{siteTitle} - Web Developer</title>
 			</Head>
-			{data.page.homeContent.homeContent.map((item) => (
+			{/* {data.page.homeContent.homeContent.map((item) => (
 				<div>
 					<p>{item.__typename}</p>
 
@@ -41,7 +39,7 @@ export default function Home() {
 						<h2>{item.contenido}</h2>
 					)}
 				</div>
-			))}
+			))} */}
 			<SplitContent tag='section' split='50-50'>
 				<div className={styles.picture}>
 					<DaxImage
@@ -107,7 +105,7 @@ export default function Home() {
 				</div>
 			</SplitContent>
 			<Spacer height='double' />
-			<FeatureList data={homeFeatures} />
+			{/* <FeatureList data={homeFeatures} /> */}
 		</Layout>
 	);
 }
