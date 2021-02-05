@@ -22,11 +22,12 @@ const CONTENT = gql`
 
 export default function Home() {
 	const { loading, error, data } = useQuery(CONTENT);
+	let contenido = '';
 
 	if (loading) return <p>Loading...</p>;
 	if (error) return <p>Error :( </p>;
 	if (data) {
-		console.log(data);
+		contenido = data.page.content;
 	}
 
 	return (
@@ -34,16 +35,7 @@ export default function Home() {
 			<Head>
 				<title>{siteTitle} - Web Developer</title>
 			</Head>
-			{data.page.content}
-			{/* {data.page.homeContent.homeContent.map((item) => (
-				<div>
-					<p>{item.__typename}</p>
-
-					{item.__typename === 'Page_Homecontent_HomeContent_Bloque' && (
-						<h2>{item.contenido}</h2>
-					)}
-				</div>
-			))} */}
+			<div dangerouslySetInnerHTML={{ __html: contenido }}></div>
 			<SplitContent tag='section' split='50-50'>
 				<div className={styles.picture}>
 					<DaxImage
