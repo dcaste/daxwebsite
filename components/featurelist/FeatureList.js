@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
 import styles from './FeatureList.module.scss';
 import classNames from 'classnames';
 
@@ -29,15 +28,6 @@ const FeatureList = (props) => {
 					<p>{item.copy}</p>
 				</div>
 			))}
-
-			<p className={styles.featureList__Title}>
-				<Link href={linkURL}>
-					<a>
-						{config.linkCopy}
-						<FontAwesomeIcon icon='angle-right' className='marginLeft' />
-					</a>
-				</Link>
-			</p>
 		</section>
 	);
 };

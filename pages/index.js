@@ -6,12 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Spacer from '../components/spacer/Spacer';
 import Title from '../components/misc/Title';
-import FeatureList from '../components/featurelist/FeatureList';
+import Grid from '../components/grid/Grid';
+import Card from '../components/card/Card';
 import BtnGroup from '../components/buttonsComponents/BtnGroup';
 import styles from '../components/splitcontent/SplitContent.module.scss';
-
-// Data
-import homeFeatures from '../data/homeFeatures.json';
 
 export default function Home() {
 	return (
@@ -39,6 +37,10 @@ export default function Home() {
 						websites with SEO best practices, security standards and optimized
 						for fast loading times.
 					</p>
+					<p className='lead mobileCentered'>
+						I have years of experience developing custom WordPress themes, both
+						in Back-end and Front-end.
+					</p>
 					<BtnGroup
 						btnMainCopy='Contact Me'
 						btnMainLink='/contact/'
@@ -60,11 +62,13 @@ export default function Home() {
 				</div>
 				<div className={styles.content}>
 					<Title Tag='h2' titleBlack='Work' titleRed='Experience' />
+
 					<p className='Lead'>
-						I have worked both in Front-end and Back-end, in small and large
-						projects. I have been involved in the conception till the developing
-						and optimization stages of websites.
+						I have worked for several years in small and large projects. I have
+						been involved from the conception till the developing and
+						optimization stages of websites.
 					</p>
+
 					<p>
 						<Link href='/portfolio'>
 							<a>
@@ -75,8 +79,59 @@ export default function Home() {
 					</p>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
-			<FeatureList data={homeFeatures} />
+
+			<Card className='contentSpacing'>
+				<Grid columns={2}>
+					<h2 className='entireColumn textCentered'>
+						<span className='textRed marginRight'>
+							<FontAwesomeIcon icon='check' />
+						</span>
+						My Skills
+					</h2>
+					<p className='lead entireColumn textCentered'>
+						I have learned by myself several technologies and applied them in
+						real-world scenarios. Who says an old dog cannot learn new tricks?
+					</p>
+					<h3 className='entireColumn'>Tools and Technologies</h3>
+					<ul>
+						<li>
+							<strong>Languages:</strong> HTML5, JQuery, CSS3, SASS, LESS,
+							Javascript ES6, PHP
+						</li>
+						<li>
+							<strong>Frameworks/Libraries:</strong> Bootstrap, Foundation,
+							ReactJS, NextJS, JQuery
+						</li>
+						<li>
+							<strong>Databases:</strong> MySQL, MariaDB
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<strong>WordPress CMS:</strong> Custom WP Themes coding,
+							WooCommerce, Advanced Custom Fields and most known plugins
+						</li>
+						<li>
+							<strong>Design/Video:</strong> Adobe Photoshop, Adobe Premiere,
+							Adobe LightRoom, Luminar
+						</li>
+						<li>
+							<strong>SEO:</strong> Insite optimization, Google Analytics,
+							Schema.org structured data
+						</li>
+					</ul>
+					<p className='entireColumn textCentered'>
+						<Link href='/about/'>
+							<a>
+								Get to know more about my experience and skills
+								<FontAwesomeIcon icon='angle-right' className='marginLeft' />
+							</a>
+						</Link>
+					</p>
+				</Grid>
+			</Card>
 		</Layout>
 	);
 }
