@@ -2,10 +2,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
+import FeatureList from '../components/featurelist/FeatureList';
 import Grid from '../components/grid/Grid';
 import Spacer from '../components/spacer/Spacer';
 import Card from '../components/card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Data
+import aboutFeatures from '../data/aboutFeatures.json';
 
 const About = () => {
 	return (
@@ -185,35 +189,7 @@ const About = () => {
 				</Grid>
 			</Card>
 			<Spacer />
-			<SplitContent className='width70'>
-				<h2>
-					<span className='textRed marginRight'>
-						<FontAwesomeIcon icon='check' />
-					</span>
-					Tools and Technoligies
-				</h2>
-				<ul>
-					<li>
-						<strong>Languages/Frameworks:</strong> HTML5, JQuery, CSS3, SASS,
-						LESS, Bootstrap, Foundation, Javascript ES6, ReactJS, NextJS, PHP
-					</li>
-					<li>
-						<strong>Databases:</strong> MySQL, MariaDB
-					</li>
-					<li>
-						<strong>WordPress CMS:</strong> Custom WP Themes and Plugins,
-						WooCommerce, Advanced Custom Fields
-					</li>
-					<li>
-						<strong>Design/Video:</strong> Adobe Photoshop, Adobe Premiere,
-						Adobe LightRoom, Luminar
-					</li>
-					<li>
-						<strong>SEO:</strong> Insite optimization, Google Analytics,
-						Schema.org structured data
-					</li>
-				</ul>
-			</SplitContent>
+			<FeatureList data={aboutFeatures} />
 		</Layout>
 	);
 };
