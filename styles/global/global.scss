@@ -138,6 +138,10 @@ hr {
 	border-radius: 50%;
 }
 
+.roundCorners {
+	border-radius: $global-radius;
+}
+
 // Grid / Layout
 .widthHalf {
 	@include mobile {
