@@ -38,8 +38,8 @@ export default function Home() {
 						for fast loading times.
 					</p>
 					<p className='lead mobileCentered'>
-						I have years of experience developing custom WordPress themes, both
-						in Back-end and Front-end.
+						I use WordPress as my main CMS and have experience both in Back-end
+						and Front-end developing custom themes.
 					</p>
 					<BtnGroup
 						btnMainCopy='Contact Me'
@@ -82,18 +82,21 @@ export default function Home() {
 
 			<Spacer height='double' />
 
+			<h2 className='textCentered'>
+				<span className='textRed marginRight'>
+					<FontAwesomeIcon icon='check' />
+				</span>
+				My Skills
+			</h2>
+			<p className='lead textCentered width70'>
+				I have learned by myself several technologies and applied them in real
+				world scenarios. Who says an old dog cannot learn new tricks? 💪
+			</p>
+
+			<Spacer />
+
 			<Card className='contentSpacing'>
 				<Grid columns={2}>
-					<h2 className='entireColumn textCentered'>
-						<span className='textRed marginRight'>
-							<FontAwesomeIcon icon='check' />
-						</span>
-						My Skills
-					</h2>
-					<p className='lead entireColumn textCentered'>
-						I have learned by myself several technologies and applied them in
-						real-world scenarios. Who says an old dog cannot learn new tricks?
-					</p>
 					<h3 className='entireColumn'>Tools and Technologies</h3>
 					<ul>
 						<li>

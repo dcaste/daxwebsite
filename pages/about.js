@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -26,21 +27,31 @@ const About = () => {
 
 			<SplitContent split='50-50' direction='lr'>
 				<Image
-					src='/assets/img/avatar.jpg'
-					alt='Dax Castellón'
-					className='rounded'
-					width={300}
-					height={300}
+					src='/assets/img/dax_about.jpg'
+					alt='Dax Castellón, web developer living in Switzerland'
+					width={480}
+					height={600}
+					className='roundCorners'
 				/>
 				<div className='mobileCentered'>
-					<h2>
-						<span className='textRed'>Dax</span> Castellón
-					</h2>
-					<p className='lead'>
-						I'm a Web Developer living in Switzerland with 15 years of
-						experience. I love to create elegant, fast loading and easy to use
-						websites. I've got plenty of experience building customized websites
-						with Wordpress as CMS and using SEO best practices.
+					<p>
+						I have 15 years of experience working in web development. I love to
+						create clean, elegant, fast loading and easy to use websites. I
+						believe that a friendly interface is better than fancy animations.
+					</p>
+					<p>
+						I'm also interested in everything related to SEO, analytics and
+						website performance, that is why I learn new ways to impove
+						rankings. I'm not an expert, but I know one thing or two.
+					</p>
+					<p>
+						I am also fascinated with psychology. I constantly read books about
+						marketing and strategies about web engagement.
+					</p>
+					<p>
+						<small>
+							* When I say "read books" I mean "watch YouTube videos".
+						</small>
 					</p>
 					<p className='textBig'>
 						<a
@@ -63,7 +74,9 @@ const About = () => {
 					</p>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
+
 			<Card className='contentSpacing'>
 				<Grid columns={2}>
 					<h2 className=' entireColumn textCentered'>
@@ -185,11 +198,78 @@ const About = () => {
 							websites. In some cases I still provide services of Webmastering
 							and Hosting.
 						</p>
+						<p>
+							<Link href='/portfolio'>
+								<a>
+									List of selected projects in my Portfolio
+									<FontAwesomeIcon
+										icon={'angle-right'}
+										className='marginLeft'
+									/>
+								</a>
+							</Link>
+						</p>
 					</div>
 				</Grid>
 			</Card>
 			<Spacer />
 			<FeatureList data={aboutFeatures} />
+
+			<Spacer height='double' />
+
+			<h2 className='textCentered'>I'm cool in other areas as well</h2>
+
+			<Spacer />
+
+			<SplitContent split='50-50' direction='lr'>
+				<Image
+					src='/assets/img/dax_hiking.jpg'
+					alt='Dax Castellón'
+					width={480}
+					height={600}
+					className='roundCorners'
+				/>
+				<div className='mobileCentered'>
+					<p>
+						On my free time I like to skateboard, it is something I have been
+						doing since I was a teen. They say once you start skating you will
+						never quit. I'm not good though.
+					</p>
+					<p>
+						Also I looove hiking although I do it the way down. I am not that
+						Swiss yet to hike uphill.
+					</p>
+					<p>
+						When I want to chill at the computer I play some World of Warcraft
+						or Call of Duty.
+					</p>
+					<p>
+						Lately I have been very interested in photography and video editing.
+						Since a couple of years I have been taking a lot of photos
+						everywhere I go. Sometimes I think I annoy my friends with my
+						camera. You can check me in Instagram and YouTube.
+					</p>
+					<p className='textBig'>
+						<a
+							href='https://www.instagram.com/daxvader/'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<FontAwesomeIcon icon={['fab', 'instagram-square']} />
+						</a>
+						<a
+							href='https://www.youtube.com/channel/UCbDGwt8CKStIgE1NGqLfdBg'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<FontAwesomeIcon
+								icon={['fab', 'youtube']}
+								className='marginLeft'
+							/>
+						</a>
+					</p>
+				</div>
+			</SplitContent>
 		</Layout>
 	);
 };
