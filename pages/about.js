@@ -9,7 +9,7 @@ import Card from '../components/card/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Data
-import homeFeatures from '../data/homeFeatures.json';
+import aboutFeatures from '../data/aboutFeatures.json';
 
 const About = () => {
 	return (
@@ -189,7 +189,7 @@ const About = () => {
 				</Grid>
 			</Card>
 			<Spacer />
-			<FeatureList data={homeFeatures} />
+			<FeatureList data={aboutFeatures} />
 		</Layout>
 	);
 };
