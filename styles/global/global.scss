@@ -6,26 +6,24 @@ body {
 	font-family: $fonts;
 	font-size: 20px;
 	color: $black;
-	background-repeat: repeat-y;
-	background-color: $white;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-color: $white;
 	@include mobile {
 		background-image: url('../../public/assets/img/bkg-mobile.jpg');
-		background-position: 0 -30px;
+		background-size: cover;
+		background-position: top right;
 	}
 	@include tablet-v {
 		background-image: url('../../public/assets/img/bkg-tablet.jpg');
-		background-position: 100px -60px;
+		background-size: contain;
+		background-position: top right;
 	}
-	@include tablet-h {
-		background-position: 300px -80px;
-	}
+
 	@include laptop-m {
 		background-image: url('../../public/assets/img/bkg-laptop.jpg');
-		background-position: 120px -100px;
-	}
-	@include large-screens {
-		background-position: 600px -100px;
+		background-position: top center;
+		background-size: initial;
 	}
 }
 
