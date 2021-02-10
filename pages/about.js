@@ -232,22 +232,21 @@ const About = () => {
 				<div className='mobileCentered'>
 					<p>
 						On my free time I like to skateboard, it is something I have been
-						doing since I was a teen. They say once you start skating you will
-						never quit. I'm not good though.
+						doing since I was a teen. They say once you start skating you never
+						quit. I'm not good though.
 					</p>
 					<p>
 						Also I looove hiking although I do it the way down. I am not that
 						Swiss yet to hike uphill.
 					</p>
 					<p>
-						When I want to chill at the computer I play some World of Warcraft
-						or Call of Duty.
+						When I want to chill at the computer I play some World of Warcraft,
+						Call of Duty or just paint listening to Tool or Wu Tang Clan.
 					</p>
 					<p>
 						Lately I have been very interested in photography and video editing.
 						Since a couple of years I have been taking a lot of photos
-						everywhere I go. Sometimes I think I annoy my friends with my
-						camera. You can check me in Instagram and YouTube.
+						everywhere I go. You can check me in Instagram and YouTube.
 					</p>
 					<p className='textBig'>
 						<a

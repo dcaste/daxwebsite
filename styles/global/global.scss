@@ -146,7 +146,8 @@ hr {
 .widthHalf {
 	@include mobile {
 		max-width: 100%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	@include tablet-h {
 		max-width: 50%;
@@ -156,7 +157,8 @@ hr {
 .width70 {
 	@include mobile {
 		max-width: 100%;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	@include tablet-h {
 		max-width: 70%;
