@@ -135,6 +135,43 @@ export default function Home() {
 					</p>
 				</Grid>
 			</Card>
+
+			<Spacer />
+
+			<h2 className='textCentered'>
+				<span className='textRed marginRight'>
+					<FontAwesomeIcon icon='laptop-code' />
+				</span>
+				What I am working on
+			</h2>
+			<p className='textCentered width70'>
+				Currently I am learning more about{' '}
+				<a href='https://reactjs.org/' target='_blank'>
+					ReactJS
+				</a>{' '}
+				and its frameworks like{' '}
+				<a href='https://nextjs.org/' target='_blank'>
+					NextJS
+				</a>{' '}
+				or{' '}
+				<a href='https://www.gatsbyjs.com/' target='_blank'>
+					GatsbyJS
+				</a>{' '}
+				to reduce loading times in websites and improve its rankings. This
+				website is built with NextJS not only because it is fast but because
+				prerenders the basic HTML for web crawlers, which it is better for SEO.
+			</p>
+			<p className='textCentered width70'>
+				As a personal project I am starting to connect this technologies with{' '}
+				<a href='https://wordpress.org/' target='_blank'>
+					WordPress
+				</a>{' '}
+				but I am also interested in{' '}
+				<a href='https://strapi.io/' target='_blank'>
+					Strapi
+				</a>
+				, which is a full NodeJS and API CMS.
+			</p>
 		</Layout>
 	);
 }

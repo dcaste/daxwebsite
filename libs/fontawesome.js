@@ -17,6 +17,7 @@ import {
 	faTimes,
 	faExclamationTriangle,
 	faBars,
+	faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -44,5 +45,6 @@ library.add(
 	faExclamationTriangle,
 	faBars,
 	faInstagramSquare,
-	faYoutube
+	faYoutube,
+	faLaptopCode
 );
