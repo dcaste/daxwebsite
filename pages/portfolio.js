@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
@@ -23,60 +26,28 @@ const Portfolio = () => {
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Campbell’s Kitchen' />
 					<p>
-						<strong>
-							Campbell's Kitchen is the biggest Campbell's website containing
-							thousands of detailed recipes.
-						</strong>
-					</p>
-					<p>
+						Campbell's Kitchen is the biggest Campbell's website containing
+						thousands of detailed recipes. As a member of{' '}
 						<a
+							href='https://rain.agency/'
 							target='_blank'
 							rel='noopener noreferrer'
-							href='https://www.campbells.com/kitchen/'
 						>
-							https://www.campbells.com/kitchen/
-						</a>
+							Rain Agency
+						</a>{' '}
+						WordPress Team I was in charge of back-end development of plugins
+						and theme.
 					</p>
-					<ul className={styles.list}>
-						<li>
-							As a member of{' '}
-							<a
-								href='https://rain.agency/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Rain Agency
-							</a>{' '}
-							WordPress Team.
-						</li>
-						<li>
-							WordPress back-end development of plugins and parent theme to be
-							used in other Campbell’s minisites.
-						</li>
-						<li>
-							Integration of the API Recipe Reviews in the theme with AJAX.
-						</li>
-						<li>
-							Integration of{' '}
-							<a
-								href='https://schema.org/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://schema.org/
-							</a>{' '}
-							structured data in the theme, especially in recipes.
-						</li>
-						<li>
-							This website was built before the Gutenberg editor was introduced
-							and the plugins gave blocks of content to the administrators by
-							using custom fields.
-						</li>
-						<li className={styles.technologies}>
-							Technologies: HTML5, LESS, CSS3, jQuery, PHP, AJAX.
-						</li>
-					</ul>
+					<p>
+						<Link href='/campbells-kitchen'>
+							<a>
+								View a description of the project
+								<FontAwesomeIcon icon={'angle-right'} className='marginLeft' />
+							</a>
+						</Link>
+					</p>
 				</div>
+
 				<div className={styles.picture}>
 					<Image
 						src='/assets/img/project-ck.png'

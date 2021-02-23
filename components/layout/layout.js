@@ -63,13 +63,13 @@ export default function Layout({ children, home }) {
 				<link
 					rel='icon'
 					type='image/png'
-					href='/assets/img/favicon-192x192.png'
+					href='/assets/img/android-chrome-192x192.png'
 					sizes='192x192'
 				/>
 				<link
 					rel='icon'
 					type='image/png'
-					href='/assets/img/favicon-512x512.png'
+					href='/assets/img/android-chrome-512x512.png'
 					sizes='512x512'
 				/>
 				<link rel='apple-touch-icon' href='/assets/img/apple-touch-icon.png' />

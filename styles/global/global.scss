@@ -121,17 +121,7 @@ hr {
 	text-align: center;
 	border: none;
 	border: solid 1px $grey_light;
-
-	@include mobile {
-		margin: 1rem auto;
-		max-width: 90%;
-	}
-	@include tablet-h {
-		margin: 3rem auto;
-	}
-	@include laptop-m {
-		margin: 5rem auto;
-	}
+	margin: 1.5rem auto;
 }
 
 .rounded {
@@ -140,6 +130,12 @@ hr {
 
 .roundCorners {
 	border-radius: $global-radius;
+}
+
+.bordered {
+	box-sizing: border-box !important;
+	border: 1px solid $grey_light !important;
+	border-radius: 6px;
 }
 
 // Grid / Layout
