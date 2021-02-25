@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import VisitWebsite from '../components/visitwebsite/VisitWebsite';
+import NextLink from '../components/nextlink/NextLink';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
@@ -38,27 +38,12 @@ const Portfolio = () => {
 						WordPress Team I was in charge of back-end development of plugins
 						and themes.
 					</p>
-					<p>
-						<Link href='/campbells-kitchen'>
-							<a>
-								Know more about my role in this project
-								<FontAwesomeIcon icon={'angle-right'} className='marginLeft' />
-							</a>
-						</Link>
-					</p>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://www.campbells.com/kitchen/'
-						>
-							Visit website{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
+					<NextLink
+						Tag='p'
+						Copy='Know more about my roles in this project'
+						Path='/campbells-kitchen'
+					/>
+					<VisitWebsite URL='https://www.campbells.com/kitchen/' Tag='p' />
 				</div>
 
 				<div className={styles.picture}>
@@ -94,19 +79,7 @@ const Portfolio = () => {
 						</li>
 						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
 					</ul>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://kindhumans.com'
-						>
-							Visit website{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
+					<VisitWebsite URL='https://kindhumans.com/' Tag='p' />
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -144,19 +117,7 @@ const Portfolio = () => {
 						<li>UI design and photo retouching</li>
 						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
 					</ul>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://lasmercedes.com.ni'
-						>
-							Visit website{' '}
-							<FontAwesomeIcon
-								icon={'external-link-alt'}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
+					<VisitWebsite URL='https://lasmercedes.com.ni/' Tag='p' />
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -197,15 +158,7 @@ const Portfolio = () => {
 							Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
-					<p>
-						<a
-							href='https://cashpak.com.ni/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://cashpak.com.ni/
-						</a>
-					</p>
+					<VisitWebsite URL='https://cashpak.com.ni/' Tag='p' />
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -227,15 +180,6 @@ const Portfolio = () => {
 							positions for Nicaraguan cuisine restaurants.
 						</strong>
 					</p>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='http://lacocina.com.ni/'
-						>
-							http://lacocina.com.ni/
-						</a>
-					</p>
 					<ul className={styles.list}>
 						<li>Front-end and Back-end custom WordPress theme and plugins</li>
 						<li>
@@ -249,6 +193,7 @@ const Portfolio = () => {
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
+					<VisitWebsite URL='https://lacocina.com.ni/' Tag='p' />
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -270,15 +215,6 @@ const Portfolio = () => {
 							Google.
 						</strong>
 					</p>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='http://restaurantedoncandido.com/'
-						>
-							http://restaurantedoncandido.com/
-						</a>
-					</p>
 					<ul className={styles.list}>
 						<li>Custom WordPress theme, plugins and hosting services</li>
 						<li>UI design and photo retouching</li>
@@ -287,7 +223,9 @@ const Portfolio = () => {
 							Technologies: HTML5, SASS, CSS3, jQuery, PHP
 						</li>
 					</ul>
+					<VisitWebsite URL='https://restaurantedoncandido.com/' Tag='p' />
 				</div>
+
 				<div className={styles.picture}>
 					<Image
 						src='/assets/img/project-candido.png'
@@ -297,114 +235,7 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
-			<Spacer height='double' />
-			<Grid columns={3}>
-				<h4 className='entireColumn textCentered'>
-					Other websites in which I have contributed with similar tasks:
-				</h4>
-				<div>
-					<h5>As a member of Rain Agency WordPress team</h5>
-					<ul className={styles.list}>
-						<li>
-							<a
-								href='https://www.campbells.com/v8/ '
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://www.campbells.com/v8/
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://www.campbells.com/well-yes/ '
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://www.campbells.com/well-yes/
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h5>As WordPress team leader in Tactic Center</h5>
-					<ul className={styles.list}>
-						<li>
-							<a
-								href='https://cruzlorena.com.ni/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://cruzlorena.com.ni/
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://sinsa.com.ni/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://sinsa.com.ni/
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://medco.com.ni/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://medco.com.ni/
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h5>As freelancer</h5>
-					<ul className={styles.list}>
-						<li>
-							<a
-								href='http://caminoreal.com.ni/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								http://caminoreal.com.ni/
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://tallerbonilla.com/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://tallerbonilla.com/
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://nicabus.com.ni/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								https://nicabus.com.ni/
-							</a>
-						</li>
-						<li>
-							<a
-								href='http://hotelvalerieni.com/
-						'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								http://hotelvalerieni.com/
-							</a>
-						</li>
-					</ul>
-				</div>
-			</Grid>
+			<Spacer />
 		</Layout>
 	);
 };

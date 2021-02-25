@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import NextLink from '../components/nextlink/NextLink';
+import VisitWebsite from '../components/visitwebsite/VisitWebsite';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import styles from '../components/splitcontent/SplitContent.module.scss';
@@ -11,7 +11,9 @@ const CampbellsKitchen = () => {
 	return (
 		<Layout>
 			<Head>
-				<title>Campbell's Kitchen.Explanation - {siteTitle}</title>
+				<title>
+					My Roles as a web developer in Campbell's Kitchen - {siteTitle}
+				</title>
 				<meta
 					name='description'
 					content='Explanation of my job as web developer in Campbells Kitchen website'
@@ -27,23 +29,17 @@ const CampbellsKitchen = () => {
 				height={875}
 				className='bordered'
 			/>
-			<p className='imageDesc'>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.campbells.com/kitchen/'
-				>
-					Visit the website{' '}
-					<FontAwesomeIcon icon={'external-link-alt'} className='marginLeft' />
-				</a>
-			</p>
+			<VisitWebsite
+				URL='https://campbells.com/kitchen/'
+				Tag='p'
+				className='imageDesc'
+			/>
 
 			<Spacer height='double' />
 
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<h2 className='lead'>
-						<FontAwesomeIcon icon={'briefcase'} className='marginRight' />
 						As a member of{' '}
 						<a
 							href='https://rain.agency/'
@@ -68,10 +64,7 @@ const CampbellsKitchen = () => {
 				</div>
 				<div className={styles.content}>
 					<p>
-						<strong>
-							<FontAwesomeIcon icon={'laptop-code'} className='marginRight' />{' '}
-							Technologies
-						</strong>
+						<strong>Technologies</strong>
 					</p>
 					<ul className={styles.list}>
 						<li>WordPress as CMS</li>
@@ -87,7 +80,7 @@ const CampbellsKitchen = () => {
 
 			<Spacer height='double' />
 
-			<h2 className='textCentered'>My Role in this project</h2>
+			<h2 className='textCentered'>My Roles in this project</h2>
 
 			<Spacer />
 
@@ -123,6 +116,7 @@ const CampbellsKitchen = () => {
 
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
+					<h3>Example of a Block of Content</h3>
 					<p>
 						One of my assignments was to build several custom blocks of content
 						like the one you can see in this example. You could think of them as
@@ -191,7 +185,7 @@ const CampbellsKitchen = () => {
 				src='/assets/img/campbells-kitchen-2.jpg'
 				alt="Campbell's Kitchen Website"
 				width={1400}
-				height={875}
+				height={900}
 				className='bordered'
 			/>
 			<p className='imageDesc'>
@@ -261,19 +255,15 @@ const CampbellsKitchen = () => {
 				src='/assets/img/campbells-swanson.jpg'
 				alt="Campbell's Swanson"
 				width={1400}
-				height={875}
+				height={900}
 				className='bordered'
 			/>
-			<p className='imageDesc'>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.campbells.com/swanson/'
-				>
-					Visit the website{' '}
-					<FontAwesomeIcon icon={'external-link-alt'} className='marginLeft' />
-				</a>
-			</p>
+
+			<VisitWebsite
+				URL='https://www.campbells.com/swanson/'
+				Tag='p'
+				className='imageDesc'
+			/>
 
 			<Spacer />
 
@@ -281,19 +271,15 @@ const CampbellsKitchen = () => {
 				src='/assets/img/campbells-v8.jpg'
 				alt="Campbell's V8"
 				width={1400}
-				height={875}
+				height={900}
 				className='bordered'
 			/>
-			<p className='imageDesc'>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.campbells.com/v8/'
-				>
-					Visit the website{' '}
-					<FontAwesomeIcon icon={'external-link-alt'} className='marginLeft' />
-				</a>
-			</p>
+
+			<VisitWebsite
+				URL='https://www.campbells.com/v8/'
+				Tag='p'
+				className='imageDesc'
+			/>
 
 			<Spacer />
 
@@ -301,30 +287,22 @@ const CampbellsKitchen = () => {
 				src='/assets/img/campbells-well-yes.jpg'
 				alt="Campbell's Well Yes"
 				width={1400}
-				height={875}
+				height={900}
 				className='bordered'
 			/>
-			<p className='imageDesc'>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.campbells.com/well-yes/'
-				>
-					Visit the website{' '}
-					<FontAwesomeIcon icon={'external-link-alt'} className='marginLeft' />
-				</a>
-			</p>
+			<VisitWebsite
+				URL='https://www.campbells.com/well-yes/'
+				Tag='p'
+				className='imageDesc'
+			/>
 
 			<Spacer height='double' />
 
-			<p className='width70'>
-				<Link href='/portfolio'>
-					<a>
-						View a list of other selected projects in my Portfolio
-						<FontAwesomeIcon icon={'angle-right'} className='marginLeft' />
-					</a>
-				</Link>
-			</p>
+			<NextLink
+				Tag='p'
+				Copy='View a list of other selected projects in my Portfolio'
+				Path='/portfolio'
+			/>
 		</Layout>
 	);
 };
