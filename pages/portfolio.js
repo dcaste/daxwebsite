@@ -36,97 +36,55 @@ const Portfolio = () => {
 							Rain Agency
 						</a>{' '}
 						WordPress Team I was in charge of back-end development of plugins
-						and theme.
+						and themes.
 					</p>
 					<p>
 						<Link href='/campbells-kitchen'>
 							<a>
-								View a description of the project
+								Know more about my role in this project
 								<FontAwesomeIcon icon={'angle-right'} className='marginLeft' />
 							</a>
 						</Link>
 					</p>
+					<p>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://www.campbells.com/kitchen/'
+						>
+							Visit website{' '}
+							<FontAwesomeIcon
+								icon={'external-link-alt'}
+								className='marginLeft'
+							/>
+						</a>
+					</p>
 				</div>
 
 				<div className={styles.picture}>
-					<Image
-						src='/assets/img/project-ck.png'
-						alt="Kampbell's Kitchen Website"
-						width={640}
-						height={320}
-					/>
-				</div>
-			</SplitContent>
-			<Spacer height='double' />
-			<SplitContent split='40-60' direction='rl'>
-				<div className={styles.content}>
-					<Title Tag='h3' titleBlack='Swanson' />
-					<p>
-						<strong>
-							Swanson is the Campbell’s brand specialized in broths and stocks.
-							The website contains hundreds of recipes filtered from the main
-							Campbell's Kitchen database.
-						</strong>
-					</p>
-					<p>
-						<a
-							href='https://www.campbells.com/swanson/ '
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://www.campbells.com/swanson/
+					<Link href='/campbells-kitchen'>
+						<a>
+							<Image
+								src='/assets/img/project-ck.png'
+								alt="Kampbell's Kitchen Website"
+								width={640}
+								height={320}
+							/>
 						</a>
-					</p>
-					<ul className={styles.list}>
-						<li>
-							As a member of{' '}
-							<a
-								href='https://rain.agency/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Rain Agency
-							</a>{' '}
-							WordPress Team.
-						</li>
-						<li>
-							Frontend and Backend development of plugins used as blocks of
-							content and adjustments to the child custom theme based on the
-							main Campbell’s Kitchen theme.
-						</li>
-						<li className={styles.technologies}>
-							Technologies:HTML5, LESS, CSS3, jQuery, PHP, AJAX.
-						</li>
-					</ul>
-				</div>
-				<div className={styles.picture}>
-					<Image
-						src='/assets/img/project-swanson.png'
-						alt='Swanson website'
-						width={640}
-						height={320}
-					/>
+					</Link>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
-			<SplitContent split='60-40'>
+
+			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Kindhumans' />
 					<p>
-						<strong>
-							Kindhumans is an e-commerce project based in California aimed to
-							raise funds for helping social and enviromental causes worldwide.
-						</strong>
+						Kindhumans is an e-commerce project based in California aimed to
+						raise funds for helping social and enviromental causes worldwide.
 					</p>
-					<p>
-						<a
-							target='_blank'
-							rel='noopener noreferrer'
-							href='https://kindhumans.com/'
-						>
-							https://kindhumans.com/{' '}
-						</a>
-					</p>
+
 					<ul className={styles.list}>
 						<li>As freelance developer</li>
 						<li>Developed the Blogs section with AJAX filter</li>
@@ -134,10 +92,21 @@ const Portfolio = () => {
 							Developed the basic theme for the WooCommerce products and cart
 							sections
 						</li>
-						<li className={styles.technologies}>
-							Technologies: HTML5, SASS, CSS3, jQuery, PHP
-						</li>
+						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
 					</ul>
+					<p>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://kindhumans.com'
+						>
+							Visit website{' '}
+							<FontAwesomeIcon
+								icon={'external-link-alt'}
+								className='marginLeft'
+							/>
+						</a>
+					</p>
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -148,24 +117,15 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
-			<SplitContent split='40-60' direction='rl'>
+
+			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
 					<p>
-						<strong>
-							Las Mercedes is part of the Best Western hotel chain and one of
-							the main hotels in Nicaragua.
-						</strong>
-					</p>
-					<p>
-						<a
-							href='https://lasmercedes.com.ni/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://lasmercedes.com.ni/
-						</a>
+						Las Mercedes is part of the Best Western hotel chain and one of the
+						main hotels in Nicaragua.
 					</p>
 					<ul className={styles.list}>
 						<li>
@@ -182,10 +142,21 @@ const Portfolio = () => {
 							Front-end and Back-end development of custom theme and plugins
 						</li>
 						<li>UI design and photo retouching</li>
-						<li className={styles.technologies}>
-							Technologies: HTML5, SASS, CSS3, jQuery, PHP
-						</li>
+						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
 					</ul>
+					<p>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://lasmercedes.com.ni'
+						>
+							Visit website{' '}
+							<FontAwesomeIcon
+								icon={'external-link-alt'}
+								className='marginLeft'
+							/>
+						</a>
+					</p>
 				</div>
 				<div className={styles.picture}>
 					<Image
@@ -196,53 +167,9 @@ const Portfolio = () => {
 					/>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
-			<SplitContent split='60-40'>
-				<div className={styles.content}>
-					<Title Tag='h3' titleBlack='Delisoy' />
-					<p>
-						<strong>Delisoy is the lead brand of soy milk in Nicaragua.</strong>
-					</p>
-					<ul className={styles.list}>
-						<li>
-							As Web Developer Team Leader in{' '}
-							<a
-								href='https://tactic-center.com/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Tactic Center
-							</a>
-						</li>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>WooCommerce integration as a catalog of products</li>
-						<li>UI design and photo retouching</li>
-						<li className={styles.technologies}>
-							Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
-						</li>
-					</ul>
-					<p>
-						<a
-							href='https://soydelisoy.com/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							https://soydelisoy.com/
-						</a>
-					</p>
-				</div>
-				<div className={styles.picture}>
-					<Image
-						src='/assets/img/project-delisoy.png'
-						alt='Delisoy website'
-						width={640}
-						height={320}
-					/>
-				</div>
-			</SplitContent>
-			<Spacer height='double' />
+
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
