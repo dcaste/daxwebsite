@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import VisitWebsite from '../components/visitwebsite/VisitWebsite';
-import NextLink from '../components/nextlink/NextLink';
+import LinkInternal from '../components/linkinternal/LinkInternal';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Grid from '../components/grid/Grid';
@@ -38,7 +38,7 @@ const Portfolio = () => {
 						WordPress Team I was in charge of back-end development of plugins
 						and themes.
 					</p>
-					<NextLink
+					<LinkInternal
 						Tag='p'
 						Copy='Know more about my roles in this project'
 						Path='/campbells-kitchen'

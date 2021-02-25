@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 
-const NextLink = ({ Tag, Path, className, Copy }) => {
+const LinkInternal = ({ Tag, Path, className, Copy }) => {
 	return (
 		<Tag className={className}>
 			<Link href={Path}>
@@ -14,16 +14,16 @@ const NextLink = ({ Tag, Path, className, Copy }) => {
 	);
 };
 
-NextLink.propTypes = {
+LinkInternal.propTypes = {
 	Tag: PropTypes.string,
 	Path: PropTypes.string.isRequired,
 	Copy: PropTypes.string.isRequired,
 };
 
-NextLink.defaultProps = {
+LinkInternal.defaultProps = {
 	Tag: 'span',
 	Path: '/',
 	Copy: 'Know more...',
 };
 
-export default NextLink;
+export default LinkInternal;

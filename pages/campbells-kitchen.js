@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import NextLink from '../components/nextlink/NextLink';
+import LinkInternal from '../components/linkinternal/LinkInternal';
 import VisitWebsite from '../components/visitwebsite/VisitWebsite';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -298,7 +298,7 @@ const CampbellsKitchen = () => {
 
 			<Spacer height='double' />
 
-			<NextLink
+			<LinkInternal
 				Tag='p'
 				Copy='View a list of other selected projects in my Portfolio'
 				Path='/portfolio'
