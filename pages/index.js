@@ -15,7 +15,10 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle} - Web Developer</title>
+				<title>
+					{siteTitle} - Web Developer living in Switzerland specialized in
+					custom WordPress development
+				</title>
 			</Head>
 			<SplitContent tag='section' split='50-50'>
 				<Image
@@ -38,8 +41,8 @@ export default function Home() {
 						for fast loading times.
 					</p>
 					<p className='lead mobileCentered'>
-						I use WordPress as my main CMS and have experience both in Back-end
-						and Front-end developing custom themes.
+						I use WordPress as my main CMS and have an extensive experience both
+						in Backend and Frontend developing custom themes.
 					</p>
 					<BtnGroup
 						btnMainCopy='Contact Me'
@@ -146,15 +149,15 @@ export default function Home() {
 			</h2>
 			<p className='textCentered width70'>
 				Currently I am learning more about{' '}
-				<a href='https://reactjs.org/' target='_blank'>
+				<a href='https://reactjs.org/' target='_blank' rel='external'>
 					ReactJS
 				</a>{' '}
 				and its frameworks like{' '}
-				<a href='https://nextjs.org/' target='_blank'>
+				<a href='https://nextjs.org/' target='_blank' rel='external'>
 					NextJS
 				</a>{' '}
 				or{' '}
-				<a href='https://www.gatsbyjs.com/' target='_blank'>
+				<a href='https://www.gatsbyjs.com/' target='_blank' rel='external'>
 					GatsbyJS
 				</a>{' '}
 				to reduce loading times in websites and improve its rankings. This

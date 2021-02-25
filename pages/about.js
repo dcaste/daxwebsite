@@ -50,7 +50,7 @@ const About = () => {
 					</p>
 					<p>
 						<small>
-							* When I say "read books" I mean "watch YouTube videos".
+							👀 When I say "read books" I really mean "watch YouTube videos".
 						</small>
 					</p>
 					<p className='textBig'>

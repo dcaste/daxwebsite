@@ -53,13 +53,13 @@ const CampbellsKitchen = () => {
 					<hr />
 					<p>
 						Campbell's Kitchen is the biggest Campbell's website containing
-						thousands of recipes with detailed information including products
+						thousands of recipes with detailed information, including products
 						used and where to find them near the user.
 					</p>
 					<p>
 						The main goal was to redesign the old website and incorporate new
 						technologies so the Campbell's team should be able to update the
-						information with the minimun IT knowledge.
+						information without IT expertise.
 					</p>
 				</div>
 				<div className={styles.content}>
@@ -88,26 +88,27 @@ const CampbellsKitchen = () => {
 				<div className={styles.content}>
 					<h3>Building Blocks of Content</h3>
 					<p>
-						I was part of the WordPress team in charge of developing the
-						backend. This website was built before the WordPress Gutenberg
-						editor was introduced so we used custom fields to build blocks of
-						content so the administrators could easily fill them.
+						I was part of the WordPress team in charge of developing the backend
+						for this website. I did some small contributions in frontend but my
+						main role was the development of the backend.
 					</p>
 					<p>
-						The idea was to give administrators an user friendly way to update
-						the information and to be scalable.
+						This website was built before the WordPress Gutenberg editor was
+						introduced so we used custom fields to build blocks of content. The
+						idea was to give administrators an user friendly way to update the
+						information and to be scalable.
 					</p>
 				</div>
 				<div className={styles.content}>
 					<p>
-						Because of the scalability the themes and plugins were built from
-						scratch, that way other developers can modify them for future needs.
+						Because of the scalability concern the themes and plugins were built
+						from scratch, that way other developers can modify them for future
+						needs.
 					</p>
 					<p>
-						The other consideration for this was security. The more secure
-						system is the one nobody knows how it is built. We minimized the
-						risks by avoiding third party plugins and by using strict PHP and
-						WordPress security standards.
+						The other consideration for this approach was security. We minimized
+						the risks by avoiding third party plugins and coding under strict
+						PHP and WordPress security standards.
 					</p>
 				</div>
 			</SplitContent>
@@ -120,7 +121,7 @@ const CampbellsKitchen = () => {
 					<p>
 						One of my assignments was to build several custom blocks of content
 						like the one you can see in this example. You could think of them as
-						a component in React.
+						a reusable component in React.
 					</p>
 					<p>
 						This block of content is a caroussel with a collection of recipes.
@@ -242,10 +243,10 @@ const CampbellsKitchen = () => {
 			<div className='width70'>
 				<h2>Further Development</h2>
 				<p>
-					The custom theme and blocks of content were so useful that the client
-					asked to develop other websites with the same approach, so we used the
-					custom theme as a parent theme and the code from the blocks of content
-					in the following Campbell's websites.
+					The custom theme and blocks of content proved to be so useful that the
+					client asked to develop other websites with the same approach, so we
+					used the custom theme as a parent theme and the code from the blocks
+					of content in the following Campbell's websites.
 				</p>
 			</div>
 

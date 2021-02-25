@@ -31,12 +31,12 @@ const Portfolio = () => {
 						<a
 							href='https://rain.agency/'
 							target='_blank'
-							rel='noopener noreferrer'
+							rel='external noopener noreferrer'
 						>
 							Rain Agency
 						</a>{' '}
-						WordPress Team I was in charge of back-end development of plugins
-						and themes.
+						WordPress Team I was in charge of backend development of plugins and
+						themes.
 					</p>
 					<LinkInternal
 						Tag='p'
@@ -71,13 +71,13 @@ const Portfolio = () => {
 					</p>
 
 					<ul className={styles.list}>
-						<li>As freelance developer</li>
+						<li>Worked as freelance developer</li>
 						<li>Developed the Blogs section with AJAX filter</li>
 						<li>
 							Developed the basic theme for the WooCommerce products and cart
 							sections
 						</li>
-						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
+						<li>Technologies used: HTML5, SASS, CSS3, jQuery, PHP</li>
 					</ul>
 					<VisitWebsite URL='https://kindhumans.com/' Tag='p' />
 				</div>
