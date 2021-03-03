@@ -100,23 +100,23 @@ const Portfolio = () => {
 						Las Mercedes is part of the Best Western hotel chain and one of the
 						main hotels in Nicaragua.
 					</p>
-					<ul className={styles.list}>
-						<li>
-							As Web Developer Team Leader in{' '}
-							<a
-								href='https://tactic-center.com/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Tactic Center
-							</a>
-						</li>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>UI design and photo retouching</li>
-						<li>Technologies: HTML5, SASS, CSS3, jQuery, PHP</li>
-					</ul>
+					<p>
+						As Lead Web Developer in{' '}
+						<a
+							href='https://tactic-center.com/'
+							target='_blank'
+							rel='external noopener noreferrer'
+						>
+							Tactic Center
+						</a>{' '}
+						I was in charge in designing the UI, photo retouching and coding
+						both the frontend and backend for WordPress.
+					</p>
+					<LinkInternal
+						Tag='p'
+						Copy='Know more about my roles in this project'
+						Path='/best-western'
+					/>
 					<VisitWebsite URL='https://lasmercedes.com.ni/' Tag='p' />
 				</div>
 				<div className={styles.picture}>

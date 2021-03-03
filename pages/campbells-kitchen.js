@@ -6,6 +6,7 @@ import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 import Spacer from '../components/spacer/Spacer';
+import Card from '../components/card/Card';
 
 const CampbellsKitchen = () => {
 	return (
@@ -16,7 +17,7 @@ const CampbellsKitchen = () => {
 				</title>
 				<meta
 					name='description'
-					content='Explanation of my job as web developer in Campbells Kitchen website'
+					content='My roles as web developer in Campbells Kitchen website'
 				/>
 			</Head>
 
@@ -37,46 +38,46 @@ const CampbellsKitchen = () => {
 
 			<Spacer height='double' />
 
-			<SplitContent split='60-40'>
-				<div className={styles.content}>
-					<h2 className='lead'>
-						As a member of{' '}
-						<a
-							href='https://rain.agency/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							Rain Agency
-						</a>{' '}
-						WordPress Team.
-					</h2>
-					<hr />
-					<p>
-						Campbell's Kitchen is the biggest Campbell's website containing
-						thousands of recipes with detailed information, including products
-						used and where to find them near the user.
-					</p>
-					<p>
-						The main goal was to redesign the old website and incorporate new
-						technologies so the Campbell's team should be able to update the
-						information without IT expertise.
-					</p>
-				</div>
-				<div className={styles.content}>
-					<p>
-						<strong>Technologies</strong>
-					</p>
-					<ul className={styles.list}>
-						<li>WordPress as CMS</li>
-						<li>HTML5, LESS, CSS3, PHP</li>
-						<li>JQuery, AJAX</li>
-						<li>
+			<Card>
+				<SplitContent split='60-40'>
+					<div className={styles.content}>
+						<p className='lead'>
+							Campbell's Kitchen is the biggest Campbell's website containing
+							thousands of recipes with detailed information, including
+							Campbell's products used and where to find them near the user.
+						</p>
+						<p className='lead'>
+							The main goal was to redesign the old website and incorporate new
+							technologies so the Campbell's team should be able to update the
+							information with minimum IT expertise.
+						</p>
+					</div>
+					<div className={styles.content}>
+						<p>
+							<strong>Position:</strong> WordPress developer at{' '}
+							<a
+								href='https://rain.agency/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Rain Agency
+							</a>{' '}
+						</p>
+						<p>
+							<strong>Technologies:</strong>
+						</p>
+						<ul>
+							<li>WordPress as CMS</li>
+							<li>HTML5, LESS, CSS3, PHP</li>
+							<li>JQuery, AJAX</li>
+						</ul>
+						<small>
 							* because of the disclosure clauses I cannot provide the exact
 							methods and tools used to build the website
-						</li>
-					</ul>
-				</div>
-			</SplitContent>
+						</small>
+					</div>
+				</SplitContent>
+			</Card>
 
 			<Spacer height='double' />
 
@@ -94,14 +95,14 @@ const CampbellsKitchen = () => {
 					</p>
 					<p>
 						This website was built before the WordPress Gutenberg editor was
-						introduced so we used custom fields to build blocks of content. The
-						idea was to give administrators an user friendly way to update the
-						information and to be scalable.
+						introduced and we used custom fields to build blocks of content,
+						that way the Campbell's staff should have an user friendly way to
+						update the information.
 					</p>
 				</div>
 				<div className={styles.content}>
 					<p>
-						Because of the scalability concern the themes and plugins were built
+						Because of scalability concerns the themes and plugins were built
 						from scratch, that way other developers can modify them for future
 						needs.
 					</p>
@@ -121,15 +122,15 @@ const CampbellsKitchen = () => {
 					<p>
 						One of my assignments was to build several custom blocks of content
 						like the one you can see in this example. You could think of them as
-						a reusable component in React.
+						reusable components in React.
 					</p>
 					<p>
-						This block of content is a caroussel with a collection of recipes.
-						The administrator can add a maximum of 12 collections and each
+						This example is a caroussel with a collection of recipes. The
+						administrator can add a maximum of 12 collections and each
 						collection has its own name, description, a main image and two extra
-						images. Once the user clicks on the collection she or he is taken to
-						a list of recipes that belong to this collection, for example
-						"Recipes Using Tomato Soup".
+						images. Once the user clicks on a collection she or he is taken to
+						that specific collection of recipes, for example "Recipes Using
+						Tomato Soup".
 					</p>
 				</div>
 				<div className={styles.picture}>
@@ -149,10 +150,14 @@ const CampbellsKitchen = () => {
 				<div className={styles.content}>
 					<h3>API Integration</h3>
 					<p>
-						Another assignment was to integrate the Reviews coming from an
-						external API and add functionalities like sorting and adding new
-						reviews by using AJAX. Yup, there was not such a thing as React back
-						in the day 😅
+						Another of my assignment was to integrate the reviews and scores
+						coming from an external API. I also builted functionalities like
+						sorting and adding new reviews by using AJAX. Yup, there was not
+						such a thing as React back in the day 😅
+					</p>
+					<p>
+						Since there wasn't an average score for a given recipe I also built
+						a simple average calculation for the recipe score.
 					</p>
 
 					<h3>SEO Structured Data</h3>
@@ -165,8 +170,9 @@ const CampbellsKitchen = () => {
 						>
 							https://schema.org/
 						</a>{' '}
-						structured data in the whole theme, especially in recipes, although
-						it seems it is not used anymore.
+						structured data in the markup of the whole theme, especially in
+						recipes, although it seems now Campbell's use a JSON file instead of
+						the code in the markup.
 					</p>
 				</div>
 				<div className={styles.picture}>
