@@ -50,7 +50,7 @@ const About = () => {
 					</p>
 					<p>
 						<small>
-							* When I say "read books" I mean "watch YouTube videos".
+							👀 When I say "read books" I really mean "watch YouTube videos".
 						</small>
 					</p>
 					<p className='textBig'>
@@ -152,7 +152,7 @@ const About = () => {
 					</div>
 					<div>
 						<h3>
-							As Web Developer Team Leader in{' '}
+							As Lead Web Developer in{' '}
 							<a
 								href='https://tactic-center.com/'
 								target='_blank'
@@ -163,8 +163,8 @@ const About = () => {
 						</h3>
 						<ul className='splitContent__list'>
 							<li>
-								Supervising and assisting two junior developers as Web
-								Development Team Leader.
+								Supervising and assisting two junior developers as Lead Web
+								Developer.
 							</li>
 							<li>
 								Development of custom Wordpress themes and plugins using SEO

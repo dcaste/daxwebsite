@@ -113,7 +113,12 @@ p {
 	line-height: 1.5em;
 }
 
-p + p {
+p + p,
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p {
 	margin-top: 1em;
 }
 
@@ -183,7 +188,6 @@ label {
 }
 
 .lead {
-	line-height: 1.3em;
 	@include mobile {
 		font-size: 1.1em;
 	}
