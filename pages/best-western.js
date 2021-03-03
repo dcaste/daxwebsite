@@ -108,7 +108,7 @@ const CampbellsKitchen = () => {
 				<div className={styles.picture}>
 					<Image
 						src='/assets/img/bwlm-elements.jpg'
-						alt='Best Western Restaurant block of content'
+						alt='Best Western UI design'
 						width={1440}
 						height={1840}
 						className='bordered'
@@ -116,11 +116,11 @@ const CampbellsKitchen = () => {
 				</div>
 			</SplitContent>
 
-			<Spacer />
+			<Spacer height='double' />
 
 			<Image
 				src='/assets/img/bwlm-home-1.jpg'
-				alt='Best Western Homepage'
+				alt='Best Western Bedroom block of content'
 				width={1400}
 				height={900}
 				className='bordered'
@@ -128,7 +128,7 @@ const CampbellsKitchen = () => {
 
 			<Spacer height='double' />
 
-			<SplitContent split='40-60' direction='rl'>
+			<SplitContent split='50-50' direction='rl'>
 				<div className={styles.content}>
 					<h3>
 						Developing a custom theme for WordPress, both Frontend and Backend
@@ -164,7 +164,30 @@ const CampbellsKitchen = () => {
 				</div>
 			</SplitContent>
 
+			<Spacer height='double' />
+
+			<div className='width70'>
+				<h3>Design everything Responsive</h3>
+				<p>
+					I think being responsive is a standard now and every website should be
+					responsive, especially since most of the visitors now come from a
+					mobile source.
+				</p>
+				<p>
+					Foundation Framework made the responsive design a little bit easier.
+				</p>
+			</div>
+
 			<Spacer />
+
+			<Image
+				src='/assets/img/bwlm-responsive.png'
+				alt='Responsive design'
+				width={1400}
+				height={701}
+			/>
+
+			<Spacer height='double' />
 
 			<div className='width70'>
 				<h3>My Favorite section: the Restaurant page</h3>
@@ -182,7 +205,7 @@ const CampbellsKitchen = () => {
 				</p>
 			</div>
 
-			<Spacer />
+			<Spacer height='double' />
 
 			<Image
 				src='/assets/img/bwlm-restaurant.jpg'
@@ -192,7 +215,7 @@ const CampbellsKitchen = () => {
 				className='bordered'
 			/>
 
-			<Spacer />
+			<Spacer height='double' />
 
 			<LinkInternal
 				Tag='p'
