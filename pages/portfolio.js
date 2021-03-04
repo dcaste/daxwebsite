@@ -109,7 +109,7 @@ const Portfolio = () => {
 						>
 							Tactic Center
 						</a>{' '}
-						I was in charge in designing the UI, photo retouching and coding
+						I was in charge of designing the UI, photo retouching and coding
 						both the frontend and backend for WordPress.
 					</p>
 					<LinkInternal
@@ -133,43 +133,43 @@ const Portfolio = () => {
 
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
-					<Title Tag='h3' titleBlack='CashPak Nicaragua' />
+					<Title Tag='h3' titleBlack='Cruz Lorena' />
 					<p>
-						<strong>
-							CashPak is a Nicaraguan nationwide WesternUnion subsidiary.
-						</strong>
+						Cruz Lorena is one of the biggest Department Stores in Nicaragua
+						with a wide variety of consumer goods.
 					</p>
-					<ul className={styles.list}>
-						<li>
-							As Web Developer Team Leader in{' '}
-							<a
-								href='https://tactic-center.com/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								Tactic Center
-							</a>
-						</li>
-						<li>
-							Front-end and Back-end development of custom theme and plugins
-						</li>
-						<li>UI design and photo retouching</li>
-						<li className={styles.technologies}>
-							Technologies: AJAX, HTML5, SASS, CSS3, jQuery, PHP
-						</li>
-					</ul>
-					<VisitWebsite URL='https://cashpak.com.ni/' Tag='p' />
+					<p>
+						As Lead Web Developer in{' '}
+						<a
+							href='https://tactic-center.com/'
+							target='_blank'
+							rel='external noopener noreferrer'
+						>
+							Tactic Center
+						</a>{' '}
+						I was in charge of coding both the frontend and backend for
+						WordPress and WooCommerce, among several other E-Commerce related
+						task.
+					</p>
+					<LinkInternal
+						Tag='p'
+						Copy='Know more about my roles in this project'
+						Path='/cruz-lorena'
+					/>
+					<VisitWebsite URL='https://cruzlorena.com.ni/' Tag='p' />
 				</div>
 				<div className={styles.picture}>
 					<Image
-						src='/assets/img/project-cashpak.png'
-						alt='CashPak Nicaragua website'
+						src='/assets/img/project-cruz-lorena.png'
+						alt='Cruz Lorena website'
 						width={640}
 						height={320}
 					/>
 				</div>
 			</SplitContent>
+
 			<Spacer height='double' />
+
 			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Cocina Dña Haydeé' />
