@@ -116,12 +116,13 @@ export default function Home() {
 					</ul>
 					<ul>
 						<li>
-							<strong>WordPress CMS:</strong> Custom WP Themes coding,
-							WooCommerce, Advanced Custom Fields and most known plugins
+							<strong>WordPress CMS:</strong> Customized themes for WordPress
+							and WooCommerce. Backend and Frontend implementation of Advanced
+							Custom Fields and most known plugins
 						</li>
 						<li>
 							<strong>Design/Video:</strong> Adobe Photoshop, Adobe Premiere,
-							Adobe LightRoom, Luminar
+							Adobe LightRoom, Luminar AI
 						</li>
 						<li>
 							<strong>SEO:</strong> Insite optimization, Google Analytics,
@@ -131,7 +132,7 @@ export default function Home() {
 					<p className='entireColumn textCentered'>
 						<Link href='/about/'>
 							<a>
-								Get to know more about my experience and skills
+								Get to know more about my job experience and skills
 								<FontAwesomeIcon icon='angle-right' className='marginLeft' />
 							</a>
 						</Link>
@@ -165,7 +166,7 @@ export default function Home() {
 				prerenders the basic HTML for web crawlers, which it is better for SEO.
 			</p>
 			<p className='textCentered width70'>
-				As a personal project I am starting to connect this technologies with{' '}
+				As a personal project I am starting to connect these technologies with{' '}
 				<a href='https://wordpress.org/' target='_blank'>
 					WordPress
 				</a>{' '}
