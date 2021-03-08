@@ -56,6 +56,17 @@ The file structure is as follows:
 - There are some global styles that like variables, mixins, fonts and a CSS reset. Those styles are found in styles/settings/
 - React components styles are found in the same directory of the component. I.E. components/alert/Alert.module.scss
 
+## Sendig Email Messages
+
+This website uses EmailJS as the Email service. To use EmailJS:
+
+- Create an account in [EmailJS](https://emailjs.com)
+- Once logged in, create a new Email Service and select your Email provider
+- Create a .env file with the following variables:
+  -- NEXT_PUBLIC_EMAILJS_USER: is your EmailJS user ID
+  -- NEXT_PUBLIC_EMAILJS_TEMPLATE: is your EmailJS template ID
+  -- NEXT_PUBLIC_EMAILJS_SERVICE: is your EmailJS service ID
+
 ## Roadmap
 
 I am working on the following:
