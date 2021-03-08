@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import LinkInternal from '../components/linkinternal/LinkInternal';
-import VisitWebsite from '../components/visitwebsite/VisitWebsite';
+import VisitRepo from '../components/visitrepo/VisitRepo';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 import Spacer from '../components/spacer/Spacer';
 import Card from '../components/card/Card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CampbellsKitchen = () => {
 	return (
@@ -29,11 +28,7 @@ const CampbellsKitchen = () => {
 				height={650}
 				className='bordered'
 			/>
-			<p className='imageDesc'>
-				<a target='_blank' rel='external' href='https://github.com/dcaste/'>
-					Visit the code repository <FontAwesomeIcon icon={['fab', 'github']} />
-				</a>
-			</p>
+			<VisitRepo Tag='p' classname='imageDesc' />
 
 			<Spacer height='double' />
 
