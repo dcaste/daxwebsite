@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import VisitWebsite from '../components/visitwebsite/VisitWebsite';
+import VisitRepo from '../components/visitrepo/VisitRepo';
 import LinkInternal from '../components/linkinternal/LinkInternal';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
-import Grid from '../components/grid/Grid';
 import Spacer from '../components/spacer/Spacer';
 import Title from '../components/misc/Title';
 import styles from '../components/splitcontent/SplitContent.module.scss';
@@ -64,6 +64,36 @@ const Portfolio = () => {
 
 			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
+					<Title Tag='h3' titleBlack='Dax Website' />
+					<p>
+						Yup, I really like this website and I feel proud. Is it corny to
+						show this?
+					</p>
+					<p>
+						This website is built with NextJs and it loads super fast. It is a
+						React app but it prerenders the HTML as static HTML files.
+					</p>
+					<LinkInternal
+						Tag='p'
+						Copy='Know more about how I built this website'
+						Path='/dax-website'
+					/>
+					<VisitRepo URL='https://github.com/dcaste' />
+				</div>
+				<div className={styles.picture}>
+					<Image
+						src='/assets/img/daxwebsite-responsive.png'
+						alt='Kindhumans website'
+						width={640}
+						height={320}
+					/>
+				</div>
+			</SplitContent>
+
+			<Spacer height='double' />
+
+			<SplitContent split='60-40'>
+				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Kindhumans' />
 					<p>
 						Kindhumans is an e-commerce project based in California aimed to
@@ -93,7 +123,7 @@ const Portfolio = () => {
 
 			<Spacer height='double' />
 
-			<SplitContent split='60-40'>
+			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Best Western Las Mercedes' />
 					<p>
@@ -131,7 +161,7 @@ const Portfolio = () => {
 
 			<Spacer height='double' />
 
-			<SplitContent split='40-60' direction='rl'>
+			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Cruz Lorena' />
 					<p>
@@ -170,7 +200,7 @@ const Portfolio = () => {
 
 			<Spacer height='double' />
 
-			<SplitContent split='60-40'>
+			<SplitContent split='40-60' direction='rl'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Cocina Dña Haydeé' />
 					<p>
@@ -205,7 +235,7 @@ const Portfolio = () => {
 				</div>
 			</SplitContent>
 			<Spacer height='double' />
-			<SplitContent split='40-60' direction='rl'>
+			<SplitContent split='60-40'>
 				<div className={styles.content}>
 					<Title Tag='h3' titleBlack='Restaurante Don Candido' />
 					<p>

@@ -47,7 +47,7 @@ const CruzLorena = () => {
 						</p>
 						<p className='lead'>
 							The client wanted to redesign its website with a clean look,
-							integrate a E-Commerce solution and a CRM system.
+							integrate an E-Commerce solution and a CRM system.
 						</p>
 					</div>
 					<div className={styles.content}>
@@ -71,7 +71,7 @@ const CruzLorena = () => {
 						</ul>
 						<small>
 							* because of the disclosure clauses I cannot provide the exact
-							methods and tools used to build the website
+							methods and tools used to build this website
 						</small>
 					</div>
 				</SplitContent>
@@ -122,22 +122,19 @@ const CruzLorena = () => {
 					/>
 				</div>
 				<div className={styles.content}>
-					<h4>Sidebar Navigation Widget</h4>
+					<h4>Custom Sidebar Navigation Widget</h4>
 					<p>
 						One of the areas I had to built from scratch is the Sidebar
 						navigation. I did not used the standard navigation widget because I
-						needed to show only the WooCommerce product categories, with the
-						ability to display the subcategories using an accordion element and
+						needed to show only the WooCommerce product categories with the
+						ability to display subcategories using an accordion element and
 						showing the user the current category by displaying a red dot.
 					</p>
-					<h4>Promotion Widget</h4>
+					<h4>Custom Promotions Widget</h4>
 					<p>
-						This other custom widget is a caroussel of products built with
-						custom fields that takes the user to the specific product page.
-					</p>
-					<p>
-						This same widget is used in the main navigation menu at the top of
-						the website.
+						The Promotions widget is a caroussel that shows products and takes
+						the user to that specific product page. This same widget is also
+						used in the main navigation menu at the top of the website.
 					</p>
 				</div>
 			</SplitContent>
@@ -148,11 +145,11 @@ const CruzLorena = () => {
 				<div className={styles.content}>
 					<h3>Customizing the WooCommerce design</h3>
 					<p>
-						I changed the WooCommerce design and relocate some elements in areas
-						that don't appear by default. I acomplished this by using
-						WooCommerce hooks instead of hard coding elements in the WooCOmmerce
-						template. The reason for this was because with every update the
-						WooCommerce template is rewritten.
+						I changed the WooCommerce design and relocated some elements in
+						areas that don't appear by default. I acomplished this by using
+						WooCommerce hooks instead of hard coding elements in the WooCommerce
+						template. The reason for this is because everytime WooCommerce is
+						updated the templates are rewritten.
 					</p>
 					<p>
 						In this example, there is an extra button that leads to a form page.
@@ -196,7 +193,7 @@ const CruzLorena = () => {
 						Granted, the Payment Gateway integration is provided by the bank
 						with a plugin. My work consisted in integrating their code in the
 						theme and realize several shopping tests and verify the shopping
-						process.
+						process before launch the website into production.
 					</p>
 				</div>
 				<div className={styles.picture}>
@@ -216,18 +213,21 @@ const CruzLorena = () => {
 				<div className={styles.content}>
 					<h3>Several Backend and Frontend duties</h3>
 					<p>
-						This was a client that was constantly active and since WooCommerce
-						is also going through several updates I was in charge among other
-						things:
+						This was a very active client and since WooCommerce is also going
+						through several updates I was in charge among other duties:
 					</p>
 					<ul>
-						<li>Bulk updating of product inventory</li>
+						<li>Bulk updating of product prices and photos</li>
+						<li>Creating and updating discount coupons</li>
 						<li>
 							Testing the new WooCommerce template changes in a staging
 							environment to later update them live
 						</li>
-						<li>Configuration of CPanel, weekly backups and SSL Certificate</li>
-						<li>Testings of the Checkout process</li>
+						<li>
+							Configuration of CPanel, the weekly backups and the SSL
+							Certificate
+						</li>
+						<li>Regular testings of the Checkout process</li>
 						<li>Updating the Payment Gateway and plugins</li>
 					</ul>
 				</div>
