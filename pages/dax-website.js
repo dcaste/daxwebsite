@@ -28,7 +28,11 @@ const CampbellsKitchen = () => {
 				height={650}
 				className='bordered'
 			/>
-			<VisitRepo Tag='p' classname='imageDesc' />
+			<VisitRepo
+				Tag='p'
+				classname='imageDesc'
+				URL='https://github.com/dcaste/daxwebsite'
+			/>
 
 			<Spacer height='double' />
 

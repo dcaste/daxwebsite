@@ -78,7 +78,7 @@ const Portfolio = () => {
 						Copy='Know more about how I built this website'
 						Path='/dax-website'
 					/>
-					<VisitRepo URL='https://github.com/dcaste' />
+					<VisitRepo URL='https://github.com/dcaste/daxwebsite' />
 				</div>
 				<div className={styles.picture}>
 					<Image
