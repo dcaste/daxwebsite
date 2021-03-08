@@ -82,7 +82,7 @@ export default function Layout({ children, home }) {
 			<BreakpointProvider>
 				<div id='mainWrapper' className={styles.mainWrapper}>
 					<div className={styles.navHeader}>
-						<Breakpoint small down>
+						<Breakpoint medium down>
 							<BtnNav
 								open={openNavMobile}
 								toggle={() => {
@@ -93,7 +93,7 @@ export default function Layout({ children, home }) {
 
 						<NavMobile open={openNavMobile} />
 
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 					</div>
@@ -113,7 +113,7 @@ export default function Layout({ children, home }) {
 					</main>
 
 					<footer className={styles.navFooter}>
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 						<CopyRight />
