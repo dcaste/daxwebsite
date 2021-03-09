@@ -62,10 +62,29 @@ This website uses EmailJS as the Email service. To use EmailJS:
 
 - Create an account in [EmailJS](https://emailjs.com)
 - Once logged in, create a new Email Service and select your Email provider
-- Create a .env file with the following variables:
-  - NEXT_PUBLIC_EMAILJS_USER: is your EmailJS user ID
-  - NEXT_PUBLIC_EMAILJS_TEMPLATE: is your EmailJS template ID
-  - NEXT_PUBLIC_EMAILJS_SERVICE: is your EmailJS service ID
+- Create a .env.local file with the following variables:
+  - NEXT_PUBLIC_EMAILJS_USER=replace with your EmailJS user ID
+  - NEXT_PUBLIC_EMAILJS_TEMPLATE=replace with your EmailJS template ID
+  - NEXT_PUBLIC_EMAILJS_SERVICE=replace with your EmailJS service ID
+
+## Deployment
+
+### Static HTML
+
+Run:
+
+```bash
+npm run build
+```
+
+By default, this will generate an **_out_** directory, which can be served by any static hosting service or CDN.
+
+### Node.js Server
+
+You can use any cloud platform with node.js. Every provider has its own methods but in general you should be able to upload this website using your Git provider of your choice.
+
+- Create a repository in your Git provider and upload these files
+- Configure your cloud provider to deploy the branch of your choice of this repository
 
 ## Roadmap
 
