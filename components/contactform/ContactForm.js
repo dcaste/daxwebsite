@@ -18,10 +18,10 @@ const ContactForm = () => {
 
 		emailjs
 			.sendForm(
-				process.env.emailjsService,
-				process.env.emailjsTemplate,
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE,
 				'contactMe',
-				process.env.emailjsUser
+				process.env.NEXT_PUBLIC_EMAILJS_USER
 			)
 			.then(
 				function (response) {
@@ -64,6 +64,10 @@ const ContactForm = () => {
 					name='contactMe'
 					id='contactMe'
 				>
+					<p>
+						Feel free to reach out if you're looking for a developer, have a
+						question, or just want to connect.
+					</p>
 					<p>
 						<label htmlFor='yourName' className={styles.label}>
 							Name
@@ -123,15 +127,15 @@ const ContactForm = () => {
 					{formResponse === 'success' && (
 						<Alert severity='success'>
 							<p>
-								Thank you for contacting me, your message has been succesfully
-								delivered!
+								👍 Thank you for contacting me, your message has been
+								succesfully delivered! I will answer as soon as posible.
 							</p>
 						</Alert>
 					)}
 					{formResponse === 'error' && (
 						<Alert severity='error'>
 							<p>
-								There was a problem sending this message. Please send me a
+								😟 There was a problem sending this message. Please send me a
 								direct Email message or try again in a couple of minutes.
 							</p>
 							<p>

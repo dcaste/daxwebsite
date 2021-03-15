@@ -42,7 +42,37 @@ export default function Layout({ children, home }) {
 	return (
 		<>
 			<Head>
-				<link rel='icon' href='/favicon.ico' />
+				<link
+					rel='icon'
+					type='image/vnd.microsoft.icon'
+					href='/assets/img/favicon.ico'
+					sizes='16x16'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					href='/assets/img/favicon-16x16.png'
+					sizes='16x16'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					href='/assets/img/favicon-32x32.png'
+					sizes='32x32'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					href='/assets/img/android-chrome-192x192.png'
+					sizes='192x192'
+				/>
+				<link
+					rel='icon'
+					type='image/png'
+					href='/assets/img/android-chrome-512x512.png'
+					sizes='512x512'
+				/>
+				<link rel='apple-touch-icon' href='/assets/img/apple-touch-icon.png' />
 				<meta
 					name='description'
 					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
@@ -52,7 +82,7 @@ export default function Layout({ children, home }) {
 			<BreakpointProvider>
 				<div id='mainWrapper' className={styles.mainWrapper}>
 					<div className={styles.navHeader}>
-						<Breakpoint small down>
+						<Breakpoint medium down>
 							<BtnNav
 								open={openNavMobile}
 								toggle={() => {
@@ -63,7 +93,7 @@ export default function Layout({ children, home }) {
 
 						<NavMobile open={openNavMobile} />
 
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 					</div>
@@ -83,7 +113,7 @@ export default function Layout({ children, home }) {
 					</main>
 
 					<footer className={styles.navFooter}>
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 						<CopyRight />

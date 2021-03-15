@@ -2,6 +2,9 @@
 @import './../../styles/settings/mixins.scss';
 
 .spacer-simple {
+	display: block;
+	overflow: hidden;
+
 	@include mobile {
 		height: 3rem;
 	}
@@ -11,6 +14,9 @@
 }
 
 .spacer-double {
+	display: block;
+	overflow: hidden;
+
 	@include mobile {
 		height: 6rem;
 	}
