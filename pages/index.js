@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useQuery, gql } from '@apollo/client';
+import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -11,7 +13,25 @@ import Card from '../components/card/Card';
 import BtnGroup from '../components/buttonsComponents/BtnGroup';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 
+// Data
+const CONTENT = gql`
+	{
+		page(id: "cG9zdDoy") {
+			content(format: RENDERED)
+		}
+	}
+`;
+
 export default function Home() {
+	const { loading, error, data } = useQuery(CONTENT);
+	let contenido = '';
+
+	if (loading) return <p>Loading...</p>;
+	if (error) return <p>Error :( </p>;
+	if (data) {
+		contenido = data.page.content;
+	}
+
 	return (
 		<Layout>
 			<Head>
@@ -20,6 +40,7 @@ export default function Home() {
 					custom WordPress development
 				</title>
 			</Head>
+			<div dangerouslySetInnerHTML={{ __html: contenido }}></div>
 			<SplitContent tag='section' split='50-50'>
 				<Image
 					src='/assets/img/avatar.jpg'
@@ -84,7 +105,7 @@ export default function Home() {
 			</SplitContent>
 
 			<Spacer height='double' />
-
+    
 			<h2 className='textCentered'>
 				<span className='textRed marginRight'>
 					<FontAwesomeIcon icon='check' />
@@ -176,6 +197,8 @@ export default function Home() {
 				</a>
 				, which is a full NodeJS and API CMS.
 			</p>
+
+			{/* <FeatureList data={homeFeatures} /> */}
 		</Layout>
 	);
 }
