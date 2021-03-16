@@ -3,7 +3,7 @@ import '../styles/index.scss';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 const client = new ApolloClient({
-	uri: 'http://daxwebsite.local/graphql',
+	uri: process.env.NEXT_PUBLIC_WORDPRESS_API_URL,
 	cache: new InMemoryCache(),
 });
 

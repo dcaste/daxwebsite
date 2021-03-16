@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, gql } from '@apollo/client';
-import DaxImage from '../components/daximage/DaxImage';
 import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
@@ -27,7 +26,7 @@ export default function Home() {
 	let contenido = '';
 
 	if (loading) return <p>Loading...</p>;
-	if (error) return <p>Error :( </p>;
+	if (error) return <p>Error</p>;
 	if (data) {
 		contenido = data.page.content;
 	}
@@ -105,7 +104,7 @@ export default function Home() {
 			</SplitContent>
 
 			<Spacer height='double' />
-    
+
 			<h2 className='textCentered'>
 				<span className='textRed marginRight'>
 					<FontAwesomeIcon icon='check' />
