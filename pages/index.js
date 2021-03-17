@@ -196,8 +196,6 @@ export default function Home() {
 				</a>
 				, which is a full NodeJS and API CMS.
 			</p>
-
-			{/* <FeatureList data={homeFeatures} /> */}
 		</Layout>
 	);
 }
