@@ -10,8 +10,13 @@ import Grid from '../components/grid/Grid';
 import Card from '../components/card/Card';
 import BtnGroup from '../components/buttonsComponents/BtnGroup';
 import styles from '../components/splitcontent/SplitContent.module.scss';
+import axios from 'axios';
 
-export default function Home() {
+export default function Home({ posts, error }) {
+	axios.get('http://localhost:1337/posts/2').then((response) => {
+		const postsdata = response.data;
+		console.log(postsdata);
+	});
 	return (
 		<Layout>
 			<Head>
@@ -20,6 +25,7 @@ export default function Home() {
 					custom WordPress development
 				</title>
 			</Head>
+
 			<SplitContent tag='section' split='50-50'>
 				<Image
 					src='/assets/img/avatar.jpg'
@@ -179,3 +185,13 @@ export default function Home() {
 		</Layout>
 	);
 }
+
+Home.getInitialProps = async (ctx) => {
+	try {
+		const res = await axios.get('http://localhost:1337/posts');
+		const posts = res.data;
+		return { posts };
+	} catch (error) {
+		return { error };
+	}
+};
