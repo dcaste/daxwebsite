@@ -13,24 +13,21 @@ import GoToTop from '../buttonsComponents/GoToTop';
 import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
 
-//Styles
+// Styles
 import styles from './layout.module.scss';
 
-// FontAwesome custom Library
+// FontAwesome custom Library.
 import '../../libs/fontawesome';
 
-// Constant website SEO
-const name = 'Dax';
+// Constant website SEO data
 export const siteTitle = 'Dax Castellón';
 
-export default function Layout({ children, home }) {
-	// State to show or hide the Go To Top button
-	const [showButton, setShowButton] = useState(false);
+export default function Layout({ children }) {
+	// Global States
+	const [showButton, setShowButton] = useState(false); // To show or hide the Go To Top button.
+	const [openNavMobile, setOpenNavMobile] = useState(false); // To show or hide the Mobile Navigation Menu.
 
-	// State to show or hide the Mobile Navigation Menu
-	const [openNavMobile, setOpenNavMobile] = useState(false);
-
-	// Shows Go to Top button if current Y position is greater than 0
+	// Shows Go to Top button if current Y position is greater than 0.
 	useScrollPosition(
 		({ currPos }) => {
 			const isShow = currPos.y < 0;
@@ -42,37 +39,6 @@ export default function Layout({ children, home }) {
 	return (
 		<>
 			<Head>
-				<link
-					rel='icon'
-					type='image/vnd.microsoft.icon'
-					href='/assets/img/favicon.ico'
-					sizes='16x16'
-				/>
-				<link
-					rel='icon'
-					type='image/png'
-					href='/assets/img/favicon-16x16.png'
-					sizes='16x16'
-				/>
-				<link
-					rel='icon'
-					type='image/png'
-					href='/assets/img/favicon-32x32.png'
-					sizes='32x32'
-				/>
-				<link
-					rel='icon'
-					type='image/png'
-					href='/assets/img/android-chrome-192x192.png'
-					sizes='192x192'
-				/>
-				<link
-					rel='icon'
-					type='image/png'
-					href='/assets/img/android-chrome-512x512.png'
-					sizes='512x512'
-				/>
-				<link rel='apple-touch-icon' href='/assets/img/apple-touch-icon.png' />
 				<meta
 					name='description'
 					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
