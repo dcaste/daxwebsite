@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import renderIcon from '../../libs/fontawesome';
 
 const Title = ({ Tag, copyMain, copySecondary, icon, alignment }) => {
-	// If the icon value is not null then call renderIcon() to get the correct icon from the library.
 	const renderedIcon = icon ? renderIcon(icon) : null;
 
 	return (

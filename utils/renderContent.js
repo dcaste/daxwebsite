@@ -1,18 +1,20 @@
 /**
  * Function that returns the rendered HTML content.
- * Reads each item from the page, calls its component dinamycally and then return the HTML.
+ *
+ * Reads each item coming from the CMS, calls its component dinamycally and then return the HTML to be rendered.
  */
 
 // Dynamic utility that loads components.
 import dynamic from 'next/dynamic';
 
 export default function renderContent(item) {
+	// Assign an item ID required by REACT.
 	const itemId = item.__component + item.id;
 
 	switch (item.__component) {
 		case 'typography.title':
 			const Title = dynamic(() => import('@/title/Title'));
-			const icon = item.icon ? item.icon.icon : '';
+			const icon = item.icon ? item.icon.icon : NULL;
 			const alignment = item.alignment ? item.alignment : 'left';
 
 			return (
