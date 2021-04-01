@@ -5,7 +5,7 @@ import Layout, { siteTitle } from '../components/layout/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Spacer from '../components/spacer/Spacer';
-import Title from '../components/misc/Title';
+import Title from '../components/title/Title';
 import Grid from '../components/grid/Grid';
 import Card from '../components/card/Card';
 import BtnGroup from '../components/buttonsComponents/BtnGroup';

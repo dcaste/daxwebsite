@@ -7,7 +7,7 @@ import LinkInternal from '../components/linkinternal/LinkInternal';
 import Layout, { siteTitle } from '../components/layout/layout';
 import SplitContent from '../components/splitcontent/SplitContent';
 import Spacer from '../components/spacer/Spacer';
-import Title from '../components/misc/Title';
+import Title from '../components/title/Title';
 import styles from '../components/splitcontent/SplitContent.module.scss';
 
 const Portfolio = () => {
