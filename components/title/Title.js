@@ -8,7 +8,9 @@ const Title = ({ Tag, copyMain, copySecondary, icon, alignment }) => {
 	return (
 		<Tag style={{ textAlign: alignment }}>
 			{renderedIcon && (
-				<FontAwesomeIcon icon={renderedIcon} className='marginRight' />
+				<span className='textRed'>
+					<FontAwesomeIcon icon={renderedIcon} className='marginRight' />
+				</span>
 			)}
 			{copyMain}
 			{copySecondary && <span className='textRed'> {copySecondary}</span>}
