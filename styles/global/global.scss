@@ -133,7 +133,7 @@ hr {
 	border-radius: 50%;
 }
 
-.roundCorners {
+.roundedCorners {
 	border-radius: $global-radius;
 }
 
@@ -212,6 +212,11 @@ label {
 
 .textCentered {
 	text-align: center;
+}
+
+.centeredContent {
+	@extend .textCentered;
+	@extend .width70;
 }
 
 .imageDesc {

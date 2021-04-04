@@ -16,26 +16,13 @@
 	@include tablet-v {
 		gap: 3rem;
 	}
-
-	.picture {
-		@include mobile {
-			order: 1;
-		}
-		@include tablet-h {
-			order: 1;
-		}
-	}
-	.content {
-		@include mobile {
-			order: 2;
-		}
-		@include tablet-h {
-			order: 2;
-		}
-	}
 }
 
-.splitContent__50-50 {
+.splitContent > div {
+	width: 100%;
+}
+
+.split_Equal {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -46,7 +33,7 @@
 	}
 }
 
-.splitContent__40-60 {
+.split_FortySixty {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -58,7 +45,7 @@
 	}
 }
 
-.splitContent__60-40 {
+.split_SixtyForty {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -70,21 +57,21 @@
 	}
 }
 
-.splitContent__RightToLeft {
-	.picture {
+.RightFirst {
+	.ContentLeft {
 		@include mobile {
-			order: 1;
+			order: 2;
 		}
 		@include tablet-h {
-			order: 2;
+			order: 1;
 		}
 	}
-	.content {
+	.ContentRight {
 		@include mobile {
-			order: 2;
+			order: 1;
 		}
 		@include tablet-h {
-			order: 1;
+			order: 2;
 		}
 	}
 }

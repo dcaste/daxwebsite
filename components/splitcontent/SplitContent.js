@@ -1,34 +1,64 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Title from '@/title/Title';
+import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 import styles from './SplitContent.module.scss';
 
-const SplitContent = (props) => {
-	const { Tag, split, direction, className } = props;
-	const splitClass = split !== undefined && `splitContent__${split}`;
-	const splitDirection = direction === 'rl' && 'splitContent__RightToLeft';
-
+const SplitContent = ({ props }) => {
 	return (
-		<Tag
+		<div
 			className={classNames(
-				styles[splitClass],
-				styles[splitDirection],
-				className
+				styles[`split_${props.Split}`],
+				styles[`${props.OrderInMobile}`]
 			)}
 		>
-			{props.children}
-		</Tag>
+			<div
+				className={styles.ContentLeft}
+				style={{ textAlign: props.LeftContentAlignment }}
+			>
+				{props.LeftTitle && (
+					<Title
+						Tag={props.LeftTitle.tag}
+						copyMain={props.LeftTitle.copyMain}
+						copySecondary={props.LeftTitle.copySecondary}
+						alignment={props.LeftTitle.alignment}
+						icon={props.LeftTitle.icon}
+					/>
+				)}
+				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
+				{props.LeftPicture && (
+					<Image
+						src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${props.LeftPicture.image.url}`}
+						alt={props.LeftPicture.image.alternativetext}
+						width={props.LeftPicture.image.width}
+						height={props.LeftPicture.image.height}
+						className={props.LeftPicture.style}
+					/>
+				)}
+			</div>
+			<div
+				className={styles.ContentRight}
+				style={{ textAlign: props.RightContentAlignment }}
+			>
+				{props.RightContent && <ReactMarkdown source={props.RightContent} />}
+			</div>
+		</div>
 	);
 };
 
 SplitContent.propTypes = {
-	Tag: PropTypes.string,
-	split: PropTypes.string,
-	direction: PropTypes.string,
+	Split: PropTypes.string.isRequired,
+	OrderInMobile: PropTypes.string.isRequired,
+	LeftContentAlignment: PropTypes.string.isRequired,
+	RightContentAlignment: PropTypes.string.isRequired,
 };
 
 SplitContent.defaultProps = {
-	Tag: 'div',
-	direction: 'lr', //Left to Right
+	Split: 'split_Equal',
+	OrderInMobile: 'LeftToRight',
+	LeftContentAlignment: 'left',
+	RightContentAlignment: 'left',
 };
 
 export default SplitContent;
