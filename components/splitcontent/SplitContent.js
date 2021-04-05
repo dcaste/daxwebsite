@@ -1,11 +1,65 @@
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Title from '@/title/Title';
 import ReactMarkdown from 'react-markdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import renderIcon from '../../libs/fontawesome';
 import Image from 'next/image';
 import styles from './SplitContent.module.scss';
 
 const SplitContent = ({ props }) => {
+	const renderPicture = (picture) => {
+		return (
+			<Image
+				src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${picture.image.url}`}
+				alt={picture.image.alternativetext}
+				width={picture.image.width}
+				height={picture.image.height}
+				className={picture.style}
+			/>
+		);
+	};
+
+	const renderTitle = (title) => {
+		return (
+			<Title
+				Tag={title.tag}
+				copyMain={title.copyMain}
+				copySecondary={title.copySecondary}
+				alignment={title.alignment}
+				icon={title.Icon}
+			/>
+		);
+	};
+
+	const renderLink = (link) => {
+		const Tag = link.tag;
+		const renderedIcon = link.icon ? renderIcon(link.icon) : null;
+
+		return (
+			<Tag className={link.tag_class}>
+				{link.target === '_blank' ? (
+					<a href={link.url} target={link.target}>
+						{link.copy}
+						<span className='marginLeft'>
+							<FontAwesomeIcon icon={renderedIcon} />
+						</span>
+					</a>
+				) : (
+					<Link href={link.url}>
+						<a target={link.target}>
+							{link.copy}
+							<span className='marginLeft'>
+								<FontAwesomeIcon icon={renderedIcon} />
+							</span>
+						</a>
+					</Link>
+				)}
+			</Tag>
+		);
+	};
+
 	return (
 		<div
 			className={classNames(
@@ -20,26 +74,12 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props.LeftTitle && (
-					<Title
-						Tag={props.LeftTitle.tag}
-						copyMain={props.LeftTitle.copyMain}
-						copySecondary={props.LeftTitle.copySecondary}
-						alignment={props.LeftTitle.alignment}
-						icon={props.LeftTitle.Icon}
-					/>
-				)}
+				{props.LeftPicture && renderPicture(props.LeftPicture)}
+				{props.LeftTitle && renderTitle(props.LeftTitle)}
 				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
-				{props.LeftPicture && (
-					<Image
-						src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${props.LeftPicture.image.url}`}
-						alt={props.LeftPicture.image.alternativetext}
-						width={props.LeftPicture.image.width}
-						height={props.LeftPicture.image.height}
-						className={props.LeftPicture.style}
-					/>
-				)}
+				{props.LeftLink && renderLink(props.LeftLink)}
 			</div>
+
 			<div
 				className={styles.ContentRight}
 				style={{
