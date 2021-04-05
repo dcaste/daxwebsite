@@ -16,6 +16,10 @@
 	@include tablet-v {
 		gap: 3rem;
 	}
+
+	p {
+		margin: 0;
+	}
 }
 
 .splitContent > div {
@@ -25,9 +29,6 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
-	* {
-		margin: 0;
-	}
 }
 
 .split_Equal {

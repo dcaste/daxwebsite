@@ -8,7 +8,7 @@
 import dynamic from 'next/dynamic';
 
 export default function renderContent(item) {
-	// Assign an item ID required by REACT.
+	// Assigns an item ID required by REACT.
 	const itemId = item.__component + item.id;
 
 	switch (item.__component) {

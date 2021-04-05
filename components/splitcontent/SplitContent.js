@@ -26,7 +26,7 @@ const SplitContent = ({ props }) => {
 						copyMain={props.LeftTitle.copyMain}
 						copySecondary={props.LeftTitle.copySecondary}
 						alignment={props.LeftTitle.alignment}
-						icon={props.LeftTitle.icon}
+						icon={props.LeftTitle.Icon}
 					/>
 				)}
 				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
