@@ -21,18 +21,6 @@ const SplitContent = ({ props }) => {
 		);
 	};
 
-	const renderTitle = (title) => {
-		return (
-			<Title
-				Tag={title.tag}
-				copyMain={title.copyMain}
-				copySecondary={title.copySecondary}
-				alignment={title.alignment}
-				icon={title.Icon}
-			/>
-		);
-	};
-
 	const renderLink = (link) => {
 		const Tag = link.tag;
 		const renderedIcon = link.icon ? renderIcon(link.icon) : null;
@@ -75,7 +63,7 @@ const SplitContent = ({ props }) => {
 				}}
 			>
 				{props.LeftPicture && renderPicture(props.LeftPicture)}
-				{props.LeftTitle && renderTitle(props.LeftTitle)}
+				{props.LeftTitle && <Title props={props.LeftTitle} />}
 				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
 				{props.LeftLink && renderLink(props.LeftLink)}
 			</div>

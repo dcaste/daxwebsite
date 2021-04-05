@@ -15,19 +15,7 @@ export default function renderContent(item) {
 		// Title component.
 		case 'typography.title':
 			const Title = dynamic(() => import('@/title/Title'));
-			const icon = item.Icon ? item.Icon : null;
-			const alignment = item.alignment ? item.alignment : 'left';
-
-			return (
-				<Title
-					Tag={item.tag}
-					copyMain={item.copyMain}
-					copySecondary={item.copySecondary}
-					icon={icon}
-					alignment={alignment}
-					key={itemId}
-				/>
-			);
+			return <Title props={item} key={itemId} />;
 
 		// Card component.
 		case 'layout.card':
