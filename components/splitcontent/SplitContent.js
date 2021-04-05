@@ -15,7 +15,10 @@ const SplitContent = ({ props }) => {
 		>
 			<div
 				className={styles.ContentLeft}
-				style={{ textAlign: props.LeftContentAlignment }}
+				style={{
+					textAlign: props.LeftContentAlignment,
+					justifyContent: props.LeftVerticalAlign,
+				}}
 			>
 				{props.LeftTitle && (
 					<Title
@@ -39,7 +42,10 @@ const SplitContent = ({ props }) => {
 			</div>
 			<div
 				className={styles.ContentRight}
-				style={{ textAlign: props.RightContentAlignment }}
+				style={{
+					textAlign: props.RightContentAlignment,
+					justifyContent: props.RightVerticalAlign,
+				}}
 			>
 				{props.RightContent && <ReactMarkdown source={props.RightContent} />}
 			</div>
