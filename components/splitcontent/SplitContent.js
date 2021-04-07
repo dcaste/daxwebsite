@@ -2,25 +2,13 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Title from '@/title/Title';
+import StyledImage from '@/styledimage/StyledImage';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import renderIcon from '../../libs/fontawesome';
-import Image from 'next/image';
 import styles from './SplitContent.module.scss';
 
 const SplitContent = ({ props }) => {
-	const renderPicture = (picture) => {
-		return (
-			<Image
-				src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${picture.image.url}`}
-				alt={picture.image.alternativetext}
-				width={picture.image.width}
-				height={picture.image.height}
-				className={picture.style}
-			/>
-		);
-	};
-
 	const renderLink = (link) => {
 		const Tag = link.tag;
 		const renderedIcon = link.icon ? renderIcon(link.icon) : null;
@@ -62,7 +50,7 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props.LeftPicture && renderPicture(props.LeftPicture)}
+				{props.LeftPicture && <StyledImage props={props.LeftPicture} />}
 				{props.LeftTitle && <Title props={props.LeftTitle} />}
 				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
 				{props.LeftLink && renderLink(props.LeftLink)}
