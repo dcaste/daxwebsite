@@ -12,18 +12,20 @@ body {
 	@include mobile {
 		background-image: url('../../public/assets/img/bkg-mobile.jpg');
 		background-size: cover;
-		background-position: top right;
+		background-position: top center;
 	}
 	@include tablet-v {
 		background-image: url('../../public/assets/img/bkg-tablet.jpg');
-		background-size: contain;
-		background-position: top right;
 	}
-
+	@include tablet-h {
+		background-image: url('../../public/assets/img/bkg-tablet-h.jpg');
+	}
 	@include laptop-m {
 		background-image: url('../../public/assets/img/bkg-laptop.jpg');
-		background-position: top center;
-		background-size: initial;
+	}
+
+	@include large-screens {
+		background-image: url('../../public/assets/img/bkg-large.jpg');
 	}
 }
 
