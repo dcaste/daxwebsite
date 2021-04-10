@@ -6,27 +6,30 @@
 
 // Dynamic utility that loads components.
 import dynamic from 'next/dynamic';
+import getitemKey from './misc';
 
 export default function renderContent(item) {
-	// Assigns an item ID required by REACT.
-	const itemId = item.__component + item.id;
-
 	switch (item.__component) {
 		// Title component.
 		case 'typography.title':
 			const Title = dynamic(() => import('@/title/Title'));
-			return <Title props={item} key={itemId} />;
+			return <Title props={item} key={getitemKey(item.__component, item.id)} />;
 
 		// Card component.
 		case 'layout.card':
 			const Card = dynamic(() => import('@/card/Card'));
-			return <Card key={itemId}>{item.content}</Card>;
+			return (
+				<Card key={getitemKey(item.__component, item.id)}>{item.content}</Card>
+			);
 
 		// Centered Content.
 		case 'typography.centered-content':
 			const ReactMarkdown = dynamic(() => import('react-markdown'));
 			return (
-				<div className='centeredContent' key={itemId}>
+				<div
+					className='centeredContent'
+					key={getitemKey(item.__component, item.id)}
+				>
 					<ReactMarkdown source={item.content} />
 				</div>
 			);
@@ -34,9 +37,14 @@ export default function renderContent(item) {
 		// Split Content Component
 		case 'layout.split-content':
 			const SplitContent = dynamic(() => import('@/splitcontent/SplitContent'));
-			return <SplitContent props={item} key={itemId} />;
+			return (
+				<SplitContent
+					props={item}
+					key={getitemKey(item.__component, item.id)}
+				/>
+			);
 
 		default:
-			return <p key={itemId}>Component not found</p>;
+			return <p key={getitemKey(item.style, item.id)}>Component not found</p>;
 	}
 }
