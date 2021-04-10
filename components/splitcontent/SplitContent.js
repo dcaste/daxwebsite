@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Title from '@/title/Title';
-import StyledImage from '@/styledimage/StyledImage';
+import ImageWrapper from '@/imageWrapper/ImageWrapper';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import renderIcon from '../../libs/fontawesome';
@@ -50,7 +50,7 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props.LeftPicture && <StyledImage props={props.LeftPicture} />}
+				{props.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
 				{props.LeftTitle && <Title props={props.LeftTitle} />}
 				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
 				{props.LeftLink && renderLink(props.LeftLink)}

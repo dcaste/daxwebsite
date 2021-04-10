@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-function StyledImage({ props }) {
+function ImageWrapper({ props }) {
 	return (
 		<>
 			<Image
@@ -14,4 +14,4 @@ function StyledImage({ props }) {
 	);
 }
 
-export default StyledImage;
+export default ImageWrapper;
