@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import renderIcon from '../../libs/fontawesome';
+import { renderIcon } from './../../utils/misc';
 
 const Title = ({
 	props: { Tag, copyMain, copySecondary, alignment, icon },

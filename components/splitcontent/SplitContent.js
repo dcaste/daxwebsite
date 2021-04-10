@@ -1,43 +1,15 @@
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactMarkdown from 'react-markdown';
-import renderIcon from '../../libs/fontawesome';
-import styles from './SplitContent.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Title from '@/title/Title';
 import ImageWrapper from '@/imageWrapper/ImageWrapper';
+import ProperLink from '@/properlink/ProperLink';
 import BtnGroup from '@/btngroup/BtnGroup';
-import BtnLink from '@/btnlink/BtnLink';
+
+import styles from './SplitContent.module.scss';
 
 const SplitContent = ({ props }) => {
-	const renderLink = (link) => {
-		const Tag = link.tag;
-		const renderedIcon = link.icon ? renderIcon(link.icon) : null;
-		return (
-			<Tag className={link.tag_class}>
-				{link.target === '_blank' ? (
-					<a href={link.url} target={link.target}>
-						{link.copy}
-						<span className='marginLeft'>
-							<FontAwesomeIcon icon={renderedIcon} />
-						</span>
-					</a>
-				) : (
-					<Link href={link.url}>
-						<a target={link.target}>
-							{link.copy}
-							<span className='marginLeft'>
-								<FontAwesomeIcon icon={renderedIcon} />
-							</span>
-						</a>
-					</Link>
-				)}
-			</Tag>
-		);
-	};
-
 	return (
 		<div
 			className={classNames(
@@ -55,7 +27,7 @@ const SplitContent = ({ props }) => {
 				{props?.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
 				{props?.LeftTitle && <Title props={props.LeftTitle} />}
 				{props?.LeftContent && <ReactMarkdown source={props.LeftContent} />}
-				{props?.LeftLink && renderLink(props.LeftLink)}
+				{props?.LeftLink && <ProperLink props={props.LeftLink} />}
 				{props?.LeftButtons && <BtnGroup props={props.LeftButtons} />}
 			</div>
 
