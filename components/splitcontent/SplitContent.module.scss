@@ -10,11 +10,15 @@
 	@include mobile {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
-		gap: 1rem;
+		gap: 6rem;
 	}
 
-	@include tablet-v {
+	@include tablet-h {
 		gap: 3rem;
+	}
+
+	@include laptop-m {
+		gap: 6rem;
 	}
 
 	p {

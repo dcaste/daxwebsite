@@ -20,6 +20,16 @@
 	}
 }
 
+.mainArticle {
+	display: flex;
+	flex-direction: column;
+
+	@include mobile {
+		padding: 6rem 0;
+		gap: 6rem;
+	}
+}
+
 // Nav Menus
 .navHeader,
 .navFooter {

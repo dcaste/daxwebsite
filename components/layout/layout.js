@@ -72,9 +72,7 @@ export default function Layout({ children }) {
 							transition={{ duration: 0.25 }}
 							exit={{ opacity: 0 }}
 						>
-							<Spacer />
 							{children}
-							<Spacer />
 						</motion.article>
 					</main>
 
