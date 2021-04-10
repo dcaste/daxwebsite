@@ -6,6 +6,7 @@ import Title from '@/title/Title';
 import ImageWrapper from '@/imageWrapper/ImageWrapper';
 import ProperLink from '@/properlink/ProperLink';
 import BtnGroup from '@/btngroup/BtnGroup';
+import SocialLinks from '@/sociallinks/SocialLinks';
 
 import styles from './SplitContent.module.scss';
 
@@ -29,6 +30,7 @@ const SplitContent = ({ props }) => {
 				{props?.LeftContent && <ReactMarkdown source={props.LeftContent} />}
 				{props?.LeftLink && <ProperLink props={props.LeftLink} />}
 				{props?.LeftButtons && <BtnGroup props={props.LeftButtons} />}
+				{props?.LeftSocialLink && <SocialLinks props={props.LeftSocialLink} />}
 			</div>
 
 			<div
@@ -38,7 +40,14 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.RightVerticalAlign,
 				}}
 			>
-				{props.RightContent && <ReactMarkdown source={props.RightContent} />}
+				{props?.RightPicture && <ImageWrapper props={props.RightPicture} />}
+				{props?.RightTitle && <Title props={props.RightTitle} />}
+				{props?.RightContent && <ReactMarkdown source={props.RightContent} />}
+				{props?.RightLink && <ProperLink props={props.RightLink} />}
+				{props?.RightButtons && <BtnGroup props={props.RightButtons} />}
+				{props?.RightSocialLink && (
+					<SocialLinks props={props.RightSocialLink} />
+				)}
 			</div>
 		</div>
 	);
