@@ -1,6 +1,6 @@
 /* Go to Top Button */
-@import './../../styles/settings/mixins.scss';
-@import '../buttonsComponents/Btn.module.scss';
+@import '../../styles/settings/mixins.scss';
+@import '../../styles/global/btn.scss';
 
 .btnNav {
 	@extend .btn;

@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Title from '@/title/Title';
-import ImageWrapper from '@/imageWrapper/ImageWrapper';
 import ReactMarkdown from 'react-markdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import renderIcon from '../../libs/fontawesome';
 import styles from './SplitContent.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import Title from '@/title/Title';
+import ImageWrapper from '@/imageWrapper/ImageWrapper';
 
 const SplitContent = ({ props }) => {
 	const renderLink = (link) => {

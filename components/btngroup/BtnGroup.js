@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import styles from './BtnGroup.module.scss';
-import stylesBtn from './Btn.module.scss';
+import stylesBtn from '../btn/btn.module.scss';
 import classNames from 'classnames';
 
 const BtnGroup = ({
