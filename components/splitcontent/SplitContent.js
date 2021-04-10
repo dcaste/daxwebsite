@@ -11,17 +11,50 @@ import SocialLinks from '@/sociallinks/SocialLinks';
 import styles from './SplitContent.module.scss';
 
 const SplitContent = ({ props }) => {
+	let LeftContentAlignment,
+		RightContentAlignment = '';
+
+	switch (props.LeftContentAlignment) {
+		case 'left':
+			LeftContentAlignment = 'start';
+			break;
+
+		case 'right':
+			LeftContentAlignment = 'end';
+			break;
+
+		default:
+			LeftContentAlignment = 'center';
+			break;
+	}
+
+	switch (props.RightContentAlignment) {
+		case 'left':
+			RightContentAlignment = 'start';
+			break;
+
+		case 'right':
+			RightContentAlignment = 'end';
+			break;
+
+		default:
+			RightContentAlignment = 'center';
+			break;
+	}
+
 	return (
 		<div
 			className={classNames(
 				styles[`split_${props.Split}`],
-				styles[`${props.OrderInMobile}`]
+				styles[`${props.OrderInMobile}`],
+				styles[`${props.ContentStyle}`]
 			)}
 		>
 			<div
 				className={styles.ContentLeft}
 				style={{
 					textAlign: props.LeftContentAlignment,
+					alignItems: LeftContentAlignment,
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
@@ -37,6 +70,7 @@ const SplitContent = ({ props }) => {
 				className={styles.ContentRight}
 				style={{
 					textAlign: props.RightContentAlignment,
+					alignItems: RightContentAlignment,
 					justifyContent: props.RightVerticalAlign,
 				}}
 			>

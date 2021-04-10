@@ -96,3 +96,19 @@
 .technologies {
 	font-weight: $bold;
 }
+
+.Card {
+	@include shadow2dp;
+	background-color: $white;
+	border-radius: 0.5rem;
+
+	@include mobile {
+		padding: 1rem;
+	}
+	@include tablet-v {
+		padding: 2rem;
+	}
+	@include laptop-m {
+		padding: 3rem;
+	}
+}
