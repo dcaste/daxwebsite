@@ -45,8 +45,8 @@ export function renderIcon(iconName) {
 			renderedIcon = ['fab', 'linkedin'];
 			break;
 
-		case 'faLinkedin':
-			renderedIcon = ['fab', 'linkedin'];
+		case 'faGithub':
+			renderedIcon = ['fab', 'github'];
 			break;
 
 		default:
