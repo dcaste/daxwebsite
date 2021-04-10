@@ -1,7 +1,7 @@
 /* Buttons *******************************/
 @import '../settings/variables.scss';
 
-.btn {
+.BtnMain {
 	padding: 1rem 1.5rem;
 	background: $red;
 	color: $white;
@@ -26,8 +26,8 @@
 	}
 }
 
-.btnHollow {
-	@extend .btn;
+.BtnSecondary {
+	@extend .BtnMain;
 	color: $red;
 	background: transparent;
 	border: 2px solid $red;

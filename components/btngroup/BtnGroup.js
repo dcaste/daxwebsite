@@ -1,33 +1,20 @@
 import PropTypes from 'prop-types';
-import Link from 'next/link';
+import getItemKey from '../../utils/misc';
 import styles from './BtnGroup.module.scss';
-import stylesBtn from '../btn/btn.module.scss';
-import classNames from 'classnames';
+import BtnLink from '@/btnlink/BtnLink';
 
-const BtnGroup = ({
-	btnMainLink,
-	btnMainCopy,
-	btnSecLink,
-	btnSecCopy,
-	className,
-}) => {
+const BtnGroup = ({ props }) => {
 	return (
-		<div className={classNames(className, styles.BtnGroup)}>
-			<Link href={btnMainLink}>
-				<a className={stylesBtn.btn}>{btnMainCopy}</a>
-			</Link>
-			<Link href={btnSecLink}>
-				<a className={`${stylesBtn.btnHollow} marginLeft`}>{btnSecCopy}</a>
-			</Link>
+		<div className={styles.BtnGroup}>
+			{props.map((item) => (
+				<BtnLink props={item} key={getItemKey(item.style, item.id)} />
+			))}
 		</div>
 	);
 };
 
 BtnGroup.propTypes = {
-	btnMainLink: PropTypes.string.isRequired,
-	btnMainCopy: PropTypes.string.isRequired,
-	btnSecLink: PropTypes.string.isRequired,
-	btnSecCopy: PropTypes.string.isRequired,
+	props: PropTypes.array.isRequired,
 };
 
 export default BtnGroup;

@@ -1,4 +1,7 @@
+@import '../../styles/global/btn.scss';
+
 .BtnGroup {
-	clear: both;
-	margin-top: 1.5rem;
+	a + a {
+		margin-left: 0.5rem;
+	}
 }

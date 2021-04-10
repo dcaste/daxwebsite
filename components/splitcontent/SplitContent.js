@@ -8,12 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Title from '@/title/Title';
 import ImageWrapper from '@/imageWrapper/ImageWrapper';
+import BtnGroup from '@/btngroup/BtnGroup';
+import BtnLink from '@/btnlink/BtnLink';
 
 const SplitContent = ({ props }) => {
 	const renderLink = (link) => {
 		const Tag = link.tag;
 		const renderedIcon = link.icon ? renderIcon(link.icon) : null;
-
 		return (
 			<Tag className={link.tag_class}>
 				{link.target === '_blank' ? (
@@ -51,10 +52,11 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
-				{props.LeftTitle && <Title props={props.LeftTitle} />}
-				{props.LeftContent && <ReactMarkdown source={props.LeftContent} />}
-				{props.LeftLink && renderLink(props.LeftLink)}
+				{props?.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
+				{props?.LeftTitle && <Title props={props.LeftTitle} />}
+				{props?.LeftContent && <ReactMarkdown source={props.LeftContent} />}
+				{props?.LeftLink && renderLink(props.LeftLink)}
+				{props?.LeftButtons && <BtnGroup props={props.LeftButtons} />}
 			</div>
 
 			<div

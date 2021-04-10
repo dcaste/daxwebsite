@@ -3,7 +3,7 @@
 @import '../../styles/global/btn.scss';
 
 .btnNav {
-	@extend .btn;
+	@extend .BtnMain;
 	@include shadow2dp;
 	border-radius: 4px;
 	height: 40px;
