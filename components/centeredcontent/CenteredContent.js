@@ -8,7 +8,7 @@ const CenteredContent = ({ props: { content, title, style } }) => {
 	return (
 		<div className={classNames(style, styles.CenteredContent)}>
 			{title && <Title props={title} />}
-			<div className={styles.Content}>{content}</div>
+			<ReactMarkdown source={content} className={styles.Content} />
 		</div>
 	);
 };
