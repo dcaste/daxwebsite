@@ -1,36 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
-import Layout, { siteTitle } from '../components/layout/layout';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SplitContent from '../components/splitcontent/SplitContent';
-import Spacer from '../components/spacer/Spacer';
-import Title from '../components/title/Title';
-import Grid from '../components/grid/Grid';
-import Card from '../components/card/Card';
-import BtnGroup from '../components/buttonsComponents/BtnGroup';
-import styles from '../components/splitcontent/SplitContent.module.scss';
+import Layout, { siteTitle } from '@/layout/layout';
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import axios from 'axios';
-
-import {
-	getAllPostsWithSlug,
-	getPostAndMorePosts,
-	getPostData,
-	fetchQuery,
-	getPostId,
-	fetchURLs,
-} from '../libs/api';
-import markdownToHtml from '../libs/markdownToHtml';
 
 const Post = ({ post }) => {
-	console.log(post);
-	// const router = useRouter();
-	// if (!router.isFallback && !post?.slug) {
-	// 	return <ErrorPage statusCode={404} />;
-	// }
-
 	return (
 		<Layout>
 			{/* <div>

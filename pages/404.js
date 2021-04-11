@@ -8,7 +8,6 @@ export default function Custom404() {
 			<Head>
 				<title>Page not Found - {siteTitle}</title>
 			</Head>
-
 			<h1 className='pageTitle'>404 - Page Not Found</h1>
 		</Layout>
 	);
