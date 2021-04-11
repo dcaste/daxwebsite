@@ -24,14 +24,14 @@ export default function renderContent(item) {
 
 		// Centered Content.
 		case 'typography.centered-content':
-			const ReactMarkdown = dynamic(() => import('react-markdown'));
+			const CenteredContent = dynamic(() =>
+				import('@/centeredcontent/CenteredContent')
+			);
 			return (
-				<div
-					className='centeredContent'
+				<CenteredContent
 					key={getItemKey(item.__component, item.id)}
-				>
-					<ReactMarkdown source={item.content} />
-				</div>
+					props={item}
+				/>
 			);
 
 		// Split Content Component
