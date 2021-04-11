@@ -28,6 +28,11 @@
 		padding: 6rem 0;
 		gap: 6rem;
 	}
+
+	@include tablet-h {
+		padding: 6rem 0;
+		gap: 10rem;
+	}
 }
 
 // Nav Menus

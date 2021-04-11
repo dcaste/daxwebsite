@@ -22,12 +22,12 @@
 	}
 }
 
-.featureList__Title {
+.title {
 	grid-column: 1/-1;
 	text-align: center;
 }
 
-.featureItem {
+.item {
 	display: grid;
 	grid-template-rows: auto;
 
@@ -43,7 +43,7 @@
 	}
 }
 
-.featureIcon {
+.icon {
 	@include mobile {
 		grid-column: 1/2;
 		grid-row: 1/2;

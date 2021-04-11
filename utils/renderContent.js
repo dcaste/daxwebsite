@@ -44,6 +44,13 @@ export default function renderContent(item) {
 				/>
 			);
 
+		// Feature List.
+		case 'layout.feature-list':
+			const FeatureList = dynamic(() => import('@/featurelist/FeatureList'));
+			return (
+				<FeatureList key={getItemKey(item.__component, item.id)} props={item} />
+			);
+
 		default:
 			return <p key={getItemKey(item.style, item.id)}>Component not found</p>;
 	}
