@@ -25,7 +25,6 @@
 .splitContent > div {
 	width: 100%;
 	height: 100%;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
@@ -92,11 +91,20 @@
 
 	@include mobile {
 		padding: 1rem;
+		gap: 1rem;
 	}
 	@include tablet-v {
 		padding: 2rem;
+		gap: 2rem;
 	}
 	@include laptop-m {
 		padding: 3rem;
+		gap: 3rem;
 	}
+}
+
+.mainHeader,
+.mainFooter {
+	grid-column: -1/1;
+	text-align: center;
 }

@@ -50,6 +50,12 @@ const SplitContent = ({ props }) => {
 				styles[`${props.ContentStyle}`]
 			)}
 		>
+			{props?.mainTitle && (
+				<div className={styles.mainHeader}>
+					<Title props={props.mainTitle} />
+				</div>
+			)}
+
 			<div
 				className={styles.ContentLeft}
 				style={{
@@ -58,17 +64,19 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props?.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
-				{props?.LeftTitle && <Title props={props.LeftTitle} />}
+				{props.LeftPicture?.id && <ImageWrapper props={props.LeftPicture} />}
+				{props.LeftTitle?.id && <Title props={props.LeftTitle} />}
 				{props?.LeftContent && (
 					<ReactMarkdown
 						source={props.LeftContent}
 						className={props.LeftContentStyle}
 					/>
 				)}
-				{props?.LeftLink && <ProperLink props={props.LeftLink} />}
-				{props?.LeftButtons && <BtnGroup props={props.LeftButtons} />}
-				{props?.LeftSocialLink && <SocialLinks props={props.LeftSocialLink} />}
+				{props.LeftLink?.id && <ProperLink props={props.LeftLink} />}
+				{props.LeftButtons?.id && <BtnGroup props={props.LeftButtons} />}
+				{props.LeftSocialLink?.id && (
+					<SocialLinks props={props.LeftSocialLink} />
+				)}
 			</div>
 
 			<div
@@ -79,20 +87,26 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.RightVerticalAlign,
 				}}
 			>
-				{props?.RightPicture && <ImageWrapper props={props.RightPicture} />}
-				{props?.RightTitle && <Title props={props.RightTitle} />}
+				{props.RightPicture?.id && <ImageWrapper props={props.RightPicture} />}
+				{props.RightTitle?.id && <Title props={props.RightTitle} />}
 				{props?.RightContent && (
 					<ReactMarkdown
 						source={props.RightContent}
 						className={props.RightContentStyle}
 					/>
 				)}
-				{props?.RightLink && <ProperLink props={props.RightLink} />}
-				{props?.RightButtons && <BtnGroup props={props.RightButtons} />}
-				{props?.RightSocialLink && (
+				{props.RightLink?.id && <ProperLink props={props.RightLink} />}
+				{props.RightButtons?.id && <BtnGroup props={props.RightButtons} />}
+				{props.RightSocialLink?.id && (
 					<SocialLinks props={props.RightSocialLink} />
 				)}
 			</div>
+
+			{props?.mainLink && (
+				<div className={styles.mainFooter}>
+					<ProperLink props={props.mainLink} />
+				</div>
+			)}
 		</div>
 	);
 };
