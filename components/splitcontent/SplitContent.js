@@ -60,7 +60,12 @@ const SplitContent = ({ props }) => {
 			>
 				{props?.LeftPicture && <ImageWrapper props={props.LeftPicture} />}
 				{props?.LeftTitle && <Title props={props.LeftTitle} />}
-				{props?.LeftContent && <ReactMarkdown source={props.LeftContent} />}
+				{props?.LeftContent && (
+					<ReactMarkdown
+						source={props.LeftContent}
+						className={props.LeftContentStyle}
+					/>
+				)}
 				{props?.LeftLink && <ProperLink props={props.LeftLink} />}
 				{props?.LeftButtons && <BtnGroup props={props.LeftButtons} />}
 				{props?.LeftSocialLink && <SocialLinks props={props.LeftSocialLink} />}
@@ -76,7 +81,12 @@ const SplitContent = ({ props }) => {
 			>
 				{props?.RightPicture && <ImageWrapper props={props.RightPicture} />}
 				{props?.RightTitle && <Title props={props.RightTitle} />}
-				{props?.RightContent && <ReactMarkdown source={props.RightContent} />}
+				{props?.RightContent && (
+					<ReactMarkdown
+						source={props.RightContent}
+						className={props.RightContentStyle}
+					/>
+				)}
 				{props?.RightLink && <ProperLink props={props.RightLink} />}
 				{props?.RightButtons && <BtnGroup props={props.RightButtons} />}
 				{props?.RightSocialLink && (
