@@ -73,7 +73,7 @@ const SplitContent = ({ props }) => {
 					/>
 				)}
 				{props.LeftLink?.id && <ProperLink props={props.LeftLink} />}
-				{props.LeftButtons?.id && <BtnGroup props={props.LeftButtons} />}
+				{props.LeftButtons[0]?.id && <BtnGroup props={props.LeftButtons} />}
 				{props.LeftSocialLink[0]?.id && (
 					<SocialLinks props={props.LeftSocialLink} />
 				)}
@@ -96,7 +96,7 @@ const SplitContent = ({ props }) => {
 					/>
 				)}
 				{props.RightLink?.id && <ProperLink props={props.RightLink} />}
-				{props.RightButtons?.id && <BtnGroup props={props.RightButtons} />}
+				{props.RightButtons[0]?.id && <BtnGroup props={props.RightButtons} />}
 				{props.RightSocialLink[0]?.id && (
 					<SocialLinks props={props.RightSocialLink} />
 				)}
