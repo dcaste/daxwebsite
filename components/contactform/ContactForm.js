@@ -2,9 +2,8 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
-import Alert from './../alert/Alert';
+import Alert from '@/alert/Alert';
 import styles from './ContactForm.module.scss';
-import btnStyles from '../buttonsComponents/Btn.module.scss';
 
 const ContactForm = () => {
 	// Submit Button Value
@@ -119,7 +118,7 @@ const ContactForm = () => {
 					</p>
 					{formResponse === 'neutral' && (
 						<p>
-							<button type='submit' className={btnStyles.btn}>
+							<button type='submit' className={styles.BtnMain}>
 								{btnSubmitValue}
 							</button>
 						</p>
@@ -141,7 +140,7 @@ const ContactForm = () => {
 							<p>
 								<button
 									type='reset'
-									className={btnStyles.btn}
+									className={styles.BtnMain}
 									onClick={handleReset}
 								>
 									OK

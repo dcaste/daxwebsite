@@ -1,66 +1,37 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Layout, { siteTitle } from '../components/layout/layout';
-import ContactForm from '../components/contactform/ContactForm';
-import SplitContent from '../components/splitcontent/SplitContent';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Layout, { siteTitle } from '@/layout/layout';
+import renderContent from '../utils/renderContent';
 
-const Contact = () => {
+const Contact = ({
+	data: {
+		seo: { description, excerpt },
+		content,
+	},
+}) => {
 	return (
 		<Layout>
 			<Head>
-				<title>Contact Me - {siteTitle}</title>
-				<meta
-					name='description'
-					content='Contact information to reach Web developer, Dax Castellón'
-				/>
+				<title>
+					{siteTitle} - {excerpt}
+				</title>
+				<meta name='description' content={description} />
 			</Head>
 
-			<h1 className='pageTitle'>Contact Me</h1>
-
-			<SplitContent split='50-50'>
-				<div>
-					<div>
-						<Image
-							src='/assets/img/avatar.jpg'
-							alt='Dax Castellón'
-							className='rounded'
-							width={300}
-							height={300}
-						/>
-					</div>
-					<p className='textCentered'>
-						<strong className='lead'>Dax Castellón Meyrat</strong>
-						<br />
-						Web Developer
-						<br />
-					</p>
-					<p className='textCentered'>dax@daxcastellon.dev</p>
-					<p className='textCentered textBig'>
-						<a
-							href='https://www.linkedin.com/in/daxcastellonmeyrat/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<FontAwesomeIcon icon={['fab', 'linkedin']} />
-						</a>
-						<a
-							href='https://github.com/dcaste/'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<FontAwesomeIcon
-								icon={['fab', 'github']}
-								className='marginLeft'
-							/>
-						</a>
-					</p>
-				</div>
-
-				<ContactForm />
-			</SplitContent>
+			{content.map((item) => renderContent(item))}
 		</Layout>
 	);
 };
+
+// Get Contact Me data.
+export async function getStaticProps() {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/contact`);
+	const data = await res.json();
+
+	return {
+		props: {
+			data,
+		},
+	};
+}
 
 export default Contact;

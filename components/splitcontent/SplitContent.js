@@ -7,6 +7,7 @@ import ImageWrapper from '@/imageWrapper/ImageWrapper';
 import ProperLink from '@/properlink/ProperLink';
 import BtnGroup from '@/btngroup/BtnGroup';
 import SocialLinks from '@/sociallinks/SocialLinks';
+import ContactForm from '@/contactform/ContactForm';
 
 import styles from './SplitContent.module.scss';
 
@@ -77,6 +78,7 @@ const SplitContent = ({ props }) => {
 				{props.LeftSocialLink[0]?.id && (
 					<SocialLinks props={props.LeftSocialLink} />
 				)}
+				{props.LeftForm === true && <ContactForm />}
 			</div>
 
 			<div
@@ -100,6 +102,7 @@ const SplitContent = ({ props }) => {
 				{props.RightSocialLink[0]?.id && (
 					<SocialLinks props={props.RightSocialLink} />
 				)}
+				{props.RightForm === true && <ContactForm />}
 			</div>
 
 			{props?.mainLink && (
