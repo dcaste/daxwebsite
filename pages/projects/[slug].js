@@ -1,20 +1,28 @@
-import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Layout, { siteTitle } from '@/layout/layout';
+
+import ProjectHeader from '@/projectheader/ProjectHeader';
 import renderContent from '../../utils/renderContent';
 import { fetchAPI } from '../../utils/api';
 
-const Project = ({ project: { title, website, repository, seo, content } }) => {
-	console.log(title);
-
+const Project = ({
+	project: { title, website, repository, featuredImage, seo, content },
+}) => {
 	return (
 		<Layout>
 			<Head>
 				<title>
-					{siteTitle} - Project: {title}
+					{siteTitle} - My Role as web developr in {title} website
 				</title>
 				<meta name='description' content={seo.description} />
 			</Head>
+
+			<ProjectHeader
+				title={title}
+				featuredImage={featuredImage}
+				website={website}
+				repository={repository}
+			/>
 
 			{content.map((item) => renderContent(item))}
 		</Layout>
