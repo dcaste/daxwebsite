@@ -20,7 +20,7 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 							width: featuredImage.width,
 							height: featuredImage.height,
 						},
-						style: 'shadow',
+						style: 'shadowed',
 					}}
 				/>
 			)}

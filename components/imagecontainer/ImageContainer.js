@@ -11,6 +11,9 @@ function ImageWrapper({ props }) {
 				height={props.image.height}
 				className={props.className}
 			/>
+			{props.image.caption && (
+				<p className={styles.caption}>{props.image.caption}</p>
+			)}
 		</div>
 	);
 }

@@ -51,6 +51,18 @@ export default function renderContent(item) {
 				<FeatureList key={getItemKey(item.__component, item.id)} props={item} />
 			);
 
+		// Image Container.
+		case 'global.res-picture':
+			const ImageContainer = dynamic(() =>
+				import('@/imagecontainer/ImageContainer')
+			);
+			return (
+				<ImageContainer
+					key={getItemKey(item.__component, item.id)}
+					props={item}
+				/>
+			);
+
 		default:
 			return <p key={getItemKey(item.style, item.id)}>Component not found</p>;
 	}
