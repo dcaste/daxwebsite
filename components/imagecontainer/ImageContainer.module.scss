@@ -1,0 +1,31 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/settings/mixins.scss';
+
+.rounded {
+	border-radius: 50%;
+	overflow: hidden;
+
+	> div {
+		display: block !important;
+	}
+}
+
+.bordered {
+	overflow: hidden;
+	border: 1px solid $grey_light !important;
+	border-radius: $global-radius-small;
+
+	> div {
+		display: block !important;
+	}
+}
+
+.shadow {
+	overflow: hidden;
+	border-radius: $global-radius-small;
+	@include shadow2dp;
+
+	> div {
+		display: block !important;
+	}
+}
