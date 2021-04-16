@@ -4,10 +4,21 @@ import Link from 'next/link';
 
 import ProjectHeader from '@/projectheader/ProjectHeader';
 import renderContent from '../../utils/renderContent';
+import SplitContent from '@/splitcontent/SplitContent';
+import ProperLink from '@/properlink/ProperLink';
 import { fetchAPI } from '../../utils/api';
 
 const Project = ({
-	project: { title, website, repository, featuredImage, seo, content },
+	project: {
+		title,
+		website,
+		repository,
+		featuredImage,
+		seo,
+		content,
+		projectDescription,
+		technologies,
+	},
 }) => {
 	return (
 		<Layout>
@@ -25,15 +36,31 @@ const Project = ({
 				repository={repository}
 			/>
 
+			<SplitContent
+				props={{
+					Split: 'SixtyForty',
+					ContentStyle: 'Card',
+					LeftContent: projectDescription,
+					LeftContentStyle: 'lead',
+					LeftContentAlignment: 'left',
+					LeftVerticalAlign: 'center',
+					RightContent: technologies,
+					RightContentAlignment: 'left',
+					RightVerticalAlign: 'center',
+				}}
+			/>
+
 			{content.map((item) => renderContent(item))}
 
-			<p>
-				<Link href='/portfolio'>
-					<a target='_self'>
-						View a list of other selected projects in my Portfolio
-					</a>
-				</Link>
-			</p>
+			<ProperLink
+				props={{
+					copy: 'View a list of other selected projects in my Portfolio',
+					url: '/portfolio',
+					target: '_self',
+					tag: 'p',
+					icon: 'faAngleRight',
+				}}
+			/>
 		</Layout>
 	);
 };
