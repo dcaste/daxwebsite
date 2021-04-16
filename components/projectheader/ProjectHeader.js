@@ -1,7 +1,7 @@
-import Image from 'next/image';
 import Title from '@/title/Title';
 import VisitRepo from '@/visitrepo/VisitRepo';
 import VisitWebsite from '@/visitwebsite/VisitWebsite';
+import ImageContainer from '@/imagecontainer/ImageContainer';
 import styles from './ProjectHeader.module.scss';
 
 const ProjectHeader = ({ title, featuredImage, website, repository }) => {
@@ -12,12 +12,16 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 			)}
 
 			{featuredImage && (
-				<Image
-					src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${featuredImage.url}`}
-					alt={featuredImage.alternativetext}
-					width={featuredImage.width}
-					height={featuredImage.height}
-					className='bordered'
+				<ImageContainer
+					props={{
+						image: {
+							url: featuredImage.url,
+							alt: featuredImage.alternativetext,
+							width: featuredImage.width,
+							height: featuredImage.height,
+						},
+						style: 'bordered',
+					}}
 				/>
 			)}
 
