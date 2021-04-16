@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '@/layout/layout';
+import Link from 'next/link';
 
 import ProjectHeader from '@/projectheader/ProjectHeader';
 import renderContent from '../../utils/renderContent';
@@ -25,6 +26,14 @@ const Project = ({
 			/>
 
 			{content.map((item) => renderContent(item))}
+
+			<Link href='/portfolio'>
+				<p>
+					<a href={URL} target='_self'>
+						View a list of other selected projects in my Portfolio
+					</a>
+				</p>
+			</Link>
 		</Layout>
 	);
 };
