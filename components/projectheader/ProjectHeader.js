@@ -21,14 +21,12 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 				/>
 			)}
 
-			<div className={styles.websites}>
-				{website && (
-					<VisitWebsite Tag='div' URL={website} className='textCentered' />
-				)}
-				{website && (
-					<VisitWebsite Tag='div' URL={website} className='textCentered' />
-				)}
-			</div>
+			{(website || repository) && (
+				<div className={styles.websites}>
+					{website && <VisitWebsite Tag='div' URL={website} />}
+					{repository && <VisitRepo Tag='div' URL={repository} />}
+				</div>
+			)}
 		</header>
 	);
 };
