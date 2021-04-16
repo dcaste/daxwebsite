@@ -27,13 +27,13 @@ const Project = ({
 
 			{content.map((item) => renderContent(item))}
 
-			<Link href='/portfolio'>
-				<p>
-					<a href={URL} target='_self'>
+			<p>
+				<Link href='/portfolio'>
+					<a target='_self'>
 						View a list of other selected projects in my Portfolio
 					</a>
-				</p>
-			</Link>
+				</Link>
+			</p>
 		</Layout>
 	);
 };

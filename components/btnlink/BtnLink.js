@@ -9,7 +9,7 @@ function BtnLink({ props: { copy, URL, target, style } }) {
 		</a>
 	) : (
 		<Link href={URL}>
-			<a className={styles[style]} href={URL} target={target}>
+			<a className={styles[style]} target={target}>
 				{copy}
 			</a>
 		</Link>
