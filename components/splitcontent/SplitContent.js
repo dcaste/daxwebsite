@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import ReactMarkdown from 'react-markdown';
 
 import Title from '@/title/Title';
-import ImageWrapper from '@/imageWrapper/ImageWrapper';
+import ImageContainer from '@/imagecontainer/ImageContainer';
 import ProperLink from '@/properlink/ProperLink';
 import BtnGroup from '@/btngroup/BtnGroup';
 import SocialLinks from '@/sociallinks/SocialLinks';
@@ -65,7 +65,7 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.LeftVerticalAlign,
 				}}
 			>
-				{props.LeftPicture?.id && <ImageWrapper props={props.LeftPicture} />}
+				{props.LeftPicture?.id && <ImageContainer props={props.LeftPicture} />}
 				{props.LeftTitle?.id && <Title props={props.LeftTitle} />}
 				{props?.LeftContent && (
 					<ReactMarkdown
@@ -89,7 +89,9 @@ const SplitContent = ({ props }) => {
 					justifyContent: props.RightVerticalAlign,
 				}}
 			>
-				{props.RightPicture?.id && <ImageWrapper props={props.RightPicture} />}
+				{props.RightPicture?.id && (
+					<ImageContainer props={props.RightPicture} />
+				)}
 				{props.RightTitle?.id && <Title props={props.RightTitle} />}
 				{props?.RightContent && (
 					<ReactMarkdown
