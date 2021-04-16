@@ -1,0 +1,35 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/settings/mixins.scss';
+
+.projectHeader {
+	display: flex;
+	flex-direction: column;
+
+	@include mobile {
+		gap: 1.5rem;
+	}
+
+	@include mobile {
+		gap: 3rem;
+	}
+}
+
+.websites {
+	display: flex;
+	justify-content: center;
+
+	@include mobile {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	@include tablet-h {
+		flex-direction: row;
+		gap: 1rem;
+	}
+
+	@include laptop-m {
+		flex-direction: row;
+		gap: 3rem;
+	}
+}
