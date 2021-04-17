@@ -24,7 +24,7 @@ const Project = ({
 		<Layout>
 			<Head>
 				<title>
-					{siteTitle} - My Role as web developr in {title} website
+					{siteTitle} - My Role as web developer in {title} website
 				</title>
 				<meta name='description' content={seo.description} />
 			</Head>
