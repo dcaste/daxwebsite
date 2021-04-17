@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '@/layout/layout';
-import Link from 'next/link';
 
 import ProjectHeader from '@/projectheader/ProjectHeader';
+import ProjectCard from '@/projectcard/ProjectCard';
 import renderContent from '../../utils/renderContent';
-import SplitContent from '@/splitcontent/SplitContent';
 import ProperLink from '@/properlink/ProperLink';
 import { fetchAPI } from '../../utils/api';
 
@@ -18,6 +17,7 @@ const Project = ({
 		content,
 		projectDescription,
 		technologies,
+		position,
 	},
 }) => {
 	return (
@@ -36,18 +36,10 @@ const Project = ({
 				repository={repository}
 			/>
 
-			<SplitContent
-				props={{
-					Split: 'SixtyForty',
-					ContentStyle: 'Card',
-					LeftContent: projectDescription,
-					LeftContentStyle: 'lead',
-					LeftContentAlignment: 'left',
-					LeftVerticalAlign: 'center',
-					RightContent: technologies,
-					RightContentAlignment: 'left',
-					RightVerticalAlign: 'center',
-				}}
+			<ProjectCard
+				description={projectDescription}
+				technologies={technologies}
+				position={position}
 			/>
 
 			{content.map((item) => renderContent(item))}
