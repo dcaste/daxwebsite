@@ -87,7 +87,7 @@
 
 .Card {
 	@include shadow2dp;
-	background-color: $white;
+	background-color: white;
 	border-radius: $global-radius-small;
 
 	@include mobile {

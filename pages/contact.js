@@ -4,15 +4,16 @@ import renderContent from '../utils/renderContent';
 
 const Contact = ({
 	data: {
-		seo: { description, excerpt },
+		seo: { description },
 		content,
+		title,
 	},
 }) => {
 	return (
 		<Layout>
 			<Head>
 				<title>
-					{siteTitle} - {excerpt}
+					{siteTitle} - {title}
 				</title>
 				<meta name='description' content={description} />
 			</Head>
