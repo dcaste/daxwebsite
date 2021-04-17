@@ -1,19 +1,23 @@
 import Image from 'next/image';
 import styles from './ImageContainer.module.scss';
 
-function ImageWrapper({ props }) {
+function ImageWrapper({
+	props: {
+		image: { url, alternativetext, width, height, caption },
+		className,
+		style,
+	},
+}) {
 	return (
-		<div className={styles[props.style]}>
+		<div className={styles[style]}>
 			<Image
-				src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${props.image.url}`}
-				alt={props.image.alternativetext}
-				width={props.image.width}
-				height={props.image.height}
-				className={props.className}
+				src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url}`}
+				alt={alternativetext}
+				width={width}
+				height={height}
+				className={className}
 			/>
-			{props.image.caption && (
-				<p className={styles.caption}>{props.image.caption}</p>
-			)}
+			{caption && <p className={styles.caption}>{caption}</p>}
 		</div>
 	);
 }

@@ -16,7 +16,7 @@ export function renderIcon(iconName) {
 		faClipboardCheck: 'clipboard-check',
 		faBriefcase: 'briefcase',
 		faUsers: 'users',
-		faExternalLinkAlt: 'external-links-alt',
+		faExternalLinkAlt: 'external-link-alt',
 		faCheck: 'check',
 		faCheckCircle: 'check-circle',
 		faInfoCircle: 'info-circle',
