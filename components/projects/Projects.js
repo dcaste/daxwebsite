@@ -16,15 +16,17 @@ function Projects({ projects }) {
 						<div>
 							<h2>{project.title}</h2>
 							<ReactMarkdown source={project.projectExcerpt} />
-							<ProperLink
-								props={{
-									copy: 'Know more about my roles in this project',
-									url: `/projects/${project.slug}`,
-									target: '_self',
-									tag: 'p',
-									icon: 'faAngleRight',
-								}}
-							/>
+							{project.showProjectLink && (
+								<ProperLink
+									props={{
+										copy: project.linkCopy,
+										url: `/projects/${project.slug}`,
+										target: '_self',
+										tag: 'p',
+										icon: 'faAngleRight',
+									}}
+								/>
+							)}
 							{project.website && (
 								<ProperLink
 									props={{
@@ -54,15 +56,17 @@ function Projects({ projects }) {
 						<div>
 							<h2>{project.title}</h2>
 							<ReactMarkdown source={project.projectExcerpt} />
-							<ProperLink
-								props={{
-									copy: 'Know more about my roles in this project',
-									url: `/projects/${project.slug}`,
-									target: '_self',
-									tag: 'p',
-									icon: 'faAngleRight',
-								}}
-							/>
+							{project.showProjectLink && (
+								<ProperLink
+									props={{
+										copy: project.linkCopy,
+										url: `/projects/${project.slug}`,
+										target: '_self',
+										tag: 'p',
+										icon: 'faAngleRight',
+									}}
+								/>
+							)}
 							{project.website && (
 								<ProperLink
 									props={{

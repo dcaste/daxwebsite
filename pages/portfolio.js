@@ -31,6 +31,8 @@ export async function getStaticProps() {
       repository
       projectDescription
 			projectExcerpt
+			linkCopy
+		  showProjectLink
       thumbnail{
         alternativeText
         url
