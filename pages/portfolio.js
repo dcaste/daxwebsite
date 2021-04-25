@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '@/comp/layout/layout';
 import Title from '@/comp/title/Title';
 import Projects from '@/comp/projects/Projects';
-import { fetchGRAPHQL } from '.@/utils/api';
+import { fetchGRAPHQL } from '@/utils/api';
 
 const Portfolio = ({ projects: { projects } }) => {
 	return (
