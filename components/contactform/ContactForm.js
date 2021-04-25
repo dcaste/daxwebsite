@@ -2,7 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
-import Alert from '@/alert/Alert';
+import Alert from '@/comp/alert/Alert';
 import styles from './ContactForm.module.scss';
 
 const ContactForm = () => {

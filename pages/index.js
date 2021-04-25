@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '@/layout/layout';
-import renderContent from '../utils/renderContent';
+import Layout, { siteTitle } from '@/comp/layout/layout';
+import renderContent from '@/utils/renderContent';
 
 const Home = ({
 	data: {

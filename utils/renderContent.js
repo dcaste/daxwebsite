@@ -12,12 +12,12 @@ export default function renderContent(item) {
 	switch (item.__component) {
 		// Title component.
 		case 'typography.title':
-			const Title = dynamic(() => import('@/title/Title'));
+			const Title = dynamic(() => import('@/comp/title/Title'));
 			return <Title props={item} key={getItemKey(item.__component, item.id)} />;
 
 		// Card component.
 		case 'layout.card':
-			const Card = dynamic(() => import('@/card/Card'));
+			const Card = dynamic(() => import('@/comp/card/Card'));
 			return (
 				<Card key={getItemKey(item.__component, item.id)}>{item.content}</Card>
 			);
@@ -25,7 +25,7 @@ export default function renderContent(item) {
 		// Centered Content.
 		case 'typography.centered-content':
 			const CenteredContent = dynamic(() =>
-				import('@/centeredcontent/CenteredContent')
+				import('@/comp/centeredcontent/CenteredContent')
 			);
 			return (
 				<CenteredContent
@@ -36,7 +36,9 @@ export default function renderContent(item) {
 
 		// Split Content Component
 		case 'layout.split-content':
-			const SplitContent = dynamic(() => import('@/splitcontent/SplitContent'));
+			const SplitContent = dynamic(() =>
+				import('@/comp/splitcontent/SplitContent')
+			);
 			return (
 				<SplitContent
 					props={item}
@@ -46,7 +48,9 @@ export default function renderContent(item) {
 
 		// Feature List.
 		case 'layout.feature-list':
-			const FeatureList = dynamic(() => import('@/featurelist/FeatureList'));
+			const FeatureList = dynamic(() =>
+				import('@/comp/featurelist/FeatureList')
+			);
 			return (
 				<FeatureList key={getItemKey(item.__component, item.id)} props={item} />
 			);
@@ -54,7 +58,7 @@ export default function renderContent(item) {
 		// Image Container.
 		case 'global.res-picture':
 			const ImageContainer = dynamic(() =>
-				import('@/imagecontainer/ImageContainer')
+				import('@/comp/imagecontainer/ImageContainer')
 			);
 			return (
 				<ImageContainer

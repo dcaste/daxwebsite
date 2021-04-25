@@ -8,8 +8,8 @@ import { Breakpoint, BreakpointProvider } from 'react-socks';
 // Components
 import NavMenu from '../navmenu/NavMenu';
 import NavMobile from '../navmobile/NavMobile';
-import BtnNav from '@/btnnav/BtnNav';
-import GoToTop from '@/gototop/GoToTop';
+import BtnNav from '@/comp/btnnav/BtnNav';
+import GoToTop from '@/comp/gototop/GoToTop';
 import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
 

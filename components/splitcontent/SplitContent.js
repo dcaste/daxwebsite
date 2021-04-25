@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactMarkdown from 'react-markdown';
 
-import Title from '@/title/Title';
-import ImageContainer from '@/imagecontainer/ImageContainer';
-import ProperLink from '@/properlink/ProperLink';
-import BtnGroup from '@/btngroup/BtnGroup';
-import SocialLinks from '@/sociallinks/SocialLinks';
-import ContactForm from '@/contactform/ContactForm';
+import Title from '@/comp/title/Title';
+import ImageContainer from '@/comp/imagecontainer/ImageContainer';
+import ProperLink from '@/comp/properlink/ProperLink';
+import BtnGroup from '@/comp/btngroup/BtnGroup';
+import SocialLinks from '@/comp/sociallinks/SocialLinks';
+import ContactForm from '@/comp/contactform/ContactForm';
 
 import styles from './SplitContent.module.scss';
 

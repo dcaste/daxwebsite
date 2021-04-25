@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import classNames from 'classnames';
-import Title from '@/title/Title';
+import Title from '@/comp/title/Title';
 import styles from './CenteredContent.module.scss';
 
 const CenteredContent = ({ props: { content, title, alignment, style } }) => {

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { getItemKey } from '../../utils/misc';
+import { getItemKey } from '@/utils/misc';
 import styles from './BtnGroup.module.scss';
-import BtnLink from '@/btnlink/BtnLink';
+import BtnLink from '@/comp/btnlink/BtnLink';
 
 const BtnGroup = ({ props }) => {
 	return (

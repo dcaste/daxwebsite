@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import ImageContainer from '@/imagecontainer/ImageContainer';
-import ProperLink from '@/properlink/ProperLink';
+import ImageContainer from '@/comp/imagecontainer/ImageContainer';
+import ProperLink from '@/comp/properlink/ProperLink';
 import styles from './Projects.module.scss';
 
 function Projects({ projects }) {

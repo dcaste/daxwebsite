@@ -1,7 +1,7 @@
-import Title from '@/title/Title';
-import VisitRepo from '@/visitrepo/VisitRepo';
-import VisitWebsite from '@/visitwebsite/VisitWebsite';
-import ImageContainer from '@/imagecontainer/ImageContainer';
+import Title from '@/comp/title/Title';
+import VisitRepo from '@/comp/visitrepo/VisitRepo';
+import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
+import ImageContainer from '@/comp/imagecontainer/ImageContainer';
 import styles from './ProjectHeader.module.scss';
 
 const ProjectHeader = ({ title, featuredImage, website, repository }) => {

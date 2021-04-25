@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import HeadSEO from '../components/seo/HeadSEO';
+import HeadSEO from '@/comp/seo/HeadSEO';
 
 export default class MyDocument extends Document {
 	render() {

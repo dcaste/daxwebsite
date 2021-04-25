@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { renderIcon } from './../../utils/misc';
-import Title from '@/title/Title';
+import Title from '@/comp/title/Title';
 import classNames from 'classnames';
 import styles from './FeatureList.module.scss';
 
