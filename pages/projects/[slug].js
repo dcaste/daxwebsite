@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '@/layout/layout';
+import Layout, { siteTitle } from '@/comp/layout/layout';
 
-import ProjectHeader from '@/projectheader/ProjectHeader';
-import ProjectCard from '@/projectcard/ProjectCard';
-import renderContent from '../../utils/renderContent';
-import ProperLink from '@/properlink/ProperLink';
-import { fetchAPI } from '../../utils/api';
+import ProjectHeader from '@/comp/projectheader/ProjectHeader';
+import ProjectCard from '@/comp/projectcard/ProjectCard';
+import renderContent from '@/utils/renderContent';
+import ProperLink from '@/comp/properlink/ProperLink';
+import { fetchAPI } from '@/utils/api';
 
 const Project = ({
 	project: {
