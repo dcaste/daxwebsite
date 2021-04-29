@@ -23,9 +23,7 @@ export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
 	const paths = pages.map((page) => {
 		const slugArray = [page.slug];
-		return {
-			params: { slug: slugArray },
-		};
+		return { params: { slug: slugArray } };
 	});
 
 	return {
