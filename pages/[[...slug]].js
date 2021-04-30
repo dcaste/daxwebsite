@@ -21,11 +21,11 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const paths = getSlugs(pages);
+	const pathURLs = getSlugs(pages);
 
 	return {
-		paths,
-		fallback: false,
+		paths: pathURLs,
+		fallback: true,
 	};
 }
 
