@@ -45,8 +45,12 @@ export async function fetchGRAPHQL(query, { variables } = {}) {
 	return json.data;
 }
 
-// Return slug param from an array of slugs.
-export function getSlug(item) {
-	const slugArray = [item.slug];
-	return { params: { slug: slugArray } };
+// Return an array of slugs.
+export function getSlugs(items) {
+	const slugs = items.map((item) => {
+		const slugsArray = [item.slug];
+		return { params: { slug: slugsArray } };
+	});
+
+	return slugs;
 }

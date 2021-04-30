@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '@/comp/layout/layout';
-import { fetchAPI, getSlug } from '@/utils/api';
+import { fetchAPI, getSlugs } from '@/utils/api';
 import renderContent from '@/utils/renderContent';
 
 const DynamicPage = ({ page: { title, seo, content } }) => {
@@ -21,7 +21,7 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const paths = pages.map(getSlug);
+	const paths = getSlugs(pages);
 
 	return {
 		paths,
