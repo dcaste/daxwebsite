@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '@/comp/layout/layout';
-import { fetchAPI } from '@/utils/api';
+import { fetchAPI, getSlug } from '@/utils/api';
 import renderContent from '@/utils/renderContent';
 
 const DynamicPage = ({ page: { title, seo, content } }) => {
@@ -21,10 +21,7 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const paths = pages.map((page) => {
-		const slugArray = [page.slug];
-		return { params: { slug: slugArray } };
-	});
+	const paths = pages.map(getSlug);
 
 	return {
 		paths,
@@ -34,11 +31,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params, preview = null }) {
 	// To get the homepage, find the only page where slug is an empty string.
-	const slug = params == {} || !params.slug ? '' : params.slug;
-
+	const slug = params === {} || !params.slug ? '' : params.slug;
 	const pages = await fetchAPI(`/pages?slug=${slug}`);
 
-	if (pages == null) {
+	if (pages === null) {
 		return { props: {} };
 	}
 
