@@ -21,7 +21,19 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const paths = getSlugs(pages);
+	// const paths = getSlugs(pages);
+
+	// return {
+	// 	paths,
+	// 	fallback: false,
+	// };
+	const paths = pages.map((page) => {
+		// Decompose the slug that was saved in Strapi
+		const slugArray = page.slug.split('__');
+		return {
+			params: { slug: slugArray },
+		};
+	});
 
 	return {
 		paths,
