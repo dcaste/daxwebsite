@@ -61,7 +61,7 @@ export async function getStaticPaths() {
 	const projects = await fetchAPI('/projects');
 
 	// True returns an Array, False returns a string.
-	const pathURLs = getSlugs(projects, false);
+	const pathURLs = await getSlugs(projects, false);
 
 	return {
 		paths: pathURLs,
