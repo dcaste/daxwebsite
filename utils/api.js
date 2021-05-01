@@ -45,11 +45,11 @@ export async function fetchGRAPHQL(query, { variables } = {}) {
 	return json.data;
 }
 
-// Return an array of slugs.
-export function getSlugs(items) {
+// Return an array or a string of slugs.
+export function getSlugs(items, doesReturnArray) {
 	const slugs = items.map((item) => {
-		const slugsArray = [item.slug];
-		return { params: { slug: slugsArray } };
+		const slugsReturned = doesReturnArray === true ? [item.slug] : item.slug;
+		return { params: { slug: slugsReturned } };
 	});
 
 	return slugs;

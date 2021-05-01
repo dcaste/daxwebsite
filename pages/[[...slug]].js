@@ -4,7 +4,6 @@ import { fetchAPI, getSlugs } from '@/utils/api';
 import renderContent from '@/utils/renderContent';
 
 const DynamicPage = ({ page: { title, seo, content } }) => {
-	console.error(title);
 	const pageTitle = title === 'Homepage' ? seo.description : title;
 
 	return (
@@ -22,12 +21,12 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const pathURLs = pages.map((page) => {
-		console.error(page.slug);
-	});
+
+	// True returns an Array, False returns a string.
+	const pathURLs = getSlugs(pages, true);
 
 	return {
-		paths: [{ params: { slug: [''] } }, { params: { slug: ['about'] } }],
+		paths: pathURLs,
 		fallback: false,
 	};
 }

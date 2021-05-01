@@ -5,7 +5,7 @@ import ProjectHeader from '@/comp/projectheader/ProjectHeader';
 import ProjectCard from '@/comp/projectcard/ProjectCard';
 import renderContent from '@/utils/renderContent';
 import ProperLink from '@/comp/properlink/ProperLink';
-import { fetchAPI } from '@/utils/api';
+import { fetchAPI, getSlugs } from '@/utils/api';
 
 const Project = ({
 	project: {
@@ -60,10 +60,11 @@ const Project = ({
 export async function getStaticPaths() {
 	const projects = await fetchAPI('/projects');
 
+	// True returns an Array, False returns a string.
+	const pathURLs = getSlugs(projects, false);
+
 	return {
-		paths: projects.map((project) => ({
-			params: { slug: project.slug },
-		})),
+		paths: pathURLs,
 		fallback: false,
 	};
 }
