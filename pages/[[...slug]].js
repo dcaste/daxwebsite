@@ -21,7 +21,9 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-	const pathURLs = await getSlugs(pages);
+
+	// True returns an Array, False returns a string.
+	const pathURLs = await getSlugs(pages, true);
 
 	return {
 		paths: pathURLs,
