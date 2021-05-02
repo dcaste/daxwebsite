@@ -6,27 +6,31 @@ import { motion } from 'framer-motion';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 
 // Components
-import NavMenu from '../navmenu/NavMenu';
-import NavMobile from '../navmobile/NavMobile';
+import NavMenu from '@/comp/navmenu/NavMenu';
+import NavMobile from '@/comp/navmobile/NavMobile';
 import BtnNav from '@/comp/btnnav/BtnNav';
 import GoToTop from '@/comp/gototop/GoToTop';
-import CopyRight from '../copyright/CopyRight';
+import CopyRight from '@/comp/copyright/CopyRight';
 
 // Styles
 import styles from './layout.module.scss';
 
 // FontAwesome custom Library.
-import '../../libs/fontawesome';
+import '@/libs/fontawesome';
 
 // Constant website SEO data
 export const siteTitle = 'Dax Castellón';
 
 export default function Layout({ children }) {
-	// Global States
-	const [showButton, setShowButton] = useState(false); // To show or hide the Go To Top button.
-	const [openNavMobile, setOpenNavMobile] = useState(false); // To show or hide the Mobile Navigation Menu.
+	// Global States //
 
-	// Shows Go to Top button if current Y position is greater than 0.
+	// To show or hide the Go To Top button.
+	const [showButton, setShowButton] = useState(false);
+
+	// To show or hide the Mobile Navigation Menu.
+	const [openNavMobile, setOpenNavMobile] = useState(false);
+
+	// Shows "Go to Top" button if current Y position is greater than 0.
 	useScrollPosition(
 		({ currPos }) => {
 			const isShow = currPos.y < 0;
