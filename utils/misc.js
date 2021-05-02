@@ -8,6 +8,8 @@ export function getItemKey(itemName, itemId) {
 
 // Returns the proper Font Awesome icon class.
 export function renderIcon(iconName) {
+	const iconToRender = iconName || 'faCircle';
+
 	const iconLibrary = {
 		faAngleRight: 'angle-right',
 		faAngleUp: 'angle-up',
@@ -32,7 +34,7 @@ export function renderIcon(iconName) {
 
 	let renderedIcon = ['fas', ''];
 
-	switch (iconName) {
+	switch (iconToRender) {
 		case 'faInstagramSquare':
 			renderedIcon = ['fab', 'instagram-square'];
 			break;
@@ -50,7 +52,7 @@ export function renderIcon(iconName) {
 			break;
 
 		default:
-			renderedIcon = ['fas', iconLibrary[iconName]];
+			renderedIcon = ['fas', iconLibrary[iconToRender]];
 			break;
 	}
 

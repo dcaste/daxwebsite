@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon } from './../../utils/misc';
+import { renderIcon } from '@/utils/misc';
 import Title from '@/comp/title/Title';
 import classNames from 'classnames';
 import styles from './FeatureList.module.scss';
@@ -25,6 +25,15 @@ const FeatureList = ({ props: { title, Feature } }) => {
 			))}
 		</div>
 	);
+};
+
+FeatureList.propTypes = {
+	icon: PropTypes.string.isRequired,
+	title: PropTypes.string,
+};
+
+FeatureList.defaultProps = {
+	icon: 'faInfoCircle',
 };
 
 export default FeatureList;
