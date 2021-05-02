@@ -1,7 +1,7 @@
 /* Form Component styles */
 @import './../../styles/settings/variables.scss';
 @import './../../styles/settings/mixins.scss';
-@import './../../styles/global/btn.scss';
+@import '../btnlink/BtnLink.module.scss';
 
 .formComponent {
 	display: flex;

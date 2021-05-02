@@ -1,7 +1,7 @@
-@import '../../styles/global/btn.scss';
+@import '../btnlink/BtnLink.module.scss';
 
 .BtnGroup {
-	a + a {
+	* + * {
 		margin-left: 0.5rem;
 	}
 }

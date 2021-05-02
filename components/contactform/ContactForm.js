@@ -118,7 +118,7 @@ const ContactForm = () => {
 					</p>
 					{formResponse === 'neutral' && (
 						<p>
-							<button type='submit' className={styles.BtnMain}>
+							<button type='submit' className={styles.btnMain}>
 								{btnSubmitValue}
 							</button>
 						</p>

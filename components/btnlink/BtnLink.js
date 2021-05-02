@@ -27,7 +27,7 @@ BtnLink.defaultProps = {
 	copy: 'Copy goes here',
 	URL: '#',
 	target: '_self',
-	style: 'BtnMain',
+	style: 'btnMain',
 };
 
 export default BtnLink;
