@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon, getItemKey } from './../../utils/misc';
+import { renderIcon, getItemKey } from '@/utils/misc';
 import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ props }) => {
 	return (
-		<div className={styles.SocialLinks}>
+		<div>
 			{props.map((item) => (
 				<a
 					className={styles.item}

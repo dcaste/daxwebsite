@@ -1,9 +1,8 @@
 @import '../../styles/settings/variables.scss';
 
-.SocialLinks {
+.item {
 	font-size: 1.8em;
-
-	.item + .item {
-		margin-left: 1rem;
-	}
+}
+.item + .item {
+	margin-left: 1rem;
 }
