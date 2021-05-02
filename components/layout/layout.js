@@ -10,7 +10,6 @@ import NavMenu from '../navmenu/NavMenu';
 import NavMobile from '../navmobile/NavMobile';
 import BtnNav from '@/comp/btnnav/BtnNav';
 import GoToTop from '@/comp/gototop/GoToTop';
-import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
 
 // Styles
