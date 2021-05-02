@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import styles from './ImageContainer.module.scss';
 
-function ImageWrapper({
+function ImageContainer({
 	props: {
 		image: { url, alternativetext, width, height, caption },
 		className,
@@ -24,12 +24,12 @@ function ImageWrapper({
 	);
 }
 
-ImageWrapper.propTypes = {
+ImageContainer.propTypes = {
 	style: PropTypes.string.isRequired,
 };
 
-ImageWrapper.defaultProps = {
+ImageContainer.defaultProps = {
 	style: 'default',
 };
 
-export default ImageWrapper;
+export default ImageContainer;
