@@ -7,11 +7,11 @@ import styles from './CenteredContent.module.scss';
 const CenteredContent = ({ props: { content, title, alignment, style } }) => {
 	return (
 		<div
-			className={classNames(style, styles.CenteredContent)}
+			className={classNames(style, styles.container)}
 			style={{ textAlign: alignment }}
 		>
-			{title && <Title props={title} />}
-			<ReactMarkdown source={content} className={styles.Content} />
+			{title && <Title props={title} className={styles.title} />}
+			<ReactMarkdown source={content} />
 		</div>
 	);
 };

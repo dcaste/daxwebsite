@@ -1,6 +1,6 @@
 @import './../../styles/settings/mixins.scss';
 
-.CenteredContent {
+.container {
 	text-align: center;
 
 	@include mobile {
@@ -13,6 +13,6 @@
 	}
 }
 
-* + .Content {
-	margin-top: 1rem;
+.title {
+	margin-bottom: 1rem;
 }
