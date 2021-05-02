@@ -1,9 +1,8 @@
 @import '../../styles/settings/variables.scss';
 @import '../../styles/settings/mixins.scss';
 
-.basic {
+.default {
 	overflow: hidden;
-	background-color: $white;
 
 	> div {
 		display: block !important;
@@ -11,18 +10,18 @@
 }
 
 .rounded {
-	@extend .basic;
+	@extend .default;
 	border-radius: 50%;
 }
 
 .bordered {
-	@extend .basic;
+	@extend .default;
 	border: 1px solid $grey_light !important;
 	border-radius: $global-radius-small;
 }
 
 .shadowed {
-	@extend .basic;
+	@extend .default;
 	border-radius: $global-radius-small;
 	@include shadow2dp;
 }
