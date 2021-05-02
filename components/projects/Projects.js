@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import ImageContainer from '@/comp/imagecontainer/ImageContainer';
 import ProperLink from '@/comp/properlink/ProperLink';
+import VisitRepo from '@/comp/visitrepo/VisitRepo';
+import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
 import styles from './Projects.module.scss';
 
 function Projects({ projects }) {
@@ -35,28 +37,9 @@ function Projects({ projects }) {
 							/>
 						)}
 
-						{project.website && (
-							<ProperLink
-								props={{
-									copy: 'Visit website',
-									url: project.website,
-									target: '_blank',
-									tag: 'p',
-									icon: 'faExternalLinkAlt',
-								}}
-							/>
-						)}
-
+						{project.website && <VisitWebsite Tag='p' URL={project.website} />}
 						{project.repository && (
-							<ProperLink
-								props={{
-									copy: 'Visit repository',
-									url: project.repository,
-									target: '_blank',
-									tag: 'p',
-									icon: 'faGithub',
-								}}
-							/>
+							<VisitRepo Tag='p' URL={project.repository} />
 						)}
 					</div>
 				</div>

@@ -4,6 +4,8 @@ import Layout, { siteTitle } from '@/comp/layout/layout';
 import ProjectHeader from '@/comp/projectheader/ProjectHeader';
 import ProjectCard from '@/comp/projectcard/ProjectCard';
 import renderContent from '@/utils/renderContent';
+import VisitRepo from '@/comp/visitrepo/VisitRepo';
+import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
 import ProperLink from '@/comp/properlink/ProperLink';
 import { fetchAPI, getSlugs } from '@/utils/api';
 
