@@ -1,3 +1,6 @@
 module.exports = {
-	trailingSlash: true,
+	trailingSlash: false,
+	images: {
+		domains: [process.env.NEXT_PUBLIC_IMAGES_DOMAIN],
+	},
 };

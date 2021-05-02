@@ -1,0 +1,39 @@
+/* Split Content Component styles */
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.projectCard {
+	display: grid;
+	@include shadow2dp;
+	background-color: white;
+	border-radius: $global-radius-small;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		padding: 1rem;
+		gap: 1rem;
+	}
+
+	@include tablet-v {
+		padding: 2rem;
+		gap: 2rem;
+	}
+
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 3rem;
+	}
+
+	@include laptop-m {
+		grid-template-columns: 0.6fr 0.4fr;
+		grid-template-rows: 1fr;
+		padding: 3rem;
+		gap: 3rem;
+	}
+}
+
+.description {
+	font-size: 1.2em;
+}

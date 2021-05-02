@@ -8,29 +8,26 @@ import { Breakpoint, BreakpointProvider } from 'react-socks';
 // Components
 import NavMenu from '../navmenu/NavMenu';
 import NavMobile from '../navmobile/NavMobile';
-import BtnNav from '../buttonsComponents/BtnNav';
-import GoToTop from '../buttonsComponents/GoToTop';
+import BtnNav from '@/comp/btnnav/BtnNav';
+import GoToTop from '@/comp/gototop/GoToTop';
 import Spacer from '../spacer/Spacer';
 import CopyRight from '../copyright/CopyRight';
 
-//Styles
+// Styles
 import styles from './layout.module.scss';
 
-// FontAwesome custom Library
+// FontAwesome custom Library.
 import '../../libs/fontawesome';
 
-// Constant website SEO
-const name = 'Dax';
+// Constant website SEO data
 export const siteTitle = 'Dax Castellón';
 
-export default function Layout({ children, home }) {
-	// State to show or hide the Go To Top button
-	const [showButton, setShowButton] = useState(false);
+export default function Layout({ children }) {
+	// Global States
+	const [showButton, setShowButton] = useState(false); // To show or hide the Go To Top button.
+	const [openNavMobile, setOpenNavMobile] = useState(false); // To show or hide the Mobile Navigation Menu.
 
-	// State to show or hide the Mobile Navigation Menu
-	const [openNavMobile, setOpenNavMobile] = useState(false);
-
-	// Shows Go to Top button if current Y position is greater than 0
+	// Shows Go to Top button if current Y position is greater than 0.
 	useScrollPosition(
 		({ currPos }) => {
 			const isShow = currPos.y < 0;
@@ -42,7 +39,6 @@ export default function Layout({ children, home }) {
 	return (
 		<>
 			<Head>
-				<link rel='icon' href='/favicon.ico' />
 				<meta
 					name='description'
 					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
@@ -52,7 +48,7 @@ export default function Layout({ children, home }) {
 			<BreakpointProvider>
 				<div id='mainWrapper' className={styles.mainWrapper}>
 					<div className={styles.navHeader}>
-						<Breakpoint small down>
+						<Breakpoint medium down>
 							<BtnNav
 								open={openNavMobile}
 								toggle={() => {
@@ -63,7 +59,7 @@ export default function Layout({ children, home }) {
 
 						<NavMobile open={openNavMobile} />
 
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 					</div>
@@ -76,14 +72,12 @@ export default function Layout({ children, home }) {
 							transition={{ duration: 0.25 }}
 							exit={{ opacity: 0 }}
 						>
-							<Spacer />
 							{children}
-							<Spacer />
 						</motion.article>
 					</main>
 
 					<footer className={styles.navFooter}>
-						<Breakpoint medium up>
+						<Breakpoint large up>
 							<NavMenu />
 						</Breakpoint>
 						<CopyRight />

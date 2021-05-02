@@ -10,32 +10,28 @@
 	@include mobile {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
-		gap: 1rem;
+		gap: 6rem;
 	}
 
-	@include tablet-v {
+	@include tablet-h {
 		gap: 3rem;
 	}
 
-	.picture {
-		@include mobile {
-			order: 1;
-		}
-		@include tablet-h {
-			order: 1;
-		}
-	}
-	.content {
-		@include mobile {
-			order: 2;
-		}
-		@include tablet-h {
-			order: 2;
-		}
+	@include laptop-m {
+		gap: 6rem;
 	}
 }
 
-.splitContent__50-50 {
+.splitContent > div {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.split_Equal {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -46,7 +42,7 @@
 	}
 }
 
-.splitContent__40-60 {
+.split_FortySixty {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -58,7 +54,7 @@
 	}
 }
 
-.splitContent__60-40 {
+.split_SixtyForty {
 	@extend .splitContent;
 	@include tablet-h {
 		grid-template-columns: 1fr 1fr;
@@ -70,16 +66,8 @@
 	}
 }
 
-.splitContent__RightToLeft {
-	.picture {
-		@include mobile {
-			order: 1;
-		}
-		@include tablet-h {
-			order: 2;
-		}
-	}
-	.content {
+.RightFirst {
+	.ContentLeft {
 		@include mobile {
 			order: 2;
 		}
@@ -87,12 +75,37 @@
 			order: 1;
 		}
 	}
+	.ContentRight {
+		@include mobile {
+			order: 1;
+		}
+		@include tablet-h {
+			order: 2;
+		}
+	}
 }
 
-.list {
-	font-size: 0.95em;
+.Card {
+	@include shadow2dp;
+	background-color: white;
+	border-radius: $global-radius-small;
+
+	@include mobile {
+		padding: 1rem;
+		gap: 1rem;
+	}
+	@include tablet-v {
+		padding: 2rem;
+		gap: 2rem;
+	}
+	@include laptop-m {
+		padding: 3rem;
+		gap: 3rem;
+	}
 }
 
-.technologies {
-	font-weight: $bold;
+.mainHeader,
+.mainFooter {
+	grid-column: -1/1;
+	text-align: center;
 }

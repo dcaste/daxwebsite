@@ -17,9 +17,15 @@ import {
 	faTimes,
 	faExclamationTriangle,
 	faBars,
+	faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+	faLinkedin,
+	faGithub,
+	faInstagramSquare,
+	faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 
 library.add(
 	faAngleRight,
@@ -30,12 +36,15 @@ library.add(
 	faBriefcase,
 	faUsers,
 	faExternalLinkAlt,
-	faLinkedin,
-	faGithub,
 	faCheck,
 	faCheckCircle,
 	faInfoCircle,
 	faTimes,
 	faExclamationTriangle,
-	faBars
+	faBars,
+	faLaptopCode,
+	faLinkedin,
+	faInstagramSquare,
+	faYoutube,
+	faGithub
 );

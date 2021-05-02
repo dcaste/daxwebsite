@@ -10,6 +10,7 @@ const navMenu = () => {
 					<span className='textRed'>Dax</span>Castellón
 				</a>
 			</Link>
+
 			<ul className={styles.navLinks}>
 				<li className={styles.navItem}>
 					<Link href='/'>

@@ -1,44 +1,29 @@
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link';
-import styles from './FeatureList.module.scss';
+import { renderIcon } from './../../utils/misc';
+import Title from '@/comp/title/Title';
 import classNames from 'classnames';
+import styles from './FeatureList.module.scss';
 
-const FeatureList = (props) => {
-	const [config, itemList] = props.data;
-	const TitleTag = config.titleTag;
-	const SubTitleTag = config.subtitleTag;
-	const linkURL = config.link;
-
+const FeatureList = ({ props: { title, Feature } }) => {
 	return (
-		<section className={styles.featureList}>
-			<TitleTag className={styles.featureList__Title}>
-				{config.title}
-				<span className='textRed'> {config.titleRed}</span>
-			</TitleTag>
+		<div className={styles.featureList}>
+			{title && <Title props={title} className={styles.title} />}
 
-			{itemList.items.map((item) => (
-				<div className={styles.featureItem} key={item.id}>
-					<span className={classNames(styles.featureIcon, 'fa-stack', 'fa-2x')}>
+			{Feature.map((item) => (
+				<div className={styles.item} key={item.id}>
+					<span className={classNames(styles.icon, 'fa-stack', 'fa-2x')}>
 						<FontAwesomeIcon icon='circle' className='fa-stack-2x' />
 						<FontAwesomeIcon
-							icon={item.icon}
+							icon={renderIcon(item.icon.icon)}
 							className='fa-stack-1x fa-inverse'
 						/>
 					</span>
-					<SubTitleTag>{item.title}</SubTitleTag>
-					<p>{item.copy}</p>
+					<h3>{item.title}</h3>
+					<p>{item.description}</p>
 				</div>
 			))}
-
-			<p className={styles.featureList__Title}>
-				<Link href={linkURL}>
-					<a>
-						{config.linkCopy}
-						<FontAwesomeIcon icon='angle-right' className='marginLeft' />
-					</a>
-				</Link>
-			</p>
-		</section>
+		</div>
 	);
 };
 

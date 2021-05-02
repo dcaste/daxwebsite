@@ -27,15 +27,17 @@
 .logo {
 	font-weight: $bold;
 	color: $grey;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 
 .navItem + .navItem {
+	margin: 0;
 	margin-left: 2rem;
 }
 
 .socialIcon {
 	font-size: 1.3em;
+	margin: 0;
 	margin-left: 2rem;
 }
 

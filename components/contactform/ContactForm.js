@@ -2,9 +2,8 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
-import Alert from './../alert/Alert';
+import Alert from '@/comp/alert/Alert';
 import styles from './ContactForm.module.scss';
-import btnStyles from '../buttonsComponents/Btn.module.scss';
 
 const ContactForm = () => {
 	// Submit Button Value
@@ -65,6 +64,10 @@ const ContactForm = () => {
 					id='contactMe'
 				>
 					<p>
+						Feel free to reach out if you're looking for a developer, have a
+						question, or just want to connect.
+					</p>
+					<p>
 						<label htmlFor='yourName' className={styles.label}>
 							Name
 						</label>
@@ -115,7 +118,7 @@ const ContactForm = () => {
 					</p>
 					{formResponse === 'neutral' && (
 						<p>
-							<button type='submit' className={btnStyles.btn}>
+							<button type='submit' className={styles.BtnMain}>
 								{btnSubmitValue}
 							</button>
 						</p>
@@ -123,21 +126,21 @@ const ContactForm = () => {
 					{formResponse === 'success' && (
 						<Alert severity='success'>
 							<p>
-								Thank you for contacting me, your message has been succesfully
-								delivered!
+								👍 Thank you for contacting me, your message has been
+								succesfully delivered! I will answer as soon as posible.
 							</p>
 						</Alert>
 					)}
 					{formResponse === 'error' && (
 						<Alert severity='error'>
 							<p>
-								There was a problem sending this message. Please send me a
+								😟 There was a problem sending this message. Please send me a
 								direct Email message or try again in a couple of minutes.
 							</p>
 							<p>
 								<button
 									type='reset'
-									className={btnStyles.btn}
+									className={styles.BtnMain}
 									onClick={handleReset}
 								>
 									OK

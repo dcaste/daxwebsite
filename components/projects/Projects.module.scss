@@ -1,0 +1,95 @@
+/* Split Content Component styles */
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.project {
+	display: grid;
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 1rem;
+	}
+
+	@include tablet-v {
+		gap: 2rem;
+	}
+
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 3rem;
+	}
+
+	@include laptop-m {
+		grid-template-rows: 1fr;
+		gap: 3rem;
+	}
+}
+
+.odd {
+	@extend .project;
+
+	@include mobile {
+		.image {
+			order: 1;
+		}
+
+		.content {
+			order: 2;
+		}
+	}
+
+	@include tablet-h {
+		.image {
+			order: 1;
+		}
+
+		.content {
+			order: 2;
+		}
+	}
+
+	@include laptop-m {
+		grid-template-columns: 0.6fr 0.4fr;
+	}
+}
+
+.even {
+	@extend .project;
+
+	@include mobile {
+		.image {
+			order: 1;
+		}
+
+		.content {
+			order: 2;
+		}
+	}
+
+	@include tablet-h {
+		.image {
+			order: 2;
+		}
+
+		.content {
+			order: 1;
+		}
+	}
+
+	@include laptop-m {
+		grid-template-columns: 0.4fr 0.6fr;
+	}
+}
+
+.image {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	> div {
+		display: inline-block;
+	}
+}
