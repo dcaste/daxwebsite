@@ -1,4 +1,11 @@
-/* Split Content Component styles */
+/** Split Content Component styles
+ *
+ * Every project is a grid container.
+ * If the project is .even, then the .image appears first, otherwise appears second.
+ * In mobile the .image always appears first, on top of the content.
+ *
+**/
+
 @import './../../styles/settings/variables.scss';
 @import './../../styles/settings/mixins.scss';
 
@@ -27,34 +34,6 @@
 	}
 }
 
-.odd {
-	@extend .project;
-
-	@include mobile {
-		.image {
-			order: 1;
-		}
-
-		.content {
-			order: 2;
-		}
-	}
-
-	@include tablet-h {
-		.image {
-			order: 1;
-		}
-
-		.content {
-			order: 2;
-		}
-	}
-
-	@include laptop-m {
-		grid-template-columns: 0.6fr 0.4fr;
-	}
-}
-
 .even {
 	@extend .project;
 
@@ -80,6 +59,34 @@
 
 	@include laptop-m {
 		grid-template-columns: 0.4fr 0.6fr;
+	}
+}
+
+.odd {
+	@extend .project;
+
+	@include mobile {
+		.image {
+			order: 1;
+		}
+
+		.content {
+			order: 2;
+		}
+	}
+
+	@include tablet-h {
+		.image {
+			order: 1;
+		}
+
+		.content {
+			order: 2;
+		}
+	}
+
+	@include laptop-m {
+		grid-template-columns: 0.6fr 0.4fr;
 	}
 }
 

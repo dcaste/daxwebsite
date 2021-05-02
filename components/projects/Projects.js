@@ -6,8 +6,8 @@ import styles from './Projects.module.scss';
 
 function Projects({ projects }) {
 	const columnOrder = (order) => {
-		const oddOrEven = order % 2 !== 0 ? 'odd' : 'even';
-		return oddOrEven;
+		const evenOrOdd = order % 2 === 0 ? 'even' : 'odd';
+		return evenOrOdd;
 	};
 
 	return (
@@ -17,9 +17,12 @@ function Projects({ projects }) {
 					<div className={styles.image}>
 						<ImageContainer props={{ image: project.thumbnail }} />
 					</div>
+
 					<div className={styles.content}>
 						<h2>{project.title}</h2>
+
 						<ReactMarkdown source={project.projectExcerpt} />
+
 						{project.showProjectLink && (
 							<ProperLink
 								props={{
@@ -31,6 +34,7 @@ function Projects({ projects }) {
 								}}
 							/>
 						)}
+
 						{project.website && (
 							<ProperLink
 								props={{
@@ -42,6 +46,7 @@ function Projects({ projects }) {
 								}}
 							/>
 						)}
+
 						{project.repository && (
 							<ProperLink
 								props={{
