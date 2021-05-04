@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Layout, { siteTitle } from '@/comp/layout/layout';
 import { fetchAPI, getSlugs } from '@/utils/api';
 import renderContent from '@/utils/renderContent';
@@ -8,12 +8,7 @@ const DynamicPage = ({ page: { title, seo, content } }) => {
 
 	return (
 		<Layout>
-			<Head>
-				<title>
-					{siteTitle} - {pageTitle}
-				</title>
-				<meta name='description' content={seo.description} />
-			</Head>
+			<NextSeo title={siteTitle} description={seo.description} />
 			{content.map((item) => renderContent(item))}
 		</Layout>
 	);
