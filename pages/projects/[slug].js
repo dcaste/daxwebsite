@@ -1,35 +1,31 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '@/comp/layout/layout';
-
+import Layout from '@/comp/layout/layout';
+import SeoBasic from '@/comp/seo/SeoBasic';
 import ProjectHeader from '@/comp/projectheader/ProjectHeader';
 import ProjectCard from '@/comp/projectcard/ProjectCard';
 import renderContent from '@/utils/renderContent';
-import VisitRepo from '@/comp/visitrepo/VisitRepo';
-import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
 import ProperLink from '@/comp/properlink/ProperLink';
 import { fetchAPI, getSlugs } from '@/utils/api';
 
 const Project = ({
 	project: {
+		openGraph,
 		title,
 		website,
 		repository,
 		featuredImage,
-		seo,
 		content,
 		projectDescription,
 		technologies,
 		position,
 	},
+	global: { personalInfo },
+	slug,
 }) => {
 	return (
 		<Layout>
-			<Head>
-				<title>
-					{siteTitle} - My Role as web developer in {title} website
-				</title>
-				<meta name='description' content={seo.description} />
-			</Head>
+			{openGraph && (
+				<SeoBasic personal={personalInfo} og={openGraph} slug={slug} />
+			)}
 
 			<ProjectHeader
 				title={title}
@@ -72,10 +68,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	const projects = await fetchAPI(`/projects?slug=${params.slug}`);
+	const slug = params.slug;
+	const projects = await fetchAPI(`/projects?slug=${slug}`);
 
 	return {
-		props: { project: projects[0] },
+		props: { project: projects[0], slug },
 		revalidate: 1,
 	};
 }

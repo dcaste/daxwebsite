@@ -1,10 +1,11 @@
 import { NextSeo } from 'next-seo';
 
 function SeoBasic({ og, personal, slug }) {
+	const title = og.title || 'Missing Title';
 	const browserTitle =
 		slug === ''
 			? `${personal.websiteName} - ${og.description}`
-			: `${og.title} - ${personal.websiteName}`;
+			: `${title} - ${personal.websiteName}`;
 	const pageURL = `${personal.websiteURL}/${slug}`;
 	const imageURL = `${personal.websiteURL}${og.picture.url}`;
 
