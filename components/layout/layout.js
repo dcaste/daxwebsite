@@ -1,5 +1,4 @@
 // Next and NPM Modules
-import Head from 'next/head';
 import { useState } from 'react';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { motion } from 'framer-motion';
@@ -41,13 +40,6 @@ export default function Layout({ children }) {
 
 	return (
 		<>
-			<Head>
-				<meta
-					name='description'
-					content='Web Developer living in Switzerland specialized in creating custom websites and with SEO best practices, security standards and optimized for fast loading times'
-				/>
-			</Head>
-
 			<BreakpointProvider>
 				<div id='mainWrapper' className={styles.mainWrapper}>
 					<div className={styles.navHeader}>

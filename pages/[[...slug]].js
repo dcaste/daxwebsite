@@ -1,14 +1,19 @@
-import { NextSeo } from 'next-seo';
-import Layout, { siteTitle } from '@/comp/layout/layout';
+import Layout from '@/comp/layout/layout';
 import { fetchAPI, getSlugs } from '@/utils/api';
+import SeoBasic from '@/comp/seo/SeoBasic';
+import SeoSocialMedia from '@/comp/seo/SeoSocialMedia';
 import renderContent from '@/utils/renderContent';
 
-const DynamicPage = ({ page: { title, seo, content } }) => {
-	const pageTitle = title === 'Homepage' ? seo.description : title;
-
+const DynamicPage = ({
+	page: { content, openGraph },
+	global: { personalInfo },
+	slug,
+}) => {
 	return (
 		<Layout>
-			<NextSeo title={siteTitle} description={seo.description} />
+			{openGraph && (
+				<SeoBasic personal={personalInfo} og={openGraph} slug={slug} />
+			)}
 			{content.map((item) => renderContent(item))}
 		</Layout>
 	);
@@ -36,7 +41,7 @@ export async function getStaticProps({ params, preview = null }) {
 	}
 
 	return {
-		props: { page: pages[0] },
+		props: { page: pages[0], slug },
 		revalidate: 1,
 	};
 }
