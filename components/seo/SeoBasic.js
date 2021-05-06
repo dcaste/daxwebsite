@@ -1,7 +1,10 @@
 import { NextSeo } from 'next-seo';
 
 function SeoBasic({ og, personal, slug }) {
-	const browserTitle = `${og.title} - ${og.description}`;
+	const browserTitle =
+		slug === ''
+			? `${personal.websiteName} - ${og.description}`
+			: `${og.title} - ${personal.websiteName}`;
 	const pageURL = `${personal.websiteURL}/${slug}`;
 	const imageURL = `${personal.websiteURL}${og.picture.url}`;
 
@@ -13,7 +16,7 @@ function SeoBasic({ og, personal, slug }) {
 				openGraph={{
 					type: og.type,
 					url: pageURL,
-					title: og.title,
+					title: browserTitle,
 					description: og.description,
 					images: [
 						{

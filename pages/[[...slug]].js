@@ -22,7 +22,7 @@ const DynamicPage = ({
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
 
-	// True returns an Array, False returns a string.
+	// True returns an Array, False returns a string. In NextJs a Catch All Routes (...slug) needs an Array.
 	const pathURLs = await getSlugs(pages, true);
 
 	return {
