@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '@/comp/layout/layout';
+import { NextSeo } from 'next-seo';
+import Layout from '@/comp/layout/layout';
 import Title from '@/comp/title/Title';
 import Projects from '@/comp/projects/Projects';
 import { fetchGRAPHQL } from '@/utils/api';
@@ -7,9 +7,38 @@ import { fetchGRAPHQL } from '@/utils/api';
 const Portfolio = ({ projects: { projects } }) => {
 	return (
 		<Layout>
-			<Head>
-				<title>Portfolio - {siteTitle}</title>
-			</Head>
+			<NextSeo
+				title='Portfolio - Dax Castellón'
+				description='A collection of projects in which I have worked on as Web Developer'
+				openGraph={{
+					type: 'website',
+					title: 'Portfolio - Dax Castellón',
+					description:
+						'A collection of projects in which I have worked on as Web Developer',
+				}}
+				additionalLinkTags={[
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon.ico',
+						sizes: '16x16',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon-16x16.png',
+						sizes: '16x16',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon-32x32.png',
+						sizes: '32x32',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/android-chrome-512x512.png',
+						sizes: '512x512',
+					},
+				]}
+			/>
 
 			<Title
 				props={{ Tag: 'h1', copyMain: 'Portfolio', alignment: 'center' }}
