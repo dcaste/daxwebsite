@@ -28,6 +28,28 @@ function SeoBasic({ og, personal, slug }) {
 						},
 					],
 				}}
+				additionalLinkTags={[
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon.ico',
+						sizes: '16x16',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon-16x16.png',
+						sizes: '16x16',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/favicon-32x32.png',
+						sizes: '32x32',
+					},
+					{
+						rel: 'icon',
+						href: '/assets/img/android-chrome-512x512.png',
+						sizes: '512x512',
+					},
+				]}
 			/>
 		</>
 	);
