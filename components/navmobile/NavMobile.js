@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './NavMobile.module.scss';
 import { motion, AnimatePresence, useIsPresent } from 'framer-motion';
 
-const NavMobile = ({ open }) => {
+const NavMobile = ({ open, navigation: { navLink, socialLink } }) => {
 	const isPresent = useIsPresent();
+	const getLinkURL = (url) => {
+		const linkURL = url ? `/${url}` : '/';
+		return linkURL;
+	};
 
 	return (
 		<AnimatePresence exitBeforeEnter>
@@ -16,39 +20,23 @@ const NavMobile = ({ open }) => {
 					exit={{ scale: 0 }}
 					transition={{ duration: 0.25 }}
 				>
+					{navLink.map((link) => (
+						<li key={link.id}>
+							<Link
+								href={{
+									pathname: getLinkURL(link.url),
+								}}
+							>
+								<a className={styles.item}>{link.title}</a>
+							</Link>
+						</li>
+					))}
 					<li>
-						<Link href='/'>
-							<a className={styles.item}>Home</a>
-						</Link>
-					</li>
-					<li>
-						<Link href='/portfolio'>
-							<a className={styles.item}>Portfolio</a>
-						</Link>
-					</li>
-					<li>
-						<Link href='/about'>
-							<a className={styles.item}>About Me</a>
-						</Link>
-					</li>
-					<li>
-						<Link href='/contact'>
-							<a className={styles.item}>Contact Me</a>
-						</Link>
-					</li>
-					<li>
-						<a
-							href='https://www.linkedin.com/in/daxcastellonmeyrat/'
-							className={`${styles.item} ${styles.social}`}
-						>
-							<FontAwesomeIcon icon={['fab', 'linkedin']} />
-						</a>
-						<a
-							href='https://github.com/dcaste/'
-							className={`${styles.item} ${styles.social}`}
-						>
-							<FontAwesomeIcon icon={['fab', 'github']} />
-						</a>
+						{socialLink.map((link) => (
+							<a href={link.URL} className={`${styles.item} ${styles.social}`}>
+								<FontAwesomeIcon icon={['fab', 'linkedin']} />
+							</a>
+						))}
 					</li>
 				</motion.ul>
 			)}

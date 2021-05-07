@@ -4,9 +4,13 @@ import Title from '@/comp/title/Title';
 import Projects from '@/comp/projects/Projects';
 import { fetchGRAPHQL } from '@/utils/api';
 
-const Portfolio = ({ projects: { projects } }) => {
+const Portfolio = ({
+	projects: { projects },
+	global: { personalInfo, navigation, socialLinks, socialMedia },
+	slug,
+}) => {
 	return (
-		<Layout>
+		<Layout navigation={navigation} websiteURL={personalInfo.websiteURL}>
 			<NextSeo
 				title='Portfolio - Dax Castellón'
 				description='A collection of projects in which I have worked on as Web Developer'

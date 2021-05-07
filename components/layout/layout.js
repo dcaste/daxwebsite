@@ -17,15 +17,10 @@ import styles from './layout.module.scss';
 // FontAwesome custom Library.
 import '@/libs/fontawesome';
 
-// Constant website SEO data
-export const siteTitle = 'Dax Castellón';
-
-export default function Layout({ children }) {
+export default function Layout({ children, navigation, websiteURL }) {
 	// Global States //
-
 	// To show or hide the Go To Top button.
 	const [showButton, setShowButton] = useState(false);
-
 	// To show or hide the Mobile Navigation Menu.
 	const [openNavMobile, setOpenNavMobile] = useState(false);
 
@@ -52,10 +47,14 @@ export default function Layout({ children }) {
 							/>
 						</Breakpoint>
 
-						<NavMobile open={openNavMobile} />
+						<NavMobile
+							open={openNavMobile}
+							navigation={navigation}
+							websiteURL={websiteURL}
+						/>
 
 						<Breakpoint large up>
-							<NavMenu />
+							<NavMenu navigation={navigation} websiteURL={websiteURL} />
 						</Breakpoint>
 					</div>
 
@@ -73,7 +72,7 @@ export default function Layout({ children }) {
 
 					<footer className={styles.navFooter}>
 						<Breakpoint large up>
-							<NavMenu />
+							<NavMenu navigation={navigation} websiteURL={websiteURL} />
 						</Breakpoint>
 						<CopyRight />
 					</footer>

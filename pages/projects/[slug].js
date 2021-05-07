@@ -18,11 +18,11 @@ const Project = ({
 		technologies,
 		position,
 	},
-	global: { personalInfo },
+	global: { personalInfo, navigation, socialLinks, socialMedia },
 	slug,
 }) => {
 	return (
-		<Layout>
+		<Layout navigation={navigation} websiteURL={personalInfo.websiteURL}>
 			{openGraph && (
 				<SeoBasic personal={personalInfo} og={openGraph} slug={slug} />
 			)}
