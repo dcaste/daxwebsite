@@ -9,6 +9,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-color: $white;
+	line-height: 1;
 	@include mobile {
 		background-image: url('../../public/assets/img/bkg-mobile.jpg');
 		background-size: cover;
@@ -100,7 +101,6 @@ strong {
 
 a {
 	line-height: 1;
-	display: inline-block;
 	transition: $transition;
 	color: $red;
 	text-decoration: underline;

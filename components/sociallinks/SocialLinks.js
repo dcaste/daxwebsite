@@ -4,19 +4,23 @@ import { getItemKey } from '@/utils/misc';
 import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ props }) => {
+	if (!props) {
+		return null;
+	}
+
 	return (
 		<div>
 			{props.map((item) => (
 				<a
 					className={styles.item}
-					href={item.URL}
+					href={item.url}
 					target='_blank'
 					key={getItemKey(item.icon, item.id)}
 				>
 					{item.icon && (
-						<span>
+						<i>
 							<SVGIcon icon={item.icon} />
-						</span>
+						</i>
 					)}
 				</a>
 			))}
