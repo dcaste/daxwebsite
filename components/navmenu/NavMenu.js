@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './NavMenu.module.scss';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 
-const NavMenu = ({ navigation: { navLink, socialLink } }) => {
+const NavMenu = ({ navigation: { navLink }, SocialMedia }) => {
 	const getLinkURL = (url) => {
 		const linkURL = url ? `/${url}` : '/';
 		return linkURL;
@@ -33,10 +33,10 @@ const NavMenu = ({ navigation: { navLink, socialLink } }) => {
 					</li>
 				))}
 
-				{socialLink.map((link) => (
-					<li className={styles.socialIcon} key={link.id}>
-						<a href={link.URL}>
-							<FontAwesomeIcon icon={['fab', 'linkedin']} />
+				{SocialMedia.map((item) => (
+					<li className={styles.socialIcon} key={item.id}>
+						<a href={item.url}>
+							<SVGIcon icon={item.icon} />
 						</a>
 					</li>
 				))}

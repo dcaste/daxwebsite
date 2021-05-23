@@ -17,7 +17,12 @@ import styles from './layout.module.scss';
 // FontAwesome custom Library.
 import '@/libs/fontawesome';
 
-export default function Layout({ children, navigation, websiteURL }) {
+export default function Layout({
+	children,
+	navigation,
+	SocialMedia,
+	websiteURL,
+}) {
 	// Global States //
 	// To show or hide the Go To Top button.
 	const [showButton, setShowButton] = useState(false);
@@ -50,11 +55,11 @@ export default function Layout({ children, navigation, websiteURL }) {
 						<NavMobile
 							open={openNavMobile}
 							navigation={navigation}
-							websiteURL={websiteURL}
+							SocialMedia={SocialMedia}
 						/>
 
 						<Breakpoint large up>
-							<NavMenu navigation={navigation} websiteURL={websiteURL} />
+							<NavMenu navigation={navigation} SocialMedia={SocialMedia} />
 						</Breakpoint>
 					</div>
 
@@ -72,7 +77,7 @@ export default function Layout({ children, navigation, websiteURL }) {
 
 					<footer className={styles.navFooter}>
 						<Breakpoint large up>
-							<NavMenu navigation={navigation} websiteURL={websiteURL} />
+							<NavMenu navigation={navigation} SocialMedia={SocialMedia} />
 						</Breakpoint>
 						<CopyRight />
 					</footer>

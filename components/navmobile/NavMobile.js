@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import styles from './NavMobile.module.scss';
 import { motion, AnimatePresence, useIsPresent } from 'framer-motion';
 
-const NavMobile = ({ open, navigation: { navLink, socialLink } }) => {
+const NavMobile = ({ open, navigation: { navLink }, SocialMedia }) => {
 	const isPresent = useIsPresent();
 	const getLinkURL = (url) => {
 		const linkURL = url ? `/${url}` : '/';
@@ -32,9 +32,9 @@ const NavMobile = ({ open, navigation: { navLink, socialLink } }) => {
 						</li>
 					))}
 					<li>
-						{socialLink.map((link) => (
-							<a href={link.URL} className={`${styles.item} ${styles.social}`}>
-								<FontAwesomeIcon icon={['fab', 'linkedin']} />
+						{SocialMedia.map((item) => (
+							<a href={item.url} className={styles.social}>
+								<SVGIcon icon={item.icon} />
 							</a>
 						))}
 					</li>
