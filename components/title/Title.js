@@ -1,18 +1,15 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon } from '@/utils/misc';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 
 const Title = ({
 	props: { Tag, copyMain, copySecondary, alignment, icon },
 	className,
 }) => {
-	const renderedIcon = icon ? renderIcon(icon) : null;
-
 	return (
 		<Tag style={{ textAlign: alignment }} className={className}>
-			{renderedIcon && (
+			{icon && (
 				<span className='textRed marginRight'>
-					<FontAwesomeIcon icon={renderedIcon} />
+					<SVGIcon icon={icon} />
 				</span>
 			)}
 			{copyMain}

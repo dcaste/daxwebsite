@@ -14,9 +14,6 @@ import CopyRight from '@/comp/copyright/CopyRight';
 // Styles
 import styles from './layout.module.scss';
 
-// FontAwesome custom Library.
-import '@/libs/fontawesome';
-
 export default function Layout({
 	children,
 	navigation,

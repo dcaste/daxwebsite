@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon, getItemKey } from '@/utils/misc';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ props }) => {
@@ -11,11 +10,11 @@ const SocialLinks = ({ props }) => {
 					className={styles.item}
 					href={item.URL}
 					target='_blank'
-					key={getItemKey(item.SocialMedia, item.id)}
+					key={getItemKey(item.icon, item.id)}
 				>
-					{item.SocialMedia && (
+					{item.icon && (
 						<span>
-							<FontAwesomeIcon icon={renderIcon(item.SocialMedia)} />
+							<SVGIcon icon={item.icon} />
 						</span>
 					)}
 				</a>
@@ -26,7 +25,7 @@ const SocialLinks = ({ props }) => {
 
 SocialLinks.propTypes = {
 	URL: PropTypes.string,
-	SocialMedia: PropTypes.string,
+	icon: PropTypes.string,
 };
 
 export default SocialLinks;

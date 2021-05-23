@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon } from './../../utils/misc';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 
 const ProperLink = ({ props: { copy, url, target, tag, tag_class, icon } }) => {
 	const Tag = tag;
-	const renderedIcon = icon ? renderIcon(icon) : null;
 
 	return (
 		<Tag className={tag_class}>
 			{target === '_blank' ? (
 				<a href={url} target={target}>
 					{copy}
-					{renderedIcon && (
+					{icon && (
 						<span className='marginLeft'>
-							<FontAwesomeIcon icon={renderedIcon} />
+							<SVGIcon icon={icon} />
 						</span>
 					)}
 				</a>
@@ -22,9 +20,9 @@ const ProperLink = ({ props: { copy, url, target, tag, tag_class, icon } }) => {
 				<Link href={url}>
 					<a target={target}>
 						{copy}
-						{renderedIcon && (
+						{icon && (
 							<span className='marginLeft'>
-								<FontAwesomeIcon icon={renderedIcon} />
+								<SVGIcon icon={icon} />
 							</span>
 						)}
 					</a>

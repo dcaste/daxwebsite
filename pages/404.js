@@ -1,9 +1,12 @@
 import Layout from '@/comp/layout/layout';
 import { NextSeo } from 'next-seo';
 
-export default function Custom404() {
+export default function Custom404({
+	global: { personalInfo, navigation },
+	slug,
+}) {
 	return (
-		<Layout>
+		<Layout navigation={navigation}>
 			<NextSeo
 				title='404 - Page Not Found'
 				noindex={true}

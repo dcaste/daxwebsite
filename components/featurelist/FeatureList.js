@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { renderIcon } from '@/utils/misc';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import Title from '@/comp/title/Title';
 import classNames from 'classnames';
 import styles from './FeatureList.module.scss';
@@ -12,12 +11,8 @@ const FeatureList = ({ props: { title, Feature } }) => {
 
 			{Feature.map((item) => (
 				<div className={styles.item} key={item.id}>
-					<span className={classNames(styles.icon, 'fa-stack', 'fa-2x')}>
-						<FontAwesomeIcon icon='circle' className='fa-stack-2x' />
-						<FontAwesomeIcon
-							icon={renderIcon(item.icon.icon)}
-							className='fa-stack-1x fa-inverse'
-						/>
+					<span className={styles.icon}>
+						<SVGIcon icon={item.icon.icon} />
 					</span>
 					<h3>{item.title}</h3>
 					<p>{item.description}</p>
@@ -33,7 +28,7 @@ FeatureList.propTypes = {
 };
 
 FeatureList.defaultProps = {
-	icon: 'faInfoCircle',
+	icon: 'Info',
 };
 
 export default FeatureList;

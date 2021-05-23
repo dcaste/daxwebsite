@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 
 const VisitRepo = ({ Tag, URL, className }) => {
 	return (
 		<Tag className={className}>
 			<a target='_blank' rel='external' href={URL}>
-				Visit repository{' '}
-				<FontAwesomeIcon icon={['fab', 'github']} className='marginLeft' />
+				Visit repository <SVGIcon icon={'GitHub'} className='marginLeft' />
 			</a>
 		</Tag>
 	);

@@ -1,5 +1,5 @@
 import styles from './GoToTop.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const GoToTop = ({ show }) => {
@@ -15,7 +15,7 @@ const GoToTop = ({ show }) => {
 					exit={{ opacity: 0, scale: 0 }}
 					transition={{ duration: 0.2 }}
 				>
-					<FontAwesomeIcon icon={'angle-up'} />
+					<SVGIcon icon={'ArrowUp'} />
 				</motion.a>
 			)}
 		</AnimatePresence>

@@ -1,14 +1,10 @@
 import styles from './BtnNav.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 
 const BtnNav = ({ open, toggle }) => {
 	return (
 		<button className={styles.btnNav} onClick={toggle}>
-			{open ? (
-				<FontAwesomeIcon icon={'times'} />
-			) : (
-				<FontAwesomeIcon icon={'bars'} />
-			)}
+			{open ? <SVGIcon icon={'Close'} /> : <SVGIcon icon={'Menu'} />}
 		</button>
 	);
 };

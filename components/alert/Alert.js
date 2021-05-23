@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import styles from './Alert.module.scss';
 
 const Alert = ({ severity, children }) => {
@@ -9,29 +9,29 @@ const Alert = ({ severity, children }) => {
 	switch (severity) {
 		case 'error':
 			alertTitle = 'Error';
-			icon = 'exclamation-triangle';
+			icon = 'Exclamation';
 			break;
 
 		case 'warning':
 			alertTitle = 'Warning';
-			icon = 'info-circle';
+			icon = 'Info';
 			break;
 
 		case 'success':
 			alertTitle = 'Success';
-			icon = 'check-circle';
+			icon = 'Check';
 			break;
 
 		default:
-			alertTitle = 'Info';
-			icon = 'info-circle';
+			alertTitle = 'Information';
+			icon = 'Info';
 			break;
 	}
 
 	return (
 		<div className={styles[severity]}>
 			<p className={styles.header}>
-				<FontAwesomeIcon icon={['fas', icon]} className='marginRight' />
+				<SVGIcon icon={icon} className='marginRight' />
 				{alertTitle}
 			</p>
 			{children}

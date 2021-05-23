@@ -5,7 +5,7 @@ import {
 	RiCheckFill,
 	RiCheckboxBlankCircleFill,
 	RiCheckboxCircleFill,
-	RiCloseCircleFill,
+	RiCloseFill,
 	RiExternalLinkFill,
 	RiGithubFill,
 	RiInformationFill,
@@ -50,7 +50,7 @@ const SVGIcon = ({ icon }) => {
 			break;
 
 		case 'Close':
-			return <RiCloseCircleFill />;
+			return <RiCloseFill />;
 			break;
 
 		case 'ExternalLink':
