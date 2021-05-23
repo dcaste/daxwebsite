@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import SVGIcon from '@/comp/svgicon/SVGIcon';
+import { getItemKey } from '@/utils/misc';
 import styles from './SocialLinks.module.scss';
 
 const SocialLinks = ({ props }) => {

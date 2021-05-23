@@ -23,86 +23,86 @@ import {
 	FaUsers,
 } from 'react-icons/fa';
 
-const SVGIcon = ({ icon }) => {
+const SVGIcon = ({ icon, className }) => {
 	switch (icon) {
 		case 'ArrowRight':
-			return <RiArrowDropRightLine />;
+			return <RiArrowDropRightLine className={className} />;
 			break;
 
 		case 'ArrowUp':
-			return <RiArrowDropUpLine />;
+			return <RiArrowDropUpLine className={className} />;
 			break;
 
 		case 'Briefcase':
-			return <RiBriefcase4Fill />;
+			return <RiBriefcase4Fill className={className} />;
 			break;
 
 		case 'Dot':
-			return <RiCheckboxBlankCircleFill />;
+			return <RiCheckboxBlankCircleFill className={className} />;
 			break;
 
 		case 'CheckCircle':
-			return <RiCheckboxCircleFill />;
+			return <RiCheckboxCircleFill className={className} />;
 			break;
 
 		case 'Check':
-			return <RiCheckFill />;
+			return <RiCheckFill className={className} />;
 			break;
 
 		case 'Close':
-			return <RiCloseFill />;
+			return <RiCloseFill className={className} />;
 			break;
 
 		case 'ExternalLink':
-			return <RiExternalLinkFill />;
+			return <RiExternalLinkFill className={className} />;
 			break;
 
 		case 'GitHub':
-			return <RiGithubFill />;
+			return <RiGithubFill className={className} />;
 			break;
 
 		case 'Info':
-			return <RiInformationFill />;
+			return <RiInformationFill className={className} />;
 			break;
 
 		case 'LinkedIn':
-			return <RiLinkedinBoxFill />;
+			return <RiLinkedinBoxFill className={className} />;
 			break;
 
 		case 'Menu':
-			return <RiMenuFill />;
+			return <RiMenuFill className={className} />;
 			break;
 
 		case 'YouTube':
-			return <RiYoutubeFill />;
+			return <RiYoutubeFill className={className} />;
 			break;
 
 		case 'Instagram':
-			return <RiInstagramFill />;
+			return <RiInstagramFill className={className} />;
 			break;
 
 		case 'ClipBoard':
-			return <FaClipboardCheck />;
+			return <FaClipboardCheck className={className} />;
 			break;
 
 		case 'Exclamation':
-			return <FaExclamationTriangle />;
+			return <FaExclamationTriangle className={className} />;
 			break;
 
 		case 'Jet':
-			return <FaFighterJet />;
+			return <FaFighterJet className={className} />;
 			break;
 
 		case 'LaptopCode':
-			return <FaLaptopCode />;
+			return <FaLaptopCode className={className} />;
 			break;
 
 		case 'Users':
-			return <FaUsers />;
+			return <FaUsers className={className} />;
 			break;
 
 		default:
-			return <RiInformationFill />;
+			return <RiInformationFill className={className} />;
 			break;
 	}
 };

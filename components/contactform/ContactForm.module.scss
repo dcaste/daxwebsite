@@ -1,7 +1,6 @@
 /* Form Component styles */
 @import './../../styles/settings/variables.scss';
 @import './../../styles/settings/mixins.scss';
-@import '../btnlink/BtnLink.module.scss';
 
 .formComponent {
 	display: flex;
@@ -18,10 +17,6 @@
 	@include laptop-m {
 		margin: 3rem auto;
 	}
-}
-
-.formSocial {
-	font-size: 2em;
 }
 .formWrapper {
 	width: 100%;

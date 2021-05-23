@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import { useState } from 'react';
 import Alert from '@/comp/alert/Alert';
 import styles from './ContactForm.module.scss';
+import btnStyles from '../btnlink/BtnLink.module.scss';
 
 const ContactForm = () => {
 	// Submit Button Value
@@ -24,12 +25,10 @@ const ContactForm = () => {
 			)
 			.then(
 				function (response) {
-					console.log('SUCCESS!', response.status, response.text);
 					setFormResponse('success');
 					setBtnSubmitValue('Send message');
 				},
 				function (error) {
-					console.log('FAILED...', error);
 					setFormResponse('error');
 					setBtnSubmitValue('Send message');
 				}
@@ -63,7 +62,7 @@ const ContactForm = () => {
 					name='contactMe'
 					id='contactMe'
 				>
-					<p>
+					<p className='lead'>
 						Feel free to reach out if you're looking for a developer, have a
 						question, or just want to connect.
 					</p>
@@ -118,7 +117,7 @@ const ContactForm = () => {
 					</p>
 					{formResponse === 'neutral' && (
 						<p>
-							<button type='submit' className={styles.btnMain}>
+							<button type='submit' className={btnStyles.btnMain}>
 								{btnSubmitValue}
 							</button>
 						</p>
@@ -140,7 +139,7 @@ const ContactForm = () => {
 							<p>
 								<button
 									type='reset'
-									className={styles.BtnMain}
+									className={btnStyles.btnMain}
 									onClick={handleReset}
 								>
 									OK
