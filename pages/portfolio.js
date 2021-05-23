@@ -6,11 +6,11 @@ import { fetchGRAPHQL } from '@/utils/api';
 
 const Portfolio = ({
 	projects: { projects },
-	global: { personalInfo, navigation },
+	global: { personalInfo, navigation, SocialMedia },
 	slug,
 }) => {
 	return (
-		<Layout navigation={navigation}>
+		<Layout navigation={navigation} SocialMedia={SocialMedia}>
 			<NextSeo
 				title='Portfolio - Dax Castellón'
 				description='A collection of projects in which I have worked on as Web Developer'

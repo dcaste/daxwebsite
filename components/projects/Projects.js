@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import ImageContainer from '@/comp/imagecontainer/ImageContainer';
 import ProperLink from '@/comp/properlink/ProperLink';
-import VisitRepo from '@/comp/visitrepo/VisitRepo';
-import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
+import VisitProject from '@/comp/visitproject/VisitProject';
 import styles from './Projects.module.scss';
 
 function Projects({ projects }) {
@@ -32,14 +31,21 @@ function Projects({ projects }) {
 									url: `/projects/${project.slug}`,
 									target: '_self',
 									tag: 'p',
-									icon: 'faAngleRight',
+									icon: 'ArrowRight',
 								}}
 							/>
 						)}
 
-						{project.website && <VisitWebsite Tag='p' URL={project.website} />}
+						{project.website && (
+							<VisitProject Tag='p' url={project.website} type='website' />
+						)}
+
 						{project.repository && (
-							<VisitRepo Tag='p' URL={project.repository} />
+							<VisitProject
+								Tag='p'
+								url={project.repository}
+								type='repository'
+							/>
 						)}
 					</div>
 				</div>

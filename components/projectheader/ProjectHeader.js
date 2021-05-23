@@ -1,6 +1,5 @@
 import Title from '@/comp/title/Title';
-import VisitRepo from '@/comp/visitrepo/VisitRepo';
-import VisitWebsite from '@/comp/visitwebsite/VisitWebsite';
+import VisitProject from '@/comp/visitproject/VisitProject';
 import ImageContainer from '@/comp/imagecontainer/ImageContainer';
 import styles from './ProjectHeader.module.scss';
 
@@ -27,8 +26,10 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 
 			{(website || repository) && (
 				<div className={styles.websites}>
-					{website && <VisitWebsite Tag='div' URL={website} />}
-					{repository && <VisitRepo Tag='div' URL={repository} />}
+					{website && <VisitProject Tag='div' url={website} type='website' />}
+					{repository && (
+						<VisitProject Tag='div' url={repository} type='repository' />
+					)}
 				</div>
 			)}
 		</header>

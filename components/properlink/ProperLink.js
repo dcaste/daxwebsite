@@ -7,26 +7,26 @@ const ProperLink = ({ props: { copy, url, target, tag, tag_class, icon } }) => {
 
 	return (
 		<Tag className={tag_class}>
-			{target === '_blank' ? (
-				<a href={url} target={target}>
-					{copy}
-					{icon && (
-						<span className='marginLeft'>
-							<SVGIcon icon={icon} />
-						</span>
-					)}
-				</a>
-			) : (
+			{target === '_self' ? (
 				<Link href={url}>
 					<a target={target}>
 						{copy}
 						{icon && (
-							<span className='marginLeft'>
+							<i className='marginLeft'>
 								<SVGIcon icon={icon} />
-							</span>
+							</i>
 						)}
 					</a>
 				</Link>
+			) : (
+				<a href={url} target={target}>
+					{copy}
+					{icon && (
+						<i className='marginLeft'>
+							<SVGIcon icon={icon} />
+						</i>
+					)}
+				</a>
 			)}
 		</Tag>
 	);
