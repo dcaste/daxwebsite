@@ -37,13 +37,14 @@
 		gap: 0.5rem;
 	}
 	@include tablet-h {
-		grid-template-columns: 120px 1fr;
+		grid-template-columns: 80px 1fr;
 		text-align: left;
 		gap: 0;
 	}
 }
 
 .icon {
+	font-size: 3rem;
 	@include mobile {
 		grid-column: 1/2;
 		grid-row: 1/2;

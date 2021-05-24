@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import SVGIcon from '@/comp/svgicon/SVGIcon';
 
 const Title = ({
-	props: { Tag, copyMain, copySecondary, alignment, icon },
+	props: { tag, copyMain, copySecondary, alignment, icon },
 	className,
 }) => {
+	const Tag = tag;
 	return (
 		<Tag style={{ textAlign: alignment }} className={className}>
 			{icon && (
