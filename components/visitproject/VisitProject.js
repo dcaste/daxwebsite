@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import SVGIcon from '@/comp/svgicon/SVGIcon';
 
-const VisitProject = ({ Tag, url, className, type }) => {
+const VisitProject = ({ tag, url, className, type }) => {
+	const Tag = tag;
 	const copy = type === 'website' ? 'website' : 'repository';
 	const icon = type === 'website' ? 'ExternalLink' : 'GitHub';
 
@@ -15,13 +16,13 @@ const VisitProject = ({ Tag, url, className, type }) => {
 };
 
 VisitProject.propTypes = {
-	Tag: PropTypes.string,
+	tag: PropTypes.string,
 	url: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
 };
 
 VisitProject.defaultProps = {
-	Tag: 'p',
+	tag: 'p',
 	url: 'https://github.com/',
 	type: 'website',
 };

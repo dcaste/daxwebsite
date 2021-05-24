@@ -7,7 +7,7 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 	return (
 		<header className={styles.projectHeader}>
 			{title && (
-				<Title props={{ Tag: 'h1', copyMain: title, alignment: 'center' }} />
+				<Title props={{ tag: 'h1', copyMain: title, alignment: 'center' }} />
 			)}
 
 			{featuredImage && (
@@ -26,9 +26,9 @@ const ProjectHeader = ({ title, featuredImage, website, repository }) => {
 
 			{(website || repository) && (
 				<div className={styles.websites}>
-					{website && <VisitProject Tag='div' url={website} type='website' />}
+					{website && <VisitProject tag='div' url={website} type='website' />}
 					{repository && (
-						<VisitProject Tag='div' url={repository} type='repository' />
+						<VisitProject tag='div' url={repository} type='repository' />
 					)}
 				</div>
 			)}

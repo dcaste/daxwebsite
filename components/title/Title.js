@@ -20,7 +20,7 @@ const Title = ({
 };
 
 Title.propTypes = {
-	Tag: PropTypes.string.isRequired,
+	tag: PropTypes.string.isRequired,
 	alignment: PropTypes.string.isRequired,
 	copyMain: PropTypes.string.isRequired,
 	copySecondary: PropTypes.string,
@@ -28,7 +28,7 @@ Title.propTypes = {
 };
 
 Title.defaultProps = {
-	Tag: 'h2',
+	tag: 'h2',
 	alignment: 'left',
 	copyMain: 'Please insert copy',
 };

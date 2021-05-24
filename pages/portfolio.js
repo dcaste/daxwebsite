@@ -45,7 +45,7 @@ const Portfolio = ({
 			/>
 
 			<Title
-				props={{ Tag: 'h1', copyMain: 'Portfolio', alignment: 'center' }}
+				props={{ tag: 'h1', copyMain: 'Portfolio', alignment: 'center' }}
 			/>
 
 			<Projects projects={projects} />

@@ -48,7 +48,7 @@ const Project = ({
 					url: '/portfolio',
 					target: '_self',
 					tag: 'p',
-					icon: 'faAngleRight',
+					icon: 'ArrowRight',
 				}}
 			/>
 		</Layout>

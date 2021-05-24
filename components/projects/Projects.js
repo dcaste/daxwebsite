@@ -37,7 +37,7 @@ function Projects({ projects }) {
 						)}
 
 						{project.website && (
-							<VisitProject Tag='p' url={project.website} type='website' />
+							<VisitProject tag='p' url={project.website} type='website' />
 						)}
 
 						{project.repository && (
