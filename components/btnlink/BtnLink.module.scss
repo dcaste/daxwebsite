@@ -1,16 +1,17 @@
 @import '../../styles/settings/variables.scss';
 
 .button {
-	padding: 1rem 1.5rem;
-	min-width: 100px;
+	border-radius: $global-radius;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
 	font-size: 0.9em;
 	font-weight: $regular;
-	cursor: pointer;
 	line-height: 1;
-	box-sizing: border-box;
-	border-radius: $global-radius;
-	transition: $transition;
+	min-width: 100px;
+	padding: 1rem 1.5rem;
 	text-decoration: none;
+	transition: $transition;
 
 	&:focus {
 		outline: 0px;

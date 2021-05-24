@@ -1,6 +1,8 @@
 @import '../btnlink/BtnLink.module.scss';
 
 .BtnGroup {
+	display: block;
+
 	* + * {
 		margin-left: 0.5rem;
 	}
