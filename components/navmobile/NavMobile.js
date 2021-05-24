@@ -33,7 +33,7 @@ const NavMobile = ({ open, navigation: { navLink }, SocialMedia }) => {
 					))}
 					<li>
 						{SocialMedia.map((item) => (
-							<a href={item.url} className={styles.social}>
+							<a href={item.url} className={styles.social} key={item.id}>
 								<SVGIcon icon={item.icon} />
 							</a>
 						))}
