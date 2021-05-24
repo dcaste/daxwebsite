@@ -1,9 +1,9 @@
-import { SocialProfileJsonLd, NextSeo } from 'next-seo';
+import { SocialProfileJsonLd } from 'next-seo';
 
-function SeoBasic({ socialMedia, personalInfo }) {
-	if (!socialMedia) {
-		return null;
-	}
+function SeoBasic({ SocialMedia, personalInfo }) {
+	console.log(SocialMedia);
+	const mediaProfiles = SocialMedia.map((profiles) => profiles.url);
+	console.log(mediaProfiles);
 
 	return (
 		<>
@@ -13,13 +13,8 @@ function SeoBasic({ socialMedia, personalInfo }) {
 					name={personalInfo.name}
 					email={personalInfo.email}
 					jobTitle={personalInfo.jobTitle}
-					url={socialMedia.website}
-					sameAs={[
-						'http://www.facebook.com/your-profile',
-						'http://instagram.com/yourProfile',
-						'http://www.linkedin.com/in/yourprofile',
-						'http://plus.google.com/your_profile',
-					]}
+					url={personalInfo.websiteURL}
+					sameAs={mediaProfiles}
 				/>
 			)}
 		</>

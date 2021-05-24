@@ -1,6 +1,7 @@
 import Layout from '@/comp/layout/layout';
 import { fetchAPI, getSlugs } from '@/utils/api';
 import SeoBasic from '@/comp/seo/SeoBasic';
+import SeoSocialMedia from '@/comp/seo/SeoSocialMedia';
 import renderContent from '@/utils/renderContent';
 
 const DynamicPage = ({
@@ -13,6 +14,9 @@ const DynamicPage = ({
 			{openGraph && (
 				<SeoBasic personal={personalInfo} og={openGraph} slug={slug} />
 			)}
+
+			<SeoSocialMedia SocialMedia={SocialMedia} personalInfo={personalInfo} />
+
 			{content.map((item) => renderContent(item))}
 		</Layout>
 	);
