@@ -1,12 +1,15 @@
 import Layout from '@/comp/layout/layout';
 import { NextSeo } from 'next-seo';
+import CenteredContent from '@/comp/centeredcontent/CenteredContent';
 
-export default function Custom404({
-	global: { personalInfo, navigation },
-	slug,
-}) {
+export default function Custom404({ global: { SocialMedia, navigation } }) {
+	const props = {
+		content: `It seems the page you are looking for doesn't exists or perhaps has been moved. Please use the Navigation menu to find the information you need.`,
+		alignment: 'center',
+		style: 'lead',
+	};
 	return (
-		<Layout navigation={navigation}>
+		<Layout navigation={navigation} SocialMedia={SocialMedia}>
 			<NextSeo
 				title='404 - Page Not Found'
 				noindex={true}
@@ -35,6 +38,7 @@ export default function Custom404({
 				]}
 			/>
 			<h1 className='pageTitle'>404 - Page Not Found</h1>
+			<CenteredContent props={props} />
 		</Layout>
 	);
 }

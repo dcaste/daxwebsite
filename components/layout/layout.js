@@ -14,12 +14,7 @@ import CopyRight from '@/comp/copyright/CopyRight';
 // Styles
 import styles from './layout.module.scss';
 
-export default function Layout({
-	children,
-	navigation,
-	SocialMedia,
-	websiteURL,
-}) {
+export default function Layout({ children, navigation, SocialMedia }) {
 	// Global States //
 	// To show or hide the Go To Top button.
 	const [showButton, setShowButton] = useState(false);
