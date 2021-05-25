@@ -1,9 +1,7 @@
 import { SocialProfileJsonLd } from 'next-seo';
 
 function SeoBasic({ SocialMedia, personalInfo }) {
-	console.log(SocialMedia);
 	const mediaProfiles = SocialMedia.map((profiles) => profiles.url);
-	console.log(mediaProfiles);
 
 	return (
 		<>
