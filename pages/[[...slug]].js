@@ -17,7 +17,9 @@ const DynamicPage = ({
 
 			<SeoSocialMedia SocialMedia={SocialMedia} personalInfo={personalInfo} />
 
-			{content.map((item) => renderContent(item))}
+			{content
+				? content.map((item) => renderContent(item))
+				: 'There is no content to show'}
 		</Layout>
 	);
 };
