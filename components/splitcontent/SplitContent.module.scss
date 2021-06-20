@@ -2,14 +2,12 @@
 @import './../../styles/settings/variables.scss';
 @import './../../styles/settings/mixins.scss';
 
-.splitContent {
+.basicGrid {
 	display: grid;
 	align-items: center;
 	justify-items: center;
 
 	@include mobile {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
 		gap: 6rem;
 	}
 
@@ -22,90 +20,69 @@
 	}
 }
 
-.splitContent > div {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1.5rem;
-}
-
-.split_Equal {
-	@extend .splitContent;
-	@include tablet-h {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
+.Equal_Left {
+	@extend .basicGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 'picture' 'content';
 	}
 	@include laptop-m {
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
+		grid-template-areas: 'picture content';
 	}
 }
 
-.split_FortySixty {
-	@extend .splitContent;
-	@include tablet-h {
+.Equal_Right {
+	@extend .basicGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 'picture' 'content';
+	}
+	@include laptop-m {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
+		grid-template-areas: 'content picture';
+	}
+}
+
+.FortySixty_Left {
+	@extend .basicGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 'picture' 'content';
 	}
 	@include laptop-m {
 		grid-template-columns: 0.4fr 0.6fr;
 		grid-template-rows: 1fr;
+		grid-template-areas: 'picture content';
 	}
 }
 
-.split_SixtyForty {
-	@extend .splitContent;
-	@include tablet-h {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
+.FortySixty_Right {
+	@extend .basicGrid;
+	@include mobile {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: 'picture' 'content';
 	}
 	@include laptop-m {
 		grid-template-columns: 0.6fr 0.4fr;
 		grid-template-rows: 1fr;
+		grid-template-areas: 'content picture';
 	}
 }
 
-.RightFirst {
-	.ContentLeft {
-		@include mobile {
-			order: 2;
-		}
-		@include tablet-h {
-			order: 1;
-		}
-	}
-	.ContentRight {
-		@include mobile {
-			order: 1;
-		}
-		@include tablet-h {
-			order: 2;
-		}
-	}
+.picture {
+	grid-area: picture;
 }
 
-.Card {
-	@include shadow2dp;
-	background-color: white;
-	border-radius: $global-radius-small;
-
-	@include mobile {
-		padding: 1rem;
-		gap: 1rem;
-	}
-	@include tablet-v {
-		padding: 2rem;
-		gap: 2rem;
-	}
-	@include laptop-m {
-		padding: 3rem;
-		gap: 3rem;
-	}
-}
-
-.mainHeader,
-.mainFooter {
-	grid-column: -1/1;
-	text-align: center;
+.content {
+	display: flex;
+	gap: 1.5rem;
+	flex-direction: column;
+	grid-area: content;
 }
