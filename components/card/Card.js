@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 import Title from '@/comp/title/Title';
 import ProperLink from '@/comp/properlink/ProperLink';
+import { getItemKey } from '@/utils/misc';
 
 import styles from './Card.module.scss';
 
@@ -13,8 +13,8 @@ const Card = ({ props }) => {
 			)}
 			{props?.content &&
 				props.content.map((item) => (
-					<div className={styles[item.contentStyle]}>
-						<ReactMarkdown key={item.id} source={item.content} />
+					<div className={styles[item.contentStyle]} key={item.id}>
+						<ReactMarkdown source={item.content} />
 					</div>
 				))}
 			{props.buttons?.id && <BtnGroup props={props.buttons} />}
