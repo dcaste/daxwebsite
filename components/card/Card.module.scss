@@ -3,23 +3,53 @@
 @import './../../styles/settings/mixins.scss';
 
 .card {
+	display: grid;
+	grid-template-rows: auto;
 	@include shadow2dp;
 	background-color: $white;
 	border-radius: 0.5rem;
 
 	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 1rem;
 		padding: 1rem;
 	}
-	@include tablet-v {
+	@include tablet-h {
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
 		padding: 2rem;
 	}
 	@include laptop-m {
+		gap: 3rem;
 		padding: 3rem;
+	}
+
+	li {
+		line-height: 1.5em;
+	}
+
+	li + li {
+		margin-top: 1.5em;
 	}
 }
 
-.cardTitle {
-	margin: 0 auto 3rem auto;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid $grey_light;
+.title,
+.FullWidth,
+.link {
+	grid-column: 1 / -1;
+}
+
+.FullWidth {
+	justify-self: center;
+
+	@include mobile {
+		width: 100%;
+	}
+	@include tablet-h {
+		width: 70%;
+	}
+}
+
+.link {
+	text-align: center;
 }

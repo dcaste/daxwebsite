@@ -18,9 +18,7 @@ export default function renderContent(item) {
 		// Card component.
 		case 'layout.card':
 			const Card = dynamic(() => import('@/comp/card/Card'));
-			return (
-				<Card key={getItemKey(item.__component, item.id)}>{item.content}</Card>
-			);
+			return <Card key={getItemKey(item.__component, item.id)} props={item} />;
 
 		// Centered Content.
 		case 'typography.centered-content':

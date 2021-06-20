@@ -1,8 +1,30 @@
-import styles from './Card.module.scss';
-import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
+import Title from '@/comp/title/Title';
+import ProperLink from '@/comp/properlink/ProperLink';
 
-const Card = ({ children, className }) => {
-	return <div className={classNames(className, styles.card)}>{children}</div>;
+import styles from './Card.module.scss';
+
+const Card = ({ props }) => {
+	return (
+		<div className={styles.card}>
+			{props.title?.id && (
+				<Title props={props.title} className={styles.title} />
+			)}
+			{props?.content &&
+				props.content.map((item) => (
+					<div className={styles[item.contentStyle]}>
+						<ReactMarkdown key={item.id} source={item.content} />
+					</div>
+				))}
+			{props.buttons?.id && <BtnGroup props={props.buttons} />}
+			{props.link?.id && (
+				<div className={styles.link}>
+					<ProperLink props={props.link} />
+				</div>
+			)}
+		</div>
+	);
 };
 
 export default Card;
