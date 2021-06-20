@@ -20,6 +20,15 @@ export default function renderContent(item) {
 			const Card = dynamic(() => import('@/comp/card/Card'));
 			return <Card key={getItemKey(item.__component, item.id)} props={item} />;
 
+		// Contact Form component.
+		case 'layout.contact-form':
+			const ContactForm = dynamic(() =>
+				import('@/comp/contactform/ContactForm')
+			);
+			return (
+				<ContactForm key={getItemKey(item.__component, item.id)} props={item} />
+			);
+
 		// Centered Content.
 		case 'typography.centered-content':
 			const CenteredContent = dynamic(() =>
