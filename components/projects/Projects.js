@@ -6,6 +6,10 @@ import VisitProject from '@/comp/visitproject/VisitProject';
 import styles from './Projects.module.scss';
 
 function Projects({ projects }) {
+	if (!projects) {
+		return null;
+	}
+
 	const columnOrder = (order) => {
 		const evenOrOdd = order % 2 === 0 ? 'even' : 'odd';
 		return evenOrOdd;

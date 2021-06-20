@@ -6,9 +6,9 @@ import { fetchGRAPHQL } from '@/utils/api';
 
 const Portfolio = ({
 	projects: { projects },
-	global: { personalInfo, navigation, SocialMedia },
-	slug,
+	global: { navigation, SocialMedia },
 }) => {
+	console.log(projects);
 	return (
 		<Layout navigation={navigation} SocialMedia={SocialMedia}>
 			<NextSeo
