@@ -41,6 +41,18 @@ export default function renderContent(item) {
 				/>
 			);
 
+		// Two Columns Content.
+		case 'typography.two-columns-content':
+			const TwoColumnsContent = dynamic(() =>
+				import('@/comp/twocolumnscontent/TwoColumnsContent')
+			);
+			return (
+				<TwoColumnsContent
+					key={getItemKey(item.__component, item.id)}
+					props={item}
+				/>
+			);
+
 		// Split Content Component
 		case 'layout.split-content':
 			const SplitContent = dynamic(() =>
