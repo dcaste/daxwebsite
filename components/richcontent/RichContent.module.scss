@@ -1,0 +1,25 @@
+@import './../../styles/settings/mixins.scss';
+
+.standard {
+	font-size: 1em;
+}
+
+.lead {
+	@include mobile {
+		font-size: 1.1em;
+	}
+	@include tablet-v {
+		font-size: 1.3em;
+	}
+	@include tablet-v {
+		font-size: 1.2em;
+	}
+}
+
+.small {
+	font-size: 0.85em;
+}
+
+.fullWidth {
+	grid-column: 1/-1;
+}

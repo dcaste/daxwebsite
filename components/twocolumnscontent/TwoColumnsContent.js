@@ -1,4 +1,4 @@
-import ReactMarkdown from 'react-markdown';
+import RichContent from '@/comp/richcontent/RichContent';
 import Title from '@/comp/title/Title';
 import styles from './TwoColumnsContent.module.scss';
 
@@ -8,16 +8,8 @@ function TwoColumnsContent({
 	return (
 		<div className={styles.container}>
 			{title && <Title props={title} className={styles.title} />}
-			{leftColContent && (
-				<div>
-					<ReactMarkdown source={leftColContent.content} />
-				</div>
-			)}
-			{rightColContent && (
-				<div>
-					<ReactMarkdown source={rightColContent.content} />
-				</div>
-			)}
+			{leftColContent && <RichContent props={leftColContent} />}
+			{rightColContent && <RichContent props={rightColContent} />}
 		</div>
 	);
 }

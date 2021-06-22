@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
+import RichContent from '@/comp/richcontent/RichContent';
 import classNames from 'classnames';
 import Title from '@/comp/title/Title';
 import styles from './CenteredContent.module.scss';
@@ -11,7 +11,7 @@ const CenteredContent = ({ props: { content, title, alignment, style } }) => {
 			style={{ textAlign: alignment }}
 		>
 			{title && <Title props={title} className={styles.title} />}
-			<ReactMarkdown source={content} />
+			{content && <RichContent props={content} />}
 		</div>
 	);
 };

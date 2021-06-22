@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import ReactMarkdown from 'react-markdown';
 
 import Title from '@/comp/title/Title';
 import ImageContainer from '@/comp/imagecontainer/ImageContainer';
+import RichContent from '@/comp/richcontent/RichContent';
 import ProperLink from '@/comp/properlink/ProperLink';
 import BtnGroup from '@/comp/btngroup/BtnGroup';
 import SocialLinks from '@/comp/sociallinks/SocialLinks';
@@ -21,12 +21,7 @@ const SplitContent = ({ props }) => {
 
 			<div className={styles.content}>
 				{props.title?.id && <Title props={props.title} />}
-				{props?.content && (
-					<ReactMarkdown
-						source={props.content.content}
-						className={props.content.contentStyle}
-					/>
-				)}
+				{props?.content && <RichContent props={props.content} />}
 				{props.buttons && <BtnGroup props={props.buttons} />}
 				{props.link?.id && <ProperLink props={props.link} />}
 				{props.socialLink?.id && <SocialLinks props={props.socialLink} />}
