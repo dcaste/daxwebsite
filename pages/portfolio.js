@@ -8,7 +8,6 @@ const Portfolio = ({
 	projects: { projects },
 	global: { navigation, SocialMedia },
 }) => {
-	console.log(projects);
 	return (
 		<Layout navigation={navigation} SocialMedia={SocialMedia}>
 			<NextSeo
