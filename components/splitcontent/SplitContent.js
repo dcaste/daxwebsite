@@ -27,7 +27,7 @@ const SplitContent = ({ props }) => {
 						className={props.content.contentStyle}
 					/>
 				)}
-				{props.buttons?.id && <BtnGroup props={props.buttons} />}
+				{props.buttons && <BtnGroup props={props.buttons} />}
 				{props.link?.id && <ProperLink props={props.link} />}
 				{props.socialLink?.id && <SocialLinks props={props.socialLink} />}
 			</div>
