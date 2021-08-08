@@ -14,7 +14,12 @@ import CopyRight from '@/comp/copyright/CopyRight';
 // Styles
 import styles from './layout.module.scss';
 
-export default function Layout({ children, navigation, SocialMedia }) {
+export default function Layout({
+	children,
+	navigation,
+	SocialMedia,
+	personalInfo,
+}) {
 	// Global States //
 	// To show or hide the Go To Top button.
 	const [showButton, setShowButton] = useState(false);
@@ -48,10 +53,15 @@ export default function Layout({ children, navigation, SocialMedia }) {
 							open={openNavMobile}
 							navigation={navigation}
 							SocialMedia={SocialMedia}
+							personalInfo={personalInfo}
 						/>
 
 						<Breakpoint large up>
-							<NavMenu navigation={navigation} SocialMedia={SocialMedia} />
+							<NavMenu
+								navigation={navigation}
+								SocialMedia={SocialMedia}
+								personalInfo={personalInfo}
+							/>
 						</Breakpoint>
 					</div>
 
@@ -69,7 +79,11 @@ export default function Layout({ children, navigation, SocialMedia }) {
 
 					<footer className={styles.navFooter}>
 						<Breakpoint large up>
-							<NavMenu navigation={navigation} SocialMedia={SocialMedia} />
+							<NavMenu
+								navigation={navigation}
+								SocialMedia={SocialMedia}
+								personalInfo={personalInfo}
+							/>
 						</Breakpoint>
 						<CopyRight />
 					</footer>

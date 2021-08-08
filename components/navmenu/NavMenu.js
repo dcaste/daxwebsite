@@ -2,7 +2,11 @@ import Link from 'next/link';
 import styles from './NavMenu.module.scss';
 import SVGIcon from '@/comp/svgicon/SVGIcon';
 
-const NavMenu = ({ navigation: { navLink }, SocialMedia }) => {
+const NavMenu = ({
+	navigation: { navLink },
+	SocialMedia,
+	personalInfo: { websiteURL },
+}) => {
 	const getLinkURL = (url) => {
 		const linkURL = url ? `/${url}` : '/';
 		return linkURL;
