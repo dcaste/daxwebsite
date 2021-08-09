@@ -22,7 +22,11 @@ const Project = ({
 	slug,
 }) => {
 	return (
-		<Layout navigation={navigation} SocialMedia={SocialMedia}>
+		<Layout
+			navigation={navigation}
+			SocialMedia={SocialMedia}
+			personalInfo={personalInfo}
+		>
 			{openGraph && (
 				<SeoBasic personal={personalInfo} og={openGraph} slug={slug} />
 			)}
