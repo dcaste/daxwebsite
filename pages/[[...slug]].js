@@ -21,21 +21,16 @@ const DynamicPage = ({
 
 			<SeoSocialMedia SocialMedia={SocialMedia} personalInfo={personalInfo} />
 
-			{content.length != 0 ? (
-				content.map((item) => renderContent(item))
-			) : (
-				<p>There is no content to show</p>
-			)}
+			{content.map((item) => renderContent(item))}
 		</Layout>
 	);
 };
 
 export async function getStaticPaths() {
 	const pages = await fetchAPI('/pages');
-
-	// True returns an Array, False returns a string. In NextJs a Catch All Routes (...slug) needs an Array.
 	const pathURLs = await getSlugs(pages, true);
 
+	// True returns an Array, False returns a string. In NextJs a Catch All Routes (...slug) needs an Array.
 	return {
 		paths: pathURLs,
 		fallback: false,

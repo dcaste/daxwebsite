@@ -44,11 +44,7 @@ const Project = ({
 				position={position}
 			/>
 
-			{/* {content.length != 0 ? (
-				content.map((item) => renderContent(item))
-			) : (
-				<p>There is no content to show</p>
-			)} */}
+			{content.map((item) => renderContent(item))}
 
 			<ProperLink
 				props={{

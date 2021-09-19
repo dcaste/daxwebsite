@@ -1,4 +1,4 @@
-export function getStrapiURL(path = '') {
+export function getStrapiURL(path) {
 	return `${
 		process.env.NEXT_PUBLIC_STRAPI_API_URL || 'http://localhost:1337'
 	}${path}`;
@@ -6,9 +6,7 @@ export function getStrapiURL(path = '') {
 
 // Fetch data from a REST endpoint.
 export async function fetchAPI(path) {
-	const requestUrl = getStrapiURL(path);
-	const response = await fetch(requestUrl);
-
+	const response = await fetch(getStrapiURL(path));
 	const json = await response.json();
 
 	if (json.errors) {
