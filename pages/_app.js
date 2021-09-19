@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps, router }) {
 
 MyApp.getInitialProps = async (ctx) => {
 	const appProps = await App.getInitialProps(ctx);
-	const global = await fetchAPI('/global');
+	const global = await fetchAPI(`/global`);
 
 	return { ...appProps, pageProps: { global, path: ctx.pathname } };
 };

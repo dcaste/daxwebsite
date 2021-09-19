@@ -7,6 +7,12 @@ export function getStrapiURL(path) {
 // Fetch data from a REST endpoint.
 export async function fetchAPI(path) {
 	const response = await fetch(getStrapiURL(path));
+
+	if (!response.ok) {
+		console.error(response.statusText);
+		throw new Error(`An error occured please try again`);
+	}
+
 	const json = await response.json();
 
 	if (json.errors) {
@@ -14,7 +20,7 @@ export async function fetchAPI(path) {
 		throw new Error('Failed to fetch API');
 	}
 
-	return json;
+	return json.data;
 }
 
 // Fetch data from GRAPHQL.
