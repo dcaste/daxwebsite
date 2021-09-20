@@ -13,14 +13,8 @@ export async function fetchAPI(path) {
 		throw new Error(`An error occured please try again`);
 	}
 
-	const json = await response.json();
-
-	if (json.errors) {
-		console.error(json.errors);
-		throw new Error('Failed to fetch API');
-	}
-
-	return json.data;
+	const data = await response.json();
+	return data;
 }
 
 // Fetch data from GRAPHQL.
@@ -52,8 +46,8 @@ export async function fetchGRAPHQL(query, { variables } = {}) {
 // Receives an array of posts then returns the posts slugs in an array or a string.
 export async function getSlugs(posts, returnArray) {
 	const slugs = posts.map((post) => {
-		const foundedSlug = returnArray === true ? [post.slug] : post.slug;
-		return { params: { slug: foundedSlug } };
+		const paths = returnArray === true ? [post.slug] : post.slug;
+		return { params: { slug: paths } };
 	});
 
 	return slugs;

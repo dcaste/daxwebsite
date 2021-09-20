@@ -6,7 +6,7 @@ import { fetchGRAPHQL } from '@/utils/api';
 
 const Portfolio = ({
 	projects: { projects },
-	global: { navigation, SocialMedia, personalInfo },
+	globalData: { navigation, SocialMedia, personalInfo },
 }) => {
 	return (
 		<Layout

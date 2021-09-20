@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import CenteredContent from '@/comp/centeredcontent/CenteredContent';
 
 export default function Custom404({
-	global: { SocialMedia, navigation, personalInfo },
+	globalData: { SocialMedia, navigation, personalInfo },
 }) {
 	const props = {
 		content: `It seems the page you are looking for doesn't exists or perhaps has been moved. Please use the Navigation menu to find the information you need.`,

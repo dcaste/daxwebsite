@@ -1,12 +1,12 @@
 import Layout from '@/comp/layout/layout';
-import { fetchAPI, getSlugs } from '@/utils/api';
+import { fetchAPI, getSlugs, getStrapiURL } from '@/utils/api';
 import SeoBasic from '@/comp/seo/SeoBasic';
 import SeoSocialMedia from '@/comp/seo/SeoSocialMedia';
 import renderContent from '@/utils/renderContent';
 
 const DynamicPage = ({
 	page: { content, openGraph },
-	global: { personalInfo, navigation, SocialMedia },
+	globalData: { personalInfo, navigation, SocialMedia },
 	slug,
 }) => {
 	return (
@@ -27,17 +27,20 @@ const DynamicPage = ({
 };
 
 export async function getStaticPaths() {
+	const response = await fetch(getStrapiURL('/pages'));
 	const pages = await fetchAPI('/pages');
-	const pathURLs = await getSlugs(pages, true);
 
-	// True returns an Array, False returns a string. In NextJs a Catch All Routes (...slug) needs an Array.
-	return {
-		paths: pathURLs,
-		fallback: false,
-	};
+	// Get the paths we want to pre-render based on posts.
+	const paths = pages.map((page) => ({
+		params: { slug: [page.slug] },
+	}));
+
+	// We'll pre-render only these paths at build time.
+	// { fallback: false } means other routes should 404.
+	return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params, preview = null }) {
+export async function getStaticProps({ params }) {
 	// To get the homepage, find the only page where slug is an empty string.
 	const slug = params === {} || !params.slug ? '' : params.slug;
 	const pages = await fetchAPI(`/pages?slug=${slug}`);

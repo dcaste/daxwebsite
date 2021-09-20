@@ -18,7 +18,7 @@ const Project = ({
 		technologies,
 		position,
 	},
-	global: { personalInfo, navigation, SocialMedia },
+	globalData: { personalInfo, navigation, SocialMedia },
 	slug,
 }) => {
 	return (
@@ -62,11 +62,20 @@ const Project = ({
 export async function getStaticPaths() {
 	const projects = await fetchAPI('/projects');
 
+	const paths = projects.map((project) => ({
+		params: { slug: project.slug },
+	}));
+
+	// const slugs = posts.map((post) => {
+	// 	const paths = returnArray === true ? [post.slug] : post.slug;
+	// 	return { params: { slug: paths } };
+	// });
+
 	// True returns an Array, False returns a string.
-	const pathURLs = await getSlugs(projects, false);
+	// const paths = await getSlugs(projects, false);
 
 	return {
-		paths: pathURLs,
+		paths: paths,
 		fallback: false,
 	};
 }
