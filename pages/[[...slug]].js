@@ -27,7 +27,6 @@ const DynamicPage = ({
 };
 
 export async function getStaticPaths() {
-	const response = await fetch(getStrapiURL('/pages'));
 	const pages = await fetchAPI('/pages');
 
 	// Get the paths we want to pre-render based on posts.

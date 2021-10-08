@@ -20,8 +20,6 @@ function MyApp({ Component, pageProps, router }) {
 
 MyApp.getInitialProps = async (appContext) => {
 	const appProps = await App.getInitialProps(appContext);
-	// const response = await fetch(getStrapiURL('/global'));
-	// const globalData = await response.json();^
 	const globalData = await fetchAPI('/global');
 
 	return {

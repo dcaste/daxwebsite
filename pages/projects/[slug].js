@@ -66,11 +66,6 @@ export async function getStaticPaths() {
 		params: { slug: project.slug },
 	}));
 
-	// const slugs = posts.map((post) => {
-	// 	const paths = returnArray === true ? [post.slug] : post.slug;
-	// 	return { params: { slug: paths } };
-	// });
-
 	// True returns an Array, False returns a string.
 	// const paths = await getSlugs(projects, false);
 
