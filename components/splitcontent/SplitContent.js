@@ -24,7 +24,7 @@ const SplitContent = ({ props }) => {
 				{props?.content && <RichContent props={props.content} />}
 				{props.buttons && <BtnGroup props={props.buttons} />}
 				{props.link?.id && <ProperLink props={props.link} />}
-				{props.socialLink?.id && <SocialLinks props={props.socialLink} />}
+				{props.socialLink && <SocialLinks props={props.socialLink} />}
 			</div>
 		</div>
 	);

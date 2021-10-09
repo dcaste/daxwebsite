@@ -1,17 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './DaxImage.module.scss';
 
-const DaxImage = ({
-	alt,
-	title,
-	src_lg,
-	src_md,
-	src_sm,
-	className,
-	isRounded,
-	width,
-	height,
-}) => {
+const DaxImage = ({ alt, title, src_lg, src_md, src_sm, isRounded, width }) => {
 	const rounded = isRounded === true ? 'rounded' : null;
 
 	return (
