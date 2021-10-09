@@ -1,34 +1,42 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+
+import Title from '@/comp/title/Title';
+import ImageContainer from '@/comp/imagecontainer/ImageContainer';
+import RichContent from '@/comp/richcontent/RichContent';
+import ProperLink from '@/comp/properlink/ProperLink';
+import BtnGroup from '@/comp/btngroup/BtnGroup';
+import SocialLinks from '@/comp/sociallinks/SocialLinks';
+
 import styles from './SplitContent.module.scss';
 
-const SplitContent = (props) => {
-	const { Tag, split, direction, className } = props;
-	const splitClass = split !== undefined && `splitContent__${split}`;
-	const splitDirection = direction === 'rl' && 'splitContent__RightToLeft';
+const SplitContent = ({ props }) => {
+	// Assings the Grid's columns and the picture and content order.
+	const gridStyle = `${props.split}_${props.picturePosition}`;
 
 	return (
-		<Tag
-			className={classNames(
-				styles[splitClass],
-				styles[splitDirection],
-				className
-			)}
-		>
-			{props.children}
-		</Tag>
+		<div className={styles[gridStyle]}>
+			<div className={styles.picture}>
+				<ImageContainer props={props.picture} />
+			</div>
+
+			<div className={styles.content}>
+				{props.title?.id && <Title props={props.title} />}
+				{props?.content && <RichContent props={props.content} />}
+				{props.buttons && <BtnGroup props={props.buttons} />}
+				{props.link?.id && <ProperLink props={props.link} />}
+				{props.socialLink && <SocialLinks props={props.socialLink} />}
+			</div>
+		</div>
 	);
 };
 
 SplitContent.propTypes = {
-	Tag: PropTypes.string,
-	split: PropTypes.string,
-	direction: PropTypes.string,
+	split: PropTypes.string.isRequired,
 };
 
 SplitContent.defaultProps = {
-	Tag: 'div',
-	direction: 'lr', //Left to Right
+	split: 'Equal',
+	picturePosition: 'Left',
 };
 
 export default SplitContent;

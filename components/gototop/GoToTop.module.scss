@@ -1,0 +1,25 @@
+/* Go to Top Button */
+@import './../../styles/settings/variables.scss';
+@import './../../styles/settings/mixins.scss';
+
+.button {
+	display: block;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 99;
+	outline: none;
+	padding: 0.25em;
+	font-size: 2rem;
+	border-radius: 50%;
+	margin: 0px;
+	min-width: inherit;
+	background-color: $red;
+	color: $white;
+	@include shadow2dp;
+
+	&:hover {
+		color: $white;
+		background-color: $red_light;
+	}
+}

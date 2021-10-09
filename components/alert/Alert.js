@@ -1,45 +1,38 @@
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SVGIcon from '@/comp/svgicon/SVGIcon';
 import styles from './Alert.module.scss';
 
 const Alert = ({ severity, children }) => {
-	let alertSeverity = '';
 	let alertTitle = '';
 	let icon = '';
 
 	switch (severity) {
 		case 'error':
-			alertSeverity = 'alertError';
 			alertTitle = 'Error';
-			icon = 'exclamation-triangle';
+			icon = 'Exclamation';
 			break;
 
 		case 'warning':
-			alertSeverity = 'alertWarning';
 			alertTitle = 'Warning';
-			icon = 'info-circle';
+			icon = 'Info';
 			break;
 
 		case 'success':
-			alertSeverity = 'alertSuccess';
 			alertTitle = 'Success';
-			icon = 'check-circle';
+			icon = 'Check';
 			break;
 
 		default:
-			alertSeverity = 'alertInfo';
-			alertTitle = 'Info';
-			icon = 'info-circle';
+			alertTitle = 'Information';
+			icon = 'Info';
 			break;
 	}
 
 	return (
-		<div className={styles[alertSeverity]}>
-			<p>
-				<strong>
-					<FontAwesomeIcon icon={['fas', icon]} className='marginRight' />
-					{alertTitle}
-				</strong>
+		<div className={styles[severity]}>
+			<p className={styles.header}>
+				<SVGIcon icon={icon} className='marginRight' />
+				{alertTitle}
 			</p>
 			{children}
 		</div>
@@ -47,7 +40,7 @@ const Alert = ({ severity, children }) => {
 };
 
 Alert.propTypes = {
-	severity: PropTypes.string,
+	severity: PropTypes.string.isRequired,
 };
 
 Alert.defaultProps = {

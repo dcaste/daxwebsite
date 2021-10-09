@@ -1,0 +1,33 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/settings/mixins.scss';
+
+.default {
+	overflow: hidden;
+
+	> div {
+		display: block !important;
+	}
+}
+
+.rounded {
+	@extend .default;
+	border-radius: 50%;
+}
+
+.bordered {
+	@extend .default;
+	border: 1px solid $grey_light !important;
+	border-radius: $global-radius-small;
+}
+
+.shadowed {
+	@extend .default;
+	border-radius: $global-radius-small;
+	@include shadow2dp;
+}
+
+.caption {
+	text-align: center;
+	padding: 1rem;
+	background-color: white;
+}

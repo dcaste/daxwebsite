@@ -1,0 +1,47 @@
+@import '../../styles/settings/variables.scss';
+
+.button {
+	border-radius: $global-radius;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.9em;
+	font-weight: $regular;
+	line-height: 1;
+	min-width: 100px;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	transition: $transition;
+
+	&:focus {
+		outline: 0px;
+	}
+}
+
+.btnMain {
+	@extend .button;
+
+	background: $red;
+	color: $white;
+	border: 2px solid $red;
+
+	&:hover {
+		color: $white;
+		background-color: $red_light;
+		border: 2px solid $red_light;
+	}
+}
+
+.btnSecondary {
+	@extend .button;
+
+	color: $red;
+	background: transparent;
+	border: 2px solid $red;
+
+	&:hover {
+		color: $black;
+		border: 2px solid $black;
+		background-color: transparent;
+	}
+}

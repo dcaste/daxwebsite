@@ -90,8 +90,8 @@ You can use any cloud platform with node.js. Every provider has its own methods 
 
 I am working on the following:
 
-- Built an API for consuming the website data
-- Integrate a CMS
+- Reduce code by implementing best code practices
+- Integrate Typescript
 
 ## Learn More
 
@@ -99,3 +99,4 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Learn Strapi](https://strapi.io/) - a Javascript API based CMS.
