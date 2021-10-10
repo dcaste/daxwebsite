@@ -3,8 +3,7 @@ import SVGIcon from '@/comp/svgicon/SVGIcon';
 import styles from './NavMobile.module.scss';
 import { motion, AnimatePresence, useIsPresent } from 'framer-motion';
 
-const NavMobile = ({ open, navigation: { navLink }, SocialMedia }) => {
-	const isPresent = useIsPresent();
+const NavMobile = ({ toggle, open, navigation: { navLink }, SocialMedia }) => {
 	const getLinkURL = (url) => {
 		const linkURL = url ? `/${url}` : '/';
 		return linkURL;
@@ -27,7 +26,9 @@ const NavMobile = ({ open, navigation: { navLink }, SocialMedia }) => {
 									pathname: getLinkURL(link.url),
 								}}
 							>
-								<a className={styles.item}>{link.title}</a>
+								<a className={styles.item} onClick={toggle}>
+									{link.title}
+								</a>
 							</Link>
 						</li>
 					))}
