@@ -15,7 +15,7 @@
 	@include mobile {
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 
 	@include tablet-v {

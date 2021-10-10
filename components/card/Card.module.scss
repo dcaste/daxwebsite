@@ -11,14 +11,16 @@
 
 	@include mobile {
 		grid-template-columns: 1fr;
-		gap: 1rem;
-		padding: 1rem;
-	}
-	@include tablet-h {
-		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
 		padding: 2rem;
 	}
+
+	@include tablet-v {
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 3rem;
+	}
+
 	@include laptop-m {
 		gap: 3rem;
 		padding: 3rem;
