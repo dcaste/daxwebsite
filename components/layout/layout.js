@@ -21,8 +21,10 @@ export default function Layout({
 	personalInfo,
 }) {
 	// Global States //
+
 	// To show or hide the Go To Top button.
 	const [showButton, setShowButton] = useState(false);
+
 	// To show or hide the Mobile Navigation Menu.
 	const [openNavMobile, setOpenNavMobile] = useState(false);
 
@@ -54,6 +56,9 @@ export default function Layout({
 							navigation={navigation}
 							SocialMedia={SocialMedia}
 							personalInfo={personalInfo}
+							toggle={() => {
+								setOpenNavMobile(!openNavMobile);
+							}}
 						/>
 
 						<Breakpoint large up>
